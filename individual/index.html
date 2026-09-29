@@ -237,6 +237,36 @@
   .about,.same{overflow:hidden}
   .covers img{box-shadow:0 12px 24px rgba(0,0,0,.6),0 0 0 1px rgba(242,177,91,.35)}
   footer.ft{border-top:1px solid transparent;border-image:linear-gradient(90deg,transparent,rgba(242,177,91,.5),transparent) 1}
+
+  /* ——— мобильная адаптация (правка 29.09) ——— */
+  @media (max-width:860px){
+    .hero .wrap{padding-top:18px}
+    .hero .main{order:0}
+    .hero .side{order:1;margin-top:6px}
+    .photo{aspect-ratio:4/3}
+    .photo img{object-position:50% 12%}
+    .hero .side::before{inset:-20px}
+    .picto li{padding:11px 10px 11px 44px;min-height:60px}
+    .picto svg{left:10px;top:12px;width:24px;height:24px}
+    .agents{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;margin-left:-4px;margin-right:-4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .agents::-webkit-scrollbar{display:none}
+    .agent{flex:0 0 68%;scroll-snap-align:start}
+    .gal .sub::after{content:" Листайте вправо →";color:var(--accent)}
+    .stats{gap:8px}
+    .st{padding:12px}
+    .st b{font-size:26px}
+    .quotes{gap:10px}
+    .price{padding:22px 18px}
+    .price .btns .btn{width:100%}
+    .gc-modal{padding:10px}
+    .gc-modal__box{max-height:92vh;border-radius:14px;padding:38px 10px 12px}
+    details{padding:12px 14px}
+    summary{font-size:15px;padding-right:22px}
+    .rule{margin:6px auto}
+    h2{font-size:clamp(23px,6.4vw,30px)}
+    .sec{padding:36px 0}
+    footer.ft{padding-bottom:96px}
+  }
 </style>
 </head>
 <body>
