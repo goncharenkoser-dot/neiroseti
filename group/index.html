@@ -543,5 +543,38 @@
     <button type="button" class="gc-modal__close" data-gc-close aria-label="Закрыть">×</button>
     <script id="3e640b56af7e8e9027a568b5b058f064c8661503" src="https://getpublish.getcourse.ru/pl/lite/widget/script?id=1662643"></script>
 
+<!-- открытие окна с виджетом GetCourse (скрипт Ольги) -->
+<script>
+(function () {
+  const modal = document.getElementById('gc-modal');
+  const closeButton = modal.querySelector('[data-gc-close]');
+  let opener = null;
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (opener) opener.focus();
+  }
+
+  document.addEventListener('click', function (event) {
+    const button = event.target.closest('[data-gc-open]');
+
+    if (button) {
+      opener = button;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeButton.focus();
+    } else if (event.target === modal || event.target.closest('[data-gc-close]')) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
+</script>
 </body>
 </html>
