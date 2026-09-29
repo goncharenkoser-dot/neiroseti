@@ -201,6 +201,41 @@
     .stick{display:none}
     footer.ft{padding-bottom:30px}
   }
+
+  /* ——— премиальные детали (правка 29.09): золотые линии, рамки, градиенты ——— */
+  .eyebrow{display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:22px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+  .eyebrow .num{font-family:Literata,Georgia,serif;font-weight:600;letter-spacing:.06em;color:var(--accent);opacity:.85}
+  .btn{background:linear-gradient(135deg,#F8CB84 0%,#F2B15B 55%,#E39B3E 100%);box-shadow:0 12px 30px rgba(242,177,91,.22),inset 0 1px 0 rgba(255,255,255,.35)}
+  .btn.ghost{background:transparent;box-shadow:none}
+  .photo{box-shadow:0 0 0 1px rgba(242,177,91,.45),0 0 0 8px rgba(242,177,91,.06),0 40px 80px rgba(0,0,0,.65)}
+  .photo::before,.photo::after{content:"";position:absolute;width:26px;height:26px;border:1.5px solid var(--accent);z-index:2;opacity:.9}
+  .photo::before{left:12px;top:12px;border-right:0;border-bottom:0}
+  .photo::after{right:12px;bottom:12px;border-left:0;border-top:0}
+  .hero .side{position:relative}
+  .hero .side::before{content:"";position:absolute;inset:-40px;background:radial-gradient(60% 60% at 50% 50%,rgba(242,177,91,.18),transparent 70%);filter:blur(30px);z-index:0;pointer-events:none}
+  .hero .photo{position:relative;z-index:1}
+  .card,.persona,.st,.quote,.track,.get li,.bonus li,details{background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0)) ,var(--panel);position:relative}
+  .card::before,.track::before{content:"";position:absolute;left:20px;right:20px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(242,177,91,.55),transparent)}
+  .card{transition:transform .2s ease,border-color .2s ease}
+  .card:hover{transform:translateY(-3px);border-color:rgba(242,177,91,.45)}
+  .st b,.price .big{background:linear-gradient(135deg,#FFE0AE 0%,#F2B15B 45%,#C98A34 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .price{border:1px solid transparent;background:linear-gradient(180deg,var(--panel2),var(--panel)) padding-box,linear-gradient(135deg,rgba(242,177,91,.8),rgba(58,46,36,.6) 45%,rgba(242,177,91,.5)) border-box}
+  .price::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(242,177,91,.22),transparent 70%);filter:blur(10px)}
+  .persona.yes{border:1px solid transparent;background:linear-gradient(180deg,#2a1c10,var(--panel)) padding-box,linear-gradient(135deg,#F2B15B,rgba(242,177,91,.15)) border-box}
+  .aphoto{position:relative;box-shadow:0 0 0 1px rgba(242,177,91,.45),0 30px 60px rgba(0,0,0,.6);aspect-ratio:1/1}
+  .aphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(14,11,9,.55));pointer-events:none}
+  .aphoto figcaption{position:absolute;left:16px;bottom:14px;font-size:13px;color:var(--muted);letter-spacing:.04em;z-index:1}
+  .quote-g{position:relative;padding-left:20px}
+  .quote-g::before{content:"“";position:absolute;left:-2px;top:-26px;font-family:Literata,Georgia,serif;font-size:64px;line-height:1;color:var(--accent);opacity:.35}
+  .rule{display:flex;align-items:center;gap:14px;color:var(--accent);opacity:.7;margin:0 auto;max-width:1120px;padding:0 18px}
+  .rule::before,.rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(242,177,91,.5),transparent)}
+  .rule span{font-size:12px;letter-spacing:.2em}
+  .nebula{position:absolute;inset:-30% -20% auto -20%;height:160%;pointer-events:none;background:radial-gradient(600px 320px at 15% 60%,rgba(140,60,220,.22),transparent 70%),radial-gradient(520px 260px at 85% 30%,rgba(242,177,91,.14),transparent 70%);filter:blur(30px);z-index:0}
+  .about .wrap,.same .wrap{position:relative;z-index:1}
+  .about,.same{overflow:hidden}
+  .covers img{box-shadow:0 12px 24px rgba(0,0,0,.6),0 0 0 1px rgba(242,177,91,.35)}
+  footer.ft{border-top:1px solid transparent;border-image:linear-gradient(90deg,transparent,rgba(242,177,91,.5),transparent) 1}
 </style>
 </head>
 <body>
@@ -234,7 +269,7 @@
 <!-- [2] РЕКОМЕНДУЕМ, ЕСЛИ… -->
 <section class="sec" id="why">
   <div class="wrap">
-    <div class="eyebrow">Кому подходит</div>
+    <div class="eyebrow"><span class="num">I</span>Кому подходит</div>
     <h2>Рекомендуем индивидуальный формат, если вам важна работа с Георгием один на один</h2>
     <div class="cards">
       <article class="card">
@@ -258,14 +293,14 @@
 
 
 <!-- [4] О ГЕОРГИИ -->
-<section class="sec about" id="about">
+<section class="sec about" id="about"><div class="nebula" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="eyebrow">Ваш будущий наставник</div>
+    <div class="eyebrow"><span class="num">II</span>Ваш будущий наставник</div>
     <h2>Георгий Чистов — писатель, который живёт с нейросетями во всех сферах</h2>
     <p class="sub">Не айтишник. Инженер по образованию, потом кейтеринг, потом онлайн‑школа. Автор дилогии «Парадокс Джона». Сейчас в Тампе: издаёт книги на английском и показывает продюсерам сценарий по ним.</p>
     <div class="grid">
       <div>
-        <div class="aphoto"><img src="../img/author.jpg" alt="Георгий Чистов"></div>
+        <figure class="aphoto"><img src="../img/author2.jpg" alt="Георгий Чистов за работой над книгой"><figcaption>Георгий: книга пишется везде, где есть ноутбук</figcaption></figure>
         <blockquote class="quote-g">«Я не айтишник. Первую книгу издавал три месяца, с корректором за 45 тысяч. Вторую выпустил за месяц — вместе с переводом и трейлером. И нейросеть не написала в моих книгах ни одной фразы».<footer>Георгий Чистов</footer></blockquote>
       </div>
       <div>
@@ -303,10 +338,11 @@
   </div>
 </section>
 
+<div class="rule" aria-hidden="true"><span>◆</span></div>
 <!-- [5] ГОЛОСА УЧАСТНИКОВ -->
 <section class="sec" id="voices">
   <div class="wrap">
-    <div class="eyebrow">Что говорят после эфиров с Георгием</div>
+    <div class="eyebrow"><span class="num">IV</span>Что говорят после эфиров с Георгием</div>
     <h2>«Хоть один человек правду сказал»</h2>
     <div class="quotes">
       <figure class="quote"><span class="qm" aria-hidden="true">“</span><blockquote>«Это скачок на порядок выше всех вещей, которые сейчас есть!»</blockquote><figcaption>Сергей П.</figcaption></figure>
@@ -320,9 +356,9 @@
 </section>
 
 <!-- [6] ХОТИТЕ ТАК ЖЕ? -->
-<section class="sec" id="same">
+<section class="sec same" id="same"><div class="nebula" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="eyebrow">Выбор за вами</div>
+    <div class="eyebrow"><span class="num">V</span>Выбор за вами</div>
     <div class="two">
       <div class="persona no">
         <div class="tag">Не сложится</div>
@@ -348,10 +384,11 @@
   </div>
 </section>
 
+<div class="rule" aria-hidden="true"><span>◆</span></div>
 <!-- [7] ЧТО ВЫ ПОЛУЧИТЕ -->
 <section class="sec tight" id="get">
   <div class="wrap">
-    <div class="eyebrow">Что вы получите в индивидуальном формате</div>
+    <div class="eyebrow"><span class="num">VI</span>Что вы получите в индивидуальном формате</div>
     <h2>Не курс. Система на три сферы, собранная руками Георгия вместе с вами, и первый результат в каждой</h2>
     <ul class="get">
       <li><b>8 личных зумов с Георгием по 60 минут</b> — по одному в неделю, два месяца, один на один</li>
@@ -375,14 +412,14 @@
 <!-- [9] ТРИ ТРЕКА И БОНУСЫ -->
 <section class="sec" id="tracks">
   <div class="wrap">
-    <div class="eyebrow">Выбор за вами</div>
+    <div class="eyebrow"><span class="num">VII</span>Выбор за вами</div>
     <h2>Книга, работа или жизнь — ведущий трек ваш, система общая</h2>
     <div class="tracks">
       <div class="track"><h3>Писателю</h3><p>ИИ не напишет за вас ни строчки, но сможет забрать почти всю рутину, чтобы вы сосредоточились именно на творчестве.</p></div>
       <div class="track"><h3>Эксперту и предпринимателю</h3><p>Экспертиза становится продуктом: база знаний, ассистент для клиентов, письма и презентации своим голосом, страница услуги. Один агент под ключ — запущенный и работающий — и рутина, которая делается без вас.</p></div>
       <div class="track"><h3>Любому человеку</h3><p>Нейросеть вместо юриста, врача, визового центра и турагента: ваша личная операционная система, где документы, здоровье и поездки живут в одном окне.</p></div>
     </div>
-    <div class="eyebrow" style="margin-top:32px">Бонусы при покупке</div>
+    <div class="eyebrow" style="margin-top:32px"><span class="num">VIII</span>Бонусы при покупке</div>
     <ul class="bonus">
       <li><b>2 месяца подписки MAX на топовую нейросеть по вашему выбору под ключ</b> — включены и подключены командой до первого зума</li>
       <li><b>Записи эфиров и разборов Георгия</b> — включая те, что не выкладываются в открытый доступ</li>
@@ -391,10 +428,11 @@
   </div>
 </section>
 
+<div class="rule" aria-hidden="true"><span>◆</span></div>
 <!-- [10] ВОПРОСЫ -->
 <section class="sec" id="faq">
   <div class="wrap">
-    <div class="eyebrow">Вопросы</div>
+    <div class="eyebrow"><span class="num">IX</span>Вопросы</div>
     <h2>Что обычно спрашивают перед диагностикой</h2>
     <details><summary>Я не технарь. Справлюсь?</summary><p>Георгий сам не айтишник. Неделя 0 — установка и доступ под ключ силами команды, к первому зуму вы садитесь к готовому инструменту. Дальше — обычный язык, без промптов и кода.</p></details>
     <details><summary>Как оплачивать и есть ли рассрочка?</summary><p>Депозит 20 000 ₽ бронирует место и цену 330 000 ₽ до 10 октября. Рассрочка до 12 месяцев — около 27 500 ₽ в месяц. Оплата картой из-за рубежа возможна. Диагностическая сессия 4 900 ₽ засчитывается в стоимость.</p></details>
