@@ -91,8 +91,6 @@
   .regalia li{padding-left:18px;position:relative}
   .regalia li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
   .regalia b{color:var(--ink);font-weight:500}
-  .aphoto{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.6);aspect-ratio:4/5}
-  .aphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 10%;display:block}
   .quote-g{margin-top:16px;border-left:3px solid var(--accent);padding:6px 0 6px 16px;font-family:Literata,Georgia,serif;font-style:italic;font-size:18px;line-height:1.45}
   .quote-g footer{font-family:"IBM Plex Sans",Arial,sans-serif;font-style:normal;font-size:14px;color:var(--muted);margin-top:8px}
 
@@ -113,6 +111,11 @@
   .agent span{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:4px}
   @media (min-width:861px){.agents{grid-template-columns:repeat(5,1fr);gap:16px}.agent b{font-size:24px}.orb1{width:620px;height:620px;right:-200px;top:-220px}.orb2{width:360px;height:360px}}
   @media (min-width:861px){.agents{grid-template-columns:repeat(5,1fr);gap:16px}.agent b{font-size:24px}.orb1{width:620px;height:620px;right:-200px;top:-220px}.orb2{width:360px;height:360px}}
+
+  .about .stats4{margin-top:22px}
+  .grid2{display:grid;gap:18px;margin-top:22px}
+  .qcard{margin-top:0;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:16px;padding:22px 22px 22px 26px}
+  .qcard::before{left:10px;top:-14px}
 
   /* [5] голоса */
   .quotes{display:grid;gap:12px;margin-top:22px}
@@ -188,7 +191,8 @@
     .sec{padding:64px 0}
     .price{grid-template-columns:1fr 1fr;align-items:center;padding:34px}
     .price .btns{grid-template-columns:auto auto}
-    .about .grid{grid-template-columns:5fr 7fr;gap:40px;align-items:start}
+    .stats4{grid-template-columns:repeat(4,1fr)}
+    .grid2{grid-template-columns:7fr 5fr;gap:32px;align-items:start}
     .stats{grid-template-columns:repeat(2,1fr)}
     .st b{font-size:36px}
     .quotes{grid-template-columns:repeat(3,1fr)}
@@ -223,9 +227,6 @@
   .price{border:1px solid transparent;background:linear-gradient(180deg,var(--panel2),var(--panel)) padding-box,linear-gradient(135deg,rgba(242,177,91,.8),rgba(58,46,36,.6) 45%,rgba(242,177,91,.5)) border-box}
   .price::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(242,177,91,.22),transparent 70%);filter:blur(10px)}
   .persona.yes{border:1px solid transparent;background:linear-gradient(180deg,#2a1c10,var(--panel)) padding-box,linear-gradient(135deg,#F2B15B,rgba(242,177,91,.15)) border-box}
-  .aphoto{position:relative;box-shadow:0 0 0 1px rgba(242,177,91,.45),0 30px 60px rgba(0,0,0,.6);aspect-ratio:1/1}
-  .aphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(14,11,9,.55));pointer-events:none}
-  .aphoto figcaption{position:absolute;left:16px;bottom:14px;font-size:13px;color:var(--muted);letter-spacing:.04em;z-index:1}
   .quote-g{position:relative;padding-left:20px}
   .quote-g::before{content:"“";position:absolute;left:-2px;top:-26px;font-family:Literata,Georgia,serif;font-size:64px;line-height:1;color:var(--accent);opacity:.35}
   .rule{display:flex;align-items:center;gap:14px;color:var(--accent);opacity:.7;margin:0 auto;max-width:1120px;padding:0 18px}
@@ -298,26 +299,21 @@
     <div class="eyebrow"><span class="num">II</span>Ваш будущий наставник</div>
     <h2>Георгий Чистов — писатель, который живёт с нейросетями во всех сферах</h2>
     <p class="sub">Не айтишник. Инженер по образованию, потом кейтеринг, потом онлайн‑школа. Автор дилогии «Парадокс Джона». Сейчас в Тампе: издаёт книги на английском и показывает продюсерам сценарий по ним.</p>
-    <div class="grid">
-      <div>
-        <figure class="aphoto"><img src="../img/author2.jpg" alt="Георгий Чистов за работой над книгой"><figcaption>Георгий: книга пишется везде, где есть ноутбук</figcaption></figure>
-        <blockquote class="quote-g">«Я не айтишник. Первую книгу издавал три месяца, с корректором за 45 тысяч. Вторую выпустил за месяц — вместе с переводом и трейлером. И нейросеть не написала в моих книгах ни одной фразы».<footer>Георгий Чистов</footer></blockquote>
-      </div>
-      <div>
-        <div class="stats">
+    <div class="stats stats4">
           <div class="st"><b>14</b><span>ИИ‑помощников работают у клиентов — за это ему платят уже год</span></div>
           <div class="st"><b>2 книги</b><span>перевёл на английский за неделю</span></div>
           <div class="st"><b>1 250</b><span>участниц в приложении клуба, которое он собрал для онлайн‑школы</span></div>
           <div class="st"><b>600 000 ₽</b><span>просило агентство за поступление сына — стратегию собрали за полдня</span></div>
         </div>
-        <ul class="regalia" style="margin-top:18px">
+    <div class="grid2">
+      <ul class="regalia">
           <li><b>Писатель</b>, автор дилогии «Парадокс Джона» («Кратчайший путь», «Творец»); сценарий по книгам — на Black List, оценка выросла с 4 до 6</li>
           <li><b>Делает ИИ‑помощников на заказ и внедряет их в бизнес</b>: AI‑куратор онлайн‑школы, координатор федерального проекта для аудитории 55+, переводчик, исследователь, квалификатор заявок</li>
           <li><b>Два приложения с ИИ‑стилистом</b> для школы стиля — второе собрано за пять дней на том же движке; сайт своей книги с оплатой — за два дня</li>
           <li><b>Работает с нейросетями каждый день</b> — на книгу, документы, поездки, здоровье и бизнес клиентов. Первого помощника собрал в конце 2025‑го</li>
           <li><b>Инженер по образованию</b>, до книг — кейтеринг и онлайн‑школа. Знает, как устроен бизнес, которому нужны письма, продажи и рутина</li>
         </ul>
-      </div>
+      <blockquote class="quote-g qcard">«Я не айтишник. Первую книгу издавал три месяца, с корректором за 45 тысяч. Вторую выпустил за месяц — вместе с переводом и трейлером. И нейросеть не написала в моих книгах ни одной фразы».<footer>Георгий Чистов</footer></blockquote>
     </div>
   </div>
 </section>
