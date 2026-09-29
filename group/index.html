@@ -11,7 +11,8 @@
   [4] о наставнике: цифры и регалии; [5] голоса участников (вместо видеоотзывов); [6] «Хотите так же?» — два портрета;
   [7] что вы получите (зафиксировано в договоре); [8] программа 8 зумов; [9] три трека и бонусы; [10] вопросы;
   [11] финальный призыв с ценой; подвал. Все кнопки ведут на анкету-диагностику GetCourse.
-  Источник наполнения: 04-продукт/Тарифы практикума.md (схема 26.09). Mobile first, десктоп от 861px.
+  Источник наполнения: 04-продукт/Тарифы практикума.md (схема 26.09). Правки Сергея 29.09: заголовок «Человек с ИИ может абсолютно всё», пиктограммы формата,
+  цена внизу, галерея агентов, без блока программы и без пунктов «три дела», «переход в индивидуальный», «договор», «пять вещей». Mobile first, десктоп от 861px.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,600;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -57,6 +58,13 @@
   .facts{display:grid;gap:6px;margin-top:8px;color:var(--muted);font-size:14px}
   .facts span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin:0 10px 2px 0}
 
+  /* пиктограммы формата на первом экране */
+  .picto{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  .picto li{background:rgba(26,20,16,.75);border:1px solid var(--line);border-radius:14px;padding:12px 12px 12px 48px;position:relative;min-height:64px}
+  .picto svg{position:absolute;left:12px;top:13px;width:26px;height:26px;color:var(--accent)}
+  .picto b{display:block;font-weight:600;font-size:15px;line-height:1.2}
+  .picto span{display:block;color:var(--muted);font-size:12.5px;line-height:1.3;margin-top:3px}
+
   /* общие блоки */
   .sec{padding:44px 0}
   .sec.tight{padding-top:0}
@@ -91,6 +99,24 @@
   .aphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 10%;display:block}
   .quote-g{margin-top:16px;border-left:3px solid var(--accent);padding:6px 0 6px 16px;font-family:Literata,Georgia,serif;font-style:italic;font-size:18px;line-height:1.45}
   .quote-g footer{font-family:"IBM Plex Sans",Arial,sans-serif;font-style:normal;font-size:14px;color:var(--muted);margin-top:8px}
+
+  /* галерея агентов (из лендинга эфира) */
+  .gal{padding-top:0}
+  .agents{display:grid;gap:14px;margin-top:22px;grid-template-columns:repeat(2,1fr)}
+  .agent{margin:0}
+  .agent .frame{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#0b0907;border:1px solid var(--line)}
+  .agent .frame:before,.agent .frame:after{content:"";position:absolute;width:18px;height:18px;border:1px solid rgba(245,239,230,.6);z-index:2}
+  .agent .frame:before{left:8px;top:8px;border-right:0;border-bottom:0}
+  .agent .frame:after{right:8px;bottom:8px;border-left:0;border-top:0}
+  .agent img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:saturate(.9) contrast(1.05);transition:transform .5s ease}
+  .agent:hover img{transform:scale(1.04)}
+  .agent .no{position:absolute;left:14px;top:12px;z-index:2;font-family:"IBM Plex Sans",Arial,sans-serif;font-size:11px;letter-spacing:.2em;color:rgba(245,239,230,.75)}
+  .agent figcaption{padding:12px 4px 0}
+  .agent small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .agent b{display:block;font-family:Literata,Georgia,serif;font-size:22px;font-weight:600;margin-top:4px}
+  .agent span{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:4px}
+  @media (min-width:861px){.agents{grid-template-columns:repeat(5,1fr);gap:16px}.agent b{font-size:24px}.orb1{width:620px;height:620px;right:-200px;top:-220px}.orb2{width:360px;height:360px}}
+  @media (min-width:861px){.agents{grid-template-columns:repeat(5,1fr);gap:16px}.agent b{font-size:24px}.orb1{width:620px;height:620px;right:-200px;top:-220px}.orb2{width:360px;height:360px}}
 
   /* [5] голоса */
   .quotes{display:grid;gap:12px;margin-top:22px}
@@ -160,6 +186,7 @@
     .hero .side{order:0}.hero .main{order:1}
     .btn{width:auto}
     .cta{grid-template-columns:auto auto;align-items:center;gap:14px}
+    .picto{grid-template-columns:repeat(3,1fr);gap:12px}
     .cta small{text-align:left}
     .cards{grid-template-columns:repeat(3,1fr)}
     .sec{padding:64px 0}
@@ -173,7 +200,7 @@
     .get{grid-template-columns:1fr 1fr}
     .prog{grid-template-columns:1fr 1fr}
     .tracks{grid-template-columns:repeat(3,1fr)}
-    .bonus{grid-template-columns:repeat(3,1fr)}
+    .bonus{grid-template-columns:repeat(2,1fr)}
     .final .box{grid-template-columns:1fr auto;align-items:center;padding:36px}
     .stick{display:none}
     footer.ft{padding-bottom:30px}
@@ -193,11 +220,17 @@
     </div>
     <div class="main">
       <div class="brand"><b>GetPublishED</b><i></i><span>Мини-группа с Георгием Чистовым</span></div>
-      <p class="premium" style="margin-top:14px"><b>Премиальный формат</b> для тех, кто хочет не «научиться пользоваться нейросетью», а за два месяца собрать рабочую систему на три сферы — и уйти с первым результатом.</p>
-      <h1>Человек с ИИ может абсолютно всё. Соберите свою систему вместе с Георгием — в группе из пяти</h1>
-      <p class="lead">Два месяца, 8 зумов с Георгием, чат и поддержка, установка под ключ. Три трека в одной системе: книга, жизнь, работа и заработок. Пять человек с похожими задачами — и никакой теории ради теории.</p>
-      <div class="cta"><a class="btn" href="https://getpublish.getcourse.ru/anketa_neiroseti?utm_source=landing&utm_medium=group&utm_campaign=minigroup&utm_content=hero">Записаться на диагностику</a><small>Диагностическая сессия 4 900 ₽ засчитывается в стоимость. Мест в потоке: 2–4 группы по 5 человек</small></div>
-      <div class="facts"><span>190 000 ₽ · до 10 октября — 170 000 ₽ · депозит 20 000 ₽ бронирует место</span><span>Рассрочка до 12 месяцев — около 16 000 ₽ в месяц · оплата из-за рубежа</span></div>
+      <p class="premium" style="margin-top:14px"><b>Премиальный формат</b> для тех, кто хочет не «научиться пользоваться нейросетью», а за два месяца собрать рабочую систему и получить конкретные результаты.</p>
+      <h1>Человек с ИИ может абсолютно всё</h1>
+      <ul class="picto" aria-label="Формат мини-группы">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><b>2 месяца</b><span>по одному зуму в неделю</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="11" r="2.5"/></svg><b>8 зумов</b><span>с Георгием лично</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1v3l-3-3"/></svg><b>Чат и поддержка</b><span>каждый день</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v6c0 4.5-3.4 7.5-8 8-4.6-.5-8-3.5-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg><b>Установка под ключ</b><span>техника — не ваша забота</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><b>Три трека</b><span>книга · жизнь · работа и заработок</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6M14 20c0-2.6 1.8-4.6 4.5-5 2 .3 3.5 2.3 3.5 5"/></svg><b>Группа из пяти</b><span>с похожими задачами, без теории ради теории</span></li>
+      </ul>
+      <div class="cta"><a class="btn" href="https://getpublish.getcourse.ru/anketa_neiroseti?utm_source=landing&utm_medium=group&utm_campaign=minigroup&utm_content=hero">Записаться на диагностику</a></div>
     </div>
   </div>
 </section>
@@ -206,12 +239,12 @@
 <section class="sec" id="why">
   <div class="wrap">
     <div class="eyebrow">Кому подходит</div>
-    <h2>Рекомендуем мини-группу, если вам важна работа с Георгием напрямую — но в компании таких же, как вы</h2>
+    <h2>Рекомендуем мини-группу, если вам важна работа с Георгием напрямую</h2>
     <div class="cards">
       <article class="card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4 20c0-3.5 3.6-6 8-6s8 2.5 8 6"/><path d="M3 9a3 3 0 0 0 0 6M21 9a3 3 0 0 1 0 6"/></svg>
         <h3>8 зумов с Георгием на пятерых</h3>
-        <p>Каждую неделю — живой разбор <b>вашего</b> проекта, а не запись. Свои 15–20 минут на каждом зуме плюс личная сессия в середине курса.</p>
+        <p>Каждую неделю — живой разбор <b>вашего</b> проекта, а не запись.</p>
       </article>
       <article class="card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg>
@@ -227,27 +260,6 @@
   </div>
 </section>
 
-<!-- [3] ЦЕНА -->
-<section class="sec tight" id="price">
-  <div class="wrap">
-    <div class="price"><div class="orb orb2" aria-hidden="true"></div>
-      <div>
-        <div class="eyebrow">Мини-группа из пяти</div>
-        <div class="big" style="margin-top:8px">190 000 ₽</div>
-        <p class="early" style="margin-top:8px">Ранняя цена до 10 октября — <b>170 000 ₽</b>. Депозит 20 000 ₽ бронирует место и цену.</p>
-        <ul style="margin-top:12px">
-          <li>Рассрочка до 12 месяцев — около 16 000 ₽ в месяц</li>
-          <li>Диагностическая сессия 4 900 ₽ засчитывается в стоимость</li>
-          <li>Возврат без вопросов в течение 14 дней</li>
-        </ul>
-      </div>
-      <div class="btns">
-        <a class="btn" href="https://getpublish.getcourse.ru/anketa_neiroseti?utm_source=landing&utm_medium=group&utm_campaign=minigroup&utm_content=price">Записаться на диагностику</a>
-        <a class="btn ghost" href="#faq">Можно в рассрочку</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- [4] О ГЕОРГИИ -->
 <section class="sec about" id="about">
@@ -275,6 +287,22 @@
           <li><b>Инженер по образованию</b>, до книг — кейтеринг и онлайн‑школа. Знает, как устроен бизнес, которому нужны письма, продажи и рутина</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- [4а] ГАЛЕРЕЯ АГЕНТОВ — из лендинга эфира -->
+<section class="what gal" id="gallery">
+  <div class="wrap">
+    <div class="eyebrow lined"><span>Из портфолио Георгия</span></div>
+    <h2>14 агентов уже работают у его клиентов</h2>
+    <p class="sub">Каждый — под конкретную задачу. Такие же шаблоны получит ваша группа.</p>
+    <div class="agents">
+      <figure class="agent"><div class="frame"><img src="../img/agents/maria.jpg" alt="Агент Мария" loading="lazy"><span class="no">N°02</span></div><figcaption><small>Агент</small><b>Мария</b><span>Литературный переводчик — перевёл обе книги Георгия на английский</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/fedor.jpg" alt="Агент Фёдор" loading="lazy"><span class="no">N°04</span></div><figcaption><small>Агент</small><b>Фёдор</b><span>AI-аналитик отдела продаж</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/klavdia.jpg" alt="Агент Клавдия" loading="lazy"><span class="no">N°03</span></div><figcaption><small>Агент</small><b>Клавдия</b><span>Квалификатор заявок на сайте</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/elena.jpg" alt="Агент Елена" loading="lazy"><span class="no">N°05</span></div><figcaption><small>Агент</small><b>Елена</b><span>Самообучающийся куратор онлайн-школы с интеграцией в CRM</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/ignat.jpg" alt="Агент Игнат" loading="lazy"><span class="no">N°01</span></div><figcaption><small>Агент</small><b>Игнат</b><span>Исследователь в Telegram — отвечает голосом и картинками</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -315,12 +343,12 @@
         <h3>«Готов два месяца работать над своей системой — и довести до результата»</h3>
         <ul>
           <li>Готов приносить свою рукопись, свои дела и свою практику на разбор</li>
-          <li>Готов учиться у практика, а не у пересказа</li>
-          <li>Готов инвестировать в навык, который уже базовый — как водить машину</li>
+          <li>Готов учиться у практика, а не у теоретика</li>
+          <li>Готов инвестировать в навык будущего и опередить остальных в этом</li>
         </ul>
       </div>
     </div>
-    <p class="ask">Как думаете, кто через два месяца будет держать в руках собранную систему — <b>книгу на площадке, закрытые дела по жизни и помощника, который приводит клиентов?</b></p>
+    <p class="ask">Как думаете, кто через два месяца будет держать в руках собранную ИИ‑систему, сделанную под себя? <b>Вы сможете овладеть этим инструментом так, как им пока владеют менее 1 % населения планеты.</b></p>
     <div class="cta" style="margin-top:18px"><a class="btn" href="https://getpublish.getcourse.ru/anketa_neiroseti?utm_source=landing&utm_medium=group&utm_campaign=minigroup&utm_content=same">Записаться на диагностику</a></div>
   </div>
 </section>
@@ -334,54 +362,32 @@
       <li><b>8 зумов с Георгием</b> — по одному в неделю, два месяца. На каждом — свои 15–20 минут разбора</li>
       <li><b>Личная сессия с Георгием 30 минут</b> в середине курса — по вашему проекту</li>
       <li><b>Чат мини-группы</b> с ответом Георгия раз в два дня; поддержка команды — каждый день</li>
-      <li><b>Неделя 0 под ключ</b>: установка на все устройства, перенос рукописи и документов, месяц подписки PRO включён</li>
+      <li><b>Неделя 0 под ключ</b>: установка на все устройства, перенос рукописи и документов, 2 месяца подписки PRO включены</li>
       <li><b>«Библия» вашего проекта уже в день 1</b> — книги, практики или личных дел</li>
       <li><b>Шаблоны Георгия по трём трекам</b>: редакторская комната, корректор на полях, сайт книги, личная операционная система, агент‑рассыльщик, ассистент для практики</li>
-      <li><b>Три закрытых бытовых дела</b> за курс: претензия, заявление, анализы или виза — на своих ситуациях</li>
       <li><b>Записи всех встреч, ИИ‑конспект и план действий</b> до следующей встречи — автоматизацию показываем на себе</li>
       <li><b>Защита проекта в группе</b> и стратегия на три месяца по всем трём сферам</li>
       <li><b>Доступ к материалам 6 месяцев</b> со всеми обновлениями</li>
-      <li><b>Переход в индивидуальный формат</b> в течение 30 дней с зачётом оплаты</li>
       <li><b>Гарантии:</b> возврат 14 дней без вопросов; если инструмент не собран к концу курса — ещё месяц с куратором бесплатно</li>
     </ul>
-    <p class="note">Все пункты фиксируются в договоре. Нам важен ваш результат: вы станете новым кейсом школы и Георгия.</p>
   </div>
 </section>
 
-<!-- [8] ПРОГРАММА -->
-<section class="sec" id="program">
-  <div class="wrap">
-    <div class="eyebrow">Программа</div>
-    <h2>8 зумов за два месяца — по одному в неделю</h2>
-    <p class="sub">Три трека проходят все. Ведущий трек группы получает больше времени на зумах, но система собирается сразу для трёх сфер: одно окно, которое помнит рукопись, дела и практику.</p>
-    <div class="prog">
-      <div class="z"><div class="tr">Общий</div><h3>Одно окно и память</h3><p>Рукопись, заметки, документы и база практики переезжают в проект с памятью. Георгий собирает «библию» вашего проекта. <b>Остаётся:</b> библия книги, личная операционная система или база знаний практики.</p></div>
-      <div class="z"><div class="tr">Писатель</div><h3>Структура, герои и редакторская комната</h3><p>Разбор по школам — как сценарная комната, поднявшая сценарий на Black List с 4 до 6. <b>Остаётся:</b> редакторская комната под свою рукопись, корректор на полях.</p></div>
-      <div class="z"><div class="tr">Писатель</div><h3>Книга выходит в мир</h3><p>Корректура без потери голоса, перевод главы, описание для площадок, бриф на обложку, сайт книги с оплатой. <b>Остаётся:</b> глава в переводе, описание, сайт, план выхода на ЛитРес или Amazon.</p></div>
-      <div class="z"><div class="tr">Жизнь</div><h3>Нейросеть как юрист, врач, визовый помощник</h3><p>Претензия авиакомпании, спор с банком, заявление в инстанцию, расшифровка анализов — на своих делах. <b>Остаётся:</b> три закрытых дела и шаблоны под свои ситуации.</p></div>
-      <div class="z"><div class="tr">Жизнь и семья</div><h3>Личная операционная система</h3><p>Поступление, обучение, поездки, финансы, документы семьи; помощник в мессенджере для быстрых задач. <b>Остаётся:</b> документы, здоровье, поездки, инстанции — в одном окне.</p></div>
-      <div class="z"><div class="tr">Работа</div><h3>Экспертиза как продукт</h3><p>База знаний практики, ассистент для ответов клиентам, письма и презентации своим голосом, страница услуги словами. <b>Остаётся:</b> ассистент для практики и страница услуги.</p></div>
-      <div class="z"><div class="tr">Работа и заработок</div><h3>Агент под задачу</h3><p>Письма издателям, продюсерам или заказчикам — как агент, приведший режиссёра А‑листа; одна автоматизированная рутина; мини‑приложение словами. <b>Остаётся:</b> запущенный агент и одна рутина без вас.</p></div>
-      <div class="z"><div class="tr">Общий</div><h3>Защита и стратегия</h3><p>Защита проекта, стратегия на три месяца: выход книги, план продаж экспертизы, что закрыть по жизни. <b>Остаётся:</b> дорожная карта и SOS‑план поддержки после.</p></div>
-    </div>
-  </div>
-</section>
 
 <!-- [9] ТРИ ТРЕКА И БОНУСЫ -->
-<section class="sec tight" id="tracks">
+<section class="sec" id="tracks">
   <div class="wrap">
     <div class="eyebrow">Выбор за вами</div>
     <h2>Книга, работа или жизнь — ведущий трек ваш, система общая</h2>
     <div class="tracks">
       <div class="track"><h3>Писателю</h3><p>Рукопись перестаёт «не складываться»: структура, редакторская комната, корректор, который не трогает ваш голос, перевод и сайт книги. Книга выходит на площадку или уходит продюсерам с питч‑деком.</p></div>
       <div class="track"><h3>Эксперту и предпринимателю</h3><p>Экспертиза становится продуктом: база знаний, ассистент для клиентов, письма и презентации своим голосом, страница услуги, один агент под ключ и рутина, которая делается без вас.</p></div>
-      <div class="track"><h3>Любому человеку</h3><p>Нейросеть вместо юриста, врача, визового центра и турагента: три закрытых дела за курс и личная операционная система, где документы, здоровье и поездки живут в одном окне.</p></div>
+      <div class="track"><h3>Любому человеку</h3><p>Нейросеть вместо юриста, врача, визового центра и турагента: ваша личная операционная система, где документы, здоровье и поездки живут в одном окне.</p></div>
     </div>
     <div class="eyebrow" style="margin-top:32px">Бонусы при покупке</div>
     <ul class="bonus">
-      <li><b>Месяц подписки PRO под ключ</b> — включён и подключён командой до первого зума</li>
+      <li><b>2 месяца подписки PRO на топовую нейросеть по вашему выбору под ключ</b> — включены и подключены командой до первого зума</li>
       <li><b>Записи эфиров и разборов Георгия</b> — включая те, что не выкладываются в открытый доступ</li>
-      <li><b>«Пять вещей, которые можно попросить»</b> — задачи, которые Георгий первыми отдаёт помощнику, с примерами «до» и «после»</li>
     </ul>
   </div>
 </section>
@@ -394,7 +400,7 @@
     <details><summary>Я не технарь. Справлюсь?</summary><p>Георгий сам не айтишник. Неделя 0 — установка и доступ под ключ силами команды, к первому зуму вы садитесь к готовому инструменту. Дальше — обычный язык, без промптов и кода.</p></details>
     <details><summary>Как оплачивать и есть ли рассрочка?</summary><p>Депозит 20 000 ₽ бронирует место и раннюю цену. Рассрочка до 12 месяцев — около 16 000 ₽ в месяц. Оплата картой из-за рубежа возможна. Диагностическая сессия 4 900 ₽ засчитывается в стоимость.</p></details>
     <details><summary>Что, если через две недели пойму, что не моё?</summary><p>Возврат без вопросов в течение 14 дней. А если к концу курса инструмент не собран — ещё месяц работы с куратором бесплатно.</p></details>
-    <details><summary>Сколько времени в неделю это займёт?</summary><p>Один зум и два‑три часа самостоятельной работы над своим проектом. Всё, что вы делаете, остаётся вашим: рукопись, дела, практика.</p></details>
+    <details><summary>Сколько времени в неделю это займёт?</summary><p>Один зум в неделю, а дальше всё зависит от вашего проекта и вашей увлечённости. Всё, что вы делаете, остаётся вашим. Но предупреждаем: нейросети могут захватить вас полностью. Это «заразно» )))</p></details>
     <details><summary>Георгий в США. Когда зумы?</summary><p>Вечером по Москве, расписание группы согласуется на старте. Записи, ИИ‑конспект и план действий приходят после каждой встречи.</p></details>
     <details><summary>Мне нужен только один трек. Зачем остальные два?</summary><p>Система одна на три сферы, и разница между людьми только в ведущем треке. Писатель проходит «жизнь» и «работу» на своих же делах — и уносит закрытые вопросы, которые иначе съели бы недели.</p></details>
   </div>
@@ -411,6 +417,28 @@
         <div class="sum" style="margin-top:14px">190 000 ₽<small>до 10 октября — 170 000 ₽ · рассрочка до 12 месяцев</small></div>
       </div>
       <div class="cta"><a class="btn" href="https://getpublish.getcourse.ru/anketa_neiroseti?utm_source=landing&utm_medium=group&utm_campaign=minigroup&utm_content=final">Записаться на диагностику</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- [3] ЦЕНА -->
+<section class="sec" id="price">
+  <div class="wrap">
+    <div class="price"><div class="orb orb2" aria-hidden="true"></div>
+      <div>
+        <div class="eyebrow">Мини-группа из пяти</div>
+        <div class="big" style="margin-top:8px">190 000 ₽</div>
+        <p class="early" style="margin-top:8px">Ранняя цена до 10 октября — <b>170 000 ₽</b>. Депозит 20 000 ₽ бронирует место и цену.</p>
+        <ul style="margin-top:12px">
+          <li>Рассрочка до 12 месяцев — около 16 000 ₽ в месяц</li>
+          <li>Диагностическая сессия 4 900 ₽ засчитывается в стоимость</li>
+          <li>Возврат без вопросов в течение 14 дней</li>
+        </ul>
+      </div>
+      <div class="btns">
+        <a class="btn" href="https://getpublish.getcourse.ru/anketa_neiroseti?utm_source=landing&utm_medium=group&utm_campaign=minigroup&utm_content=price">Записаться на диагностику</a>
+        <a class="btn ghost" href="#faq">Можно в рассрочку</a>
+      </div>
     </div>
   </div>
 </section>
