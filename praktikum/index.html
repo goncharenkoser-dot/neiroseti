@@ -30,10 +30,10 @@ html[data-variant="individual"] [data-v="group"]{display:none!important}
 @media (max-width:900px){.agents{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;margin:36px -4px 0;scrollbar-width:none}.agents::-webkit-scrollbar{display:none}.agent{flex:0 0 62%;scroll-snap-align:start}}
 .gc-modal{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:16px;background:rgba(0,0,0,.72);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s ease}
 .gc-modal.is-open{opacity:1;visibility:visible;pointer-events:auto}
-.gc-modal__box{position:relative;width:min(100%,560px);max-height:90vh;overflow-y:auto;border-radius:18px;background:#fff;color:#1A1208;padding:40px 18px 18px}
+.gc-modal__box{position:relative;width:min(100%,760px);max-height:92vh;overflow-y:auto;border-radius:18px;background:#fff;color:#1A1208;padding:40px 28px 24px}
 .gc-modal__close{position:absolute;right:10px;top:7px;width:36px;height:36px;border:0;background:transparent;color:#1A1208;font:30px/1 Arial,sans-serif;cursor:pointer}
-.gc-modal__box iframe{display:block!important;min-height:440px}
-@media (max-width:600px){.gc-modal{padding:10px}.gc-modal__box{max-height:92vh;border-radius:14px;padding:38px 10px 12px}}
+.gc-modal__box iframe{display:block!important;min-height:560px;width:100%}
+@media (max-width:600px){.gc-modal{padding:8px}.gc-modal__box{max-height:94vh;border-radius:14px;padding:38px 8px 12px}.gc-modal__box iframe{min-height:600px}}
 
 /* — элементы в духе dilogia.paradoxbook.ru: золотые градиенты, свечение, тёмные карточки — */
 .kick{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600}
@@ -457,25 +457,38 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
   window.addEventListener('hashchange',function(){var h=location.hash.replace('#','');if(h==='individual'||h==='group')apply(h);});
 })();
 </script>
-<div id="gc-modal" class="gc-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Форма оплаты">
+<div id="gc-modal-group" class="gc-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Оплата: мини-группа">
   <div class="gc-modal__box">
     <button type="button" class="gc-modal__close" data-gc-close aria-label="Закрыть">×</button>
     <script id="3e640b56af7e8e9027a568b5b058f064c8661503" src="https://getpublish.getcourse.ru/pl/lite/widget/script?id=1662643"></script>
   </div>
 </div>
-<!-- открытие окна с виджетом GetCourse (скрипт Ольги, как на /group/) -->
+<div id="gc-modal-individual" class="gc-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Оплата: индивидуально">
+  <div class="gc-modal__box">
+    <button type="button" class="gc-modal__close" data-gc-close aria-label="Закрыть">×</button>
+    <script id="343201c7910955ab294e0f81adb9becb7e8f5aac" src="https://getpublish.getcourse.ru/pl/lite/widget/script?id=1663067"></script>
+  </div>
+</div>
+<!-- открытие окна с виджетом GetCourse: окно выбирается по формату (переключатель сверху). Группа — виджет 1662643 (170 000 ₽), индивидуально — 1663067 (330 000 ₽) -->
 <script>
 (function () {
-  var modal = document.getElementById('gc-modal');
-  var closeButton = modal.querySelector('[data-gc-close]');
-  var opener = null;
-  function closeModal() { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; if (opener) opener.focus(); }
+  var modals = { group: document.getElementById('gc-modal-group'), individual: document.getElementById('gc-modal-individual') };
+  var opener = null, current = null;
+  function closeModal() {
+    if (!current) return;
+    current.classList.remove('is-open'); current.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; if (opener) opener.focus(); current = null;
+  }
   document.addEventListener('click', function (event) {
     var button = event.target.closest('[data-gc-open]');
-    if (button) { opener = button; modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; closeButton.focus(); }
-    else if (event.target === modal || event.target.closest('[data-gc-close]')) { closeModal(); }
+    if (button) {
+      var v = document.documentElement.getAttribute('data-variant') === 'individual' ? 'individual' : 'group';
+      opener = button; current = modals[v];
+      current.classList.add('is-open'); current.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; current.querySelector('[data-gc-close]').focus();
+    } else if (current && (event.target === current || event.target.closest('[data-gc-close]'))) { closeModal(); }
   });
-  document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+  document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeModal(); });
 })();
 </script>
 </body>
