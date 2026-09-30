@@ -32,8 +32,10 @@ html[data-variant="individual"] [data-v="group"]{display:none!important}
 .gc-modal.is-open{opacity:1;visibility:visible;pointer-events:auto}
 .gc-modal__box{position:relative;width:min(100%,760px);max-height:92vh;overflow-y:auto;border-radius:18px;background:#fff;color:#1A1208;padding:40px 28px 24px}
 .gc-modal__close{position:absolute;right:10px;top:7px;width:36px;height:36px;border:0;background:transparent;color:#1A1208;font:30px/1 Arial,sans-serif;cursor:pointer}
-.gc-modal__box iframe{display:block!important;min-height:560px;width:100%}
-@media (max-width:600px){.gc-modal{padding:8px}.gc-modal__box{max-height:94vh;border-radius:14px;padding:38px 8px 12px}.gc-modal__box iframe{min-height:600px}}
+.gc-modal__box iframe{display:block!important;min-height:620px;width:100%}
+/* скрипт виджета GetCourse ставит контейнеру height и overflow:hidden по своей оценке высоты — снимаем, иначе низ формы обрезается */
+.gc-modal__box{height:auto!important;overflow-y:auto!important}
+@media (max-width:600px){.gc-modal{padding:8px}.gc-modal__box{max-height:94vh;border-radius:14px;padding:38px 8px 12px}.gc-modal__box iframe{min-height:660px}}
 
 /* — элементы в духе dilogia.paradoxbook.ru: золотые градиенты, свечение, тёмные карточки — */
 .kick{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600}
