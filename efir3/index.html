@@ -53,6 +53,11 @@
   .mini b{display:block;font-weight:600;font-size:15px}
   .mini span{display:block;color:var(--muted);font-size:13px;line-height:1.3}
   .side{display:none}
+  .mphoto{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);margin-bottom:6px}
+  .mphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;display:block}
+  .mphoto .cap{position:absolute;left:0;right:0;bottom:0;padding:48px 16px 14px;background:linear-gradient(180deg,rgba(14,11,9,0),rgba(14,11,9,.9))}
+  .mphoto .cap b{display:block;font-weight:600;font-size:18px;color:var(--ink)}
+  .mphoto .cap span{display:block;color:var(--muted);font-size:13px;line-height:1.3;margin-top:2px}
   .photo{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);aspect-ratio:2/3}
   .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;display:block}
   .covers{position:absolute;right:-8px;bottom:-14px;display:flex;gap:6px}
@@ -287,7 +292,7 @@
       <p class="nosale">Помощник — при вас, вживую.<br>Семь дел вокруг книги.<br>Ваши задачи на экране.<br>Стыдных вопросов нет.</p>
     </div>
     <div>
-      <div class="mini"><img src="../img/author.jpg" alt="Георгий Чистов"><div><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона»</span></div></div>
+      <div class="mphoto" data-mobile><img src="../img/author.jpg" alt="Георгий Чистов, писатель"><div class="cap"><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона»</span></div></div>
       <span class="badge">Тему выбрали зрители</span>
       <div class="eyebrow">Прямой эфир · среда 7 октября · 19:00 мск · бесплатно</div>
       <h1>Вау, а что,<br>так можно было?</h1>
