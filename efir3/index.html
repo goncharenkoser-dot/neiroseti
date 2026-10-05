@@ -542,7 +542,8 @@
 <!-- [T6] ЗАКРЕПЛЁННАЯ КНОПКА НА ТЕЛЕФОНЕ -->
 <div class="stick" id="stick"><a class="btn" href="#reg" data-open>Зарегистрироваться на эфир</a></div>
 
-<!-- [T3] ВСПЛЫВАЮЩЕЕ ОКНО С ФОРМОЙ GETCOURSE. ФОРМА ДЛЯ 07.10 ЕЩЁ НЕ ПОДКЛЮЧЕНА: нужен новый виджет GetCourse (копия 1662138) с предложением и группой эфира 07.10 и переадресацией на /efir3/thanks.html. Когда виджет будет готов, заменить блок .gc-embed ниже на его <script>. Виджет 1662138 сюда ставить нельзя: он записывает в группу эфира 30.09. -->
+<!-- [T3] ВСПЛЫВАЮЩЕЕ ОКНО С ФОРМОЙ GETCOURSE (виджет 1664724 — копия виджета 1662138, подключён 05.10): регистрации попадают в аккаунт getpublish.getcourse.ru,
+     заказ с предложением «Регистрация Нейросети 07.10.26 TECH» (id 8783681), группа «Зарегистрировались на эфир 07.10.26 — Эфир 3 (нейро-помощник)» (id 4988525), переадресация на /efir3/thanks.html. -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
   <div class="back" data-close></div>
   <div class="dlg">
@@ -550,7 +551,9 @@
     <div class="eyebrow">Среда 7 октября · 19:00 мск</div>
     <h2 id="modalTitle">Займите место на эфире</h2>
     <p>Бесплатно. Ссылка для участия придёт за час до эфира — на почту и в чат.</p>
-    <div class="gc-embed" style="padding:22px 18px;border:1px dashed var(--line);border-radius:14px;text-align:center;color:var(--muted);font-size:15px;line-height:1.5">Форма регистрации подключается.<br>Загляните чуть позже или напишите в чат «Нейросреда».</div>
+    <div class="gc-embed">
+      <script id="0bacdade50049b52d52632046b81c4dd7353c5d5" src="https://getpublish.getcourse.ru/pl/lite/widget/script?id=1664724"></script>
+    </div>
   </div>
 </div>
 
