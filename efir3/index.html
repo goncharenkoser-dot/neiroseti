@@ -105,7 +105,8 @@
   .dlg p{color:var(--muted);font-size:15px;margin-top:8px}
   .dlg .close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:24px;line-height:1;cursor:pointer;font-family:inherit}
   /* Виджет GetCourse рисуется внутри iframe: цвета полей, кнопки и текста согласия задаются в самом виджете, а не здесь */
-  .gc-embed{margin-top:12px;min-height:300px}
+  .gc-embed{margin-top:12px;min-height:300px;position:relative}
+  .gc-embed:not(:has(iframe))::before{content:"Форма загружается…";position:absolute;left:0;right:0;top:36px;text-align:center;color:var(--muted);font-size:15px}
   /* Скрипт GetCourse ставит iframe height:0 и поднимает высоту только после load внутри виджета; load задерживают
      внешние скрипты аккаунта (getfusion.ru, getloo.ru) до 30 с. min-height показывает форму сразу, а не через полминуты */
   .gc-embed iframe{display:block!important;min-height:440px}
@@ -284,6 +285,44 @@
 </style>
 </head>
 <body>
+
+<!-- ОКНО С ФОРМОЙ ОТКРЫВАЕТСЯ В ОДИН КЛИК. Этот скрипт стоит первым в body: кнопки регистрации открывают всплывающее окно сразу,
+     даже пока страница и скрипт виджета GetCourse ещё догружаются. Раньше обработчики вешались в конце страницы, после скрипта виджета,
+     и до его загрузки клик по кнопке просто прокручивал страницу к блоку «Регистрация». -->
+<script>
+(function(){
+  var lastFocus=null, timer=null;
+  function el(){return document.getElementById('modal');}
+  function show(m){
+    m.classList.add('open');m.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    if(history.replaceState){history.replaceState(null,'',location.pathname+location.search+'#reg');}
+    var c=m.querySelector('.close'); if(c){c.focus();}
+  }
+  function openModal(){
+    lastFocus=document.activeElement;
+    var m=el();
+    if(m){show(m);return;}
+    /* окно ещё не дошло до браузера: откроем, как только появится */
+    if(timer){return;}
+    timer=setInterval(function(){var m2=el(); if(m2){clearInterval(timer);timer=null;show(m2);}},40);
+  }
+  function closeModal(){
+    var m=el(); if(!m){return;}
+    m.classList.remove('open');m.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(history.replaceState){history.replaceState(null,'',location.pathname+location.search);}
+    if(lastFocus&&lastFocus.focus){lastFocus.focus();}
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target; if(!t||!t.closest){return;}
+    if(t.closest('[data-open]')){e.preventDefault();openModal();return;}
+    if(t.closest('[data-close]')){closeModal();}
+  });
+  document.addEventListener('keydown',function(e){var m=el(); if(e.key==='Escape'&&m&&m.classList.contains('open')){closeModal();}});
+  if(location.hash==='#reg'){openModal();}
+})();
+</script>
 
 <!-- [T1] ШАПКА / ОБЛОЖКА -->
 <section class="hero" id="top"><div class="orb orb1" aria-hidden="true"></div><div class="orb orb2" aria-hidden="true"></div>
@@ -547,6 +586,16 @@
 
 <!-- [T6] ЗАКРЕПЛЁННАЯ КНОПКА НА ТЕЛЕФОНЕ -->
 <div class="stick" id="stick"><a class="btn" href="#reg" data-open>Зарегистрироваться на эфир</a></div>
+<script>
+(function(){
+  var stick=document.getElementById('stick');
+  var heroBtn=document.getElementById('heroBtn');
+  /* закреплённая кнопка на телефоне: показываем, когда кнопка первого экрана скрылась */
+  if('IntersectionObserver' in window&&stick&&heroBtn){
+    new IntersectionObserver(function(entries){stick.classList.toggle('show',!entries[0].isIntersecting);},{threshold:0}).observe(heroBtn);
+  }
+})();
+</script>
 
 <!-- [T3] ВСПЛЫВАЮЩЕЕ ОКНО С ФОРМОЙ GETCOURSE (виджет 1664724 — копия виджета 1662138, подключён 05.10): регистрации попадают в аккаунт getpublish.getcourse.ru,
      заказ с предложением «Регистрация Нейросети 07.10.26 TECH» (id 8783681), группа «Зарегистрировались на эфир 07.10.26 — Эфир 3 (нейро-помощник)» (id 4988525), переадресация на /efir3/thanks.html. -->
@@ -562,37 +611,5 @@
     </div>
   </div>
 </div>
-
-<script>
-(function(){
-  var modal=document.getElementById('modal');
-  var stick=document.getElementById('stick');
-  var heroBtn=document.getElementById('heroBtn');
-  var lastFocus=null;
-  function openModal(){
-    lastFocus=document.activeElement;
-    modal.classList.add('open');modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
-    if(history.replaceState){history.replaceState(null,'',location.pathname+location.search+'#reg');}
-    var c=modal.querySelector('.close'); if(c){c.focus();}
-  }
-  function closeModal(){
-    modal.classList.remove('open');modal.setAttribute('aria-hidden','true');
-    document.body.style.overflow='';
-    if(history.replaceState){history.replaceState(null,'',location.pathname+location.search);}
-    if(lastFocus&&lastFocus.focus){lastFocus.focus();}
-  }
-  var openers=document.querySelectorAll('[data-open]');
-  for(var i=0;i<openers.length;i++){openers[i].addEventListener('click',function(e){e.preventDefault();openModal();});}
-  var closers=modal.querySelectorAll('[data-close]');
-  for(var j=0;j<closers.length;j++){closers[j].addEventListener('click',closeModal);}
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open')){closeModal();}});
-  if(location.hash==='#reg'){openModal();}
-  /* закреплённая кнопка на телефоне: показываем, когда кнопка первого экрана скрылась */
-  if('IntersectionObserver' in window&&stick&&heroBtn){
-    new IntersectionObserver(function(entries){stick.classList.toggle('show',!entries[0].isIntersecting);},{threshold:0}).observe(heroBtn);
-  }
-})();
-</script>
 </body>
 </html>
