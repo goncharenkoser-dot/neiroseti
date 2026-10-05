@@ -320,7 +320,8 @@
     if(t.closest('[data-close]')){closeModal();}
   });
   document.addEventListener('keydown',function(e){var m=el(); if(e.key==='Escape'&&m&&m.classList.contains('open')){closeModal();}});
-  if(location.hash==='#reg'){openModal();}
+  /* ссылки из писем и ботов с параметром reg=1 (или с #reg) открывают окно с формой сразу */
+  if(location.hash==='#reg'||/[?&]reg=1(&|$)/.test(location.search)){openModal();}
 })();
 </script>
 
