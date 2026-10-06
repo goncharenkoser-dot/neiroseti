@@ -36,8 +36,9 @@
   /* первый экран */
   .hero{padding:28px 0 36px;border-top:0;position:relative;overflow:hidden}
   .hero .grid{display:grid;gap:22px}
-  .price-tag{display:inline-flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;color:var(--muted);margin-bottom:14px}
-  .price-tag b{color:var(--ink);font-size:16px}
+  .price-tag{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px 14px;font-size:14px;color:var(--muted);margin-bottom:14px}
+  .price-tag b{color:var(--ink);font-size:16px;white-space:nowrap}
+  @media (min-width:861px){.price-tag{display:inline-flex;border-radius:999px}}
   .mphoto{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#1a1410}
   .mphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
   .mphoto .cap{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(180deg,rgba(14,11,9,0),rgba(14,11,9,.92));font-size:13px;color:var(--muted)}
