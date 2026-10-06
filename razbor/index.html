@@ -44,23 +44,41 @@
   .mphoto .cap{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(180deg,rgba(14,11,9,0),rgba(14,11,9,.92));font-size:13px;color:var(--muted)}
   .mphoto .cap b{display:block;color:var(--ink);font-family:Literata,Georgia,serif;font-size:17px}
   .def{margin-top:18px;padding:16px 18px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 14px 14px 0;font-family:Literata,Georgia,serif;font-size:17px;line-height:1.45}
+  /* пиктограммы */
+  .ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+  .ico{width:44px;height:44px;border-radius:12px;background:rgba(242,177,91,.14);border:1px solid rgba(242,177,91,.35);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .ico .ic{width:24px;height:24px}
+  .price-tag .ic{width:16px;height:16px;color:var(--accent);margin-right:2px;vertical-align:-3px}
+  .price-tag span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .hero::before{content:"";position:absolute;right:-180px;top:-200px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(242,177,91,.22),rgba(242,177,91,0) 68%);pointer-events:none}
+  .hero .wrap{position:relative}
   /* карточки */
   .cards{display:grid;gap:12px;margin-top:18px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card .top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
   .card .n{font-family:Literata,Georgia,serif;font-size:28px;color:var(--accent);line-height:1;margin-bottom:10px}
   .card p{color:var(--muted);margin:0;font-size:15px}
-  .ask{margin-top:18px;padding:18px 20px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 14px 14px 0}
-  .ask b{display:block;font-family:Literata,Georgia,serif;font-size:19px;margin-bottom:6px}
-  .ask p{margin:0;color:var(--muted);font-size:15.5px}
+  .ask{position:relative;margin-top:24px;padding:26px 22px 28px;border:2px solid var(--accent);border-left-width:7px;border-radius:20px;background:linear-gradient(135deg,rgba(242,177,91,.22) 0%,rgba(242,177,91,.07) 60%,var(--panel) 100%);box-shadow:0 0 0 1px rgba(242,177,91,.18),0 22px 60px rgba(242,177,91,.14)}
+  .ask .qi{width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 10px 26px rgba(242,177,91,.35)}
+  .ask .qi svg{width:30px;height:30px}
+  .ask b{display:block;font-family:Literata,Georgia,serif;font-size:27px;line-height:1.15;letter-spacing:-.01em;margin-bottom:12px}
+  .ask p{margin:0;color:var(--ink);font-size:19px;line-height:1.5}
+  .ask p mark{background:linear-gradient(transparent 55%,rgba(242,177,91,.45) 55%);color:inherit;padding:0 2px}
   .steps{counter-reset:s;display:grid;gap:12px;margin-top:18px}
   .step{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
-  .step i{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700}
+  .step i{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700}
+  .step i .ic{width:22px;height:22px;stroke-width:2}
   .step p{margin:0;color:var(--muted);font-size:15px}
+  .step small{display:block;color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
   .step b{display:block;color:var(--ink);font-size:16px;margin-bottom:3px}
   /* для кого */
   .two{display:grid;gap:14px;margin-top:18px}
   .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
   .box.yes{border-color:#3f9d6b}.box.no{border-color:#7a4a1a}
+  .box h3{display:flex;align-items:center;gap:10px}
+  .box h3 .ic{width:28px;height:28px;padding:5px;border-radius:50%;stroke-width:2.4}
+  .box.yes h3 .ic{background:rgba(63,157,107,.18);color:#5fcf8f}
+  .box.no h3 .ic{background:rgba(224,36,36,.14);color:#ff6b6b}
   .box ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:15px}
   .box li{margin-bottom:6px}
   /* цена */
@@ -71,9 +89,11 @@
   .offer ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
   .offer li{position:relative;padding-left:26px;font-size:15px}
   .offer li::before{content:"✓";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font-size:11px;display:flex;align-items:center;justify-content:center}
-  .guar{margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--panel2);font-size:14px;color:var(--muted)}
+  .guar{margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--panel2);font-size:14px;color:var(--muted);display:flex;gap:12px;align-items:flex-start}
+  .guar .ic{width:30px;height:30px;color:var(--accent);margin-top:-2px}
   .guar b{color:var(--ink)}
-  .anchor{margin-top:14px;font-size:14px;color:var(--muted)}
+  .anchor{margin-top:14px;font-size:14px;color:var(--muted);display:flex;gap:12px;align-items:flex-start}
+  .anchor .ic{width:26px;height:26px;color:var(--accent);margin-top:-1px}
   .anchor b{color:var(--ink)}
   /* Георгий */
   .host .box{display:grid;gap:16px}
@@ -81,11 +101,14 @@
   .host blockquote footer{margin-top:8px;font-family:"IBM Plex Sans",Arial,sans-serif;font-size:14px;color:var(--muted)}
   .facts{display:grid;gap:10px;margin-top:14px}
   .facts div{display:flex;gap:12px;align-items:baseline}
+  .facts .ic{width:20px;height:20px;color:var(--accent);align-self:center}
   .facts b{font-family:Literata,Georgia,serif;font-size:24px;color:var(--accent);white-space:nowrap}
   .facts span{color:var(--muted);font-size:14.5px}
   /* отзывы */
   .quotes{display:grid;gap:12px;margin-top:18px}
   .quote{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-family:Literata,Georgia,serif;font-size:16px;line-height:1.4}
+  .quote{position:relative;padding-top:22px}
+  .quote::before{content:"\201C";position:absolute;left:14px;top:-2px;font-family:Literata,Georgia,serif;font-size:56px;line-height:1;color:var(--accent);opacity:.55}
   .quote figcaption{margin-top:8px;font-family:"IBM Plex Sans",Arial,sans-serif;font-size:13px;color:var(--accent)}
   /* вопросы */
   details{border-top:1px solid var(--line);padding:12px 0}
@@ -128,6 +151,11 @@
     .cards.three{grid-template-columns:repeat(3,1fr)}
     .steps{grid-template-columns:repeat(3,1fr);gap:16px}
     .two{grid-template-columns:1fr 1fr;gap:16px}
+    .ask{padding:42px 48px 44px 128px;margin-top:32px}
+    .ask .qi{position:absolute;left:40px;top:44px;width:64px;height:64px;margin:0}
+    .ask .qi svg{width:36px;height:36px}
+    .ask b{font-size:40px;margin-bottom:14px}
+    .ask p{font-size:22px;max-width:820px}
     .offer{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:30px}
     .quotes{grid-template-columns:repeat(3,1fr)}
     .host .box{grid-template-columns:1fr 1fr;gap:28px;padding:28px}
@@ -138,6 +166,28 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21"/><path d="M5 7l7-2 7 2"/><path d="M2 14l3-7 3 7a3 3 0 0 1-6 0z"/><path d="M16 14l3-7 3 7a3 3 0 0 1-6 0z"/><line x1="8" y1="21" x2="16" y2="21"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="7" y1="3" x2="7" y2="21"/><line x1="17" y1="3" x2="17" y2="21"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7.5" x2="7" y2="7.5"/><line x1="2" y1="16.5" x2="7" y2="16.5"/><line x1="17" y1="7.5" x2="22" y2="7.5"/><line x1="17" y1="16.5" x2="22" y2="16.5"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="3"/><line x1="12" y1="4" x2="12" y2="8"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/><line x1="1" y1="13" x2="3" y2="13"/><line x1="21" y1="13" x2="23" y2="13"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+</defs></svg>
 
 <script>
 /* Кнопки открывают окно с формой оплаты сразу, в один клик — даже пока скрипт виджета GetCourse ещё грузится */
@@ -159,7 +209,7 @@
       <div>
         <div class="eyebrow">Личный разбор с Георгием Чистовым</div>
         <h1>Узнайте, как построить свою личную ИИ-систему под свой проект или задачу</h1>
-        <div class="price-tag"><b>4 900 ₽</b> · 40–60 минут · засчитываются в стоимость практикума</div>
+        <div class="price-tag"><b>4 900 ₽</b><span><svg class="ic"><use href="#i-clock"/></svg>40–60 минут</span><span><svg class="ic"><use href="#i-back"/></svg>засчитываются в стоимость практикума</span></div>
         <p class="sub">Вы приносите один проект — книгу, своё дело или задачу по жизни. Уходите с картой: что остаётся вам, что забирает ИИ-система и что для этого нужно.</p>
         <div class="def">Разбор — не консультация и не урок. Это встреча, на которой мы понимаем, как ваш проект сделать с нейросетями быстрее и дешевле, чем обычным способом, и какой должна быть ваша ИИ-инфраструктура — в писательстве, в жизни и в работе.</div>
         <div class="cta"><a class="btn" id="heroBtn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>После оплаты команда свяжется в течение дня и согласует время</small></div>
@@ -173,11 +223,11 @@
   <div class="wrap">
     <h2>В каких сферах применим ИИ</h2>
     <div class="cards three">
-      <article class="card"><h3>Профессиональная</h3><p>Эксперту, предпринимателю, любому специалисту: база знаний, помощник для клиентов, письма, презентации, сайт услуги.</p></article>
-      <article class="card"><h3>Писательская</h3><p>Всё вокруг текста: структура, редактура без потери голоса, перевод, описание, продвижение книги.</p></article>
-      <article class="card"><h3>Личная</h3><p>Документы, поездки, финансы, здоровье, семья: дела, на которые уходят вечера.</p></article>
+      <article class="card"><div class="ico"><svg class="ic"><use href="#i-case"/></svg></div><h3>Профессиональная</h3><p>Эксперту, предпринимателю, любому специалисту: база знаний, помощник для клиентов, письма, презентации, сайт услуги.</p></article>
+      <article class="card"><div class="ico"><svg class="ic"><use href="#i-book"/></svg></div><h3>Писательская</h3><p>Всё вокруг текста: структура, редактура без потери голоса, перевод, описание, продвижение книги.</p></article>
+      <article class="card"><div class="ico"><svg class="ic"><use href="#i-home"/></svg></div><h3>Личная</h3><p>Документы, поездки, финансы, здоровье, семья: дела, на которые уходят вечера.</p></article>
     </div>
-    <div class="ask"><b>А если я пока не знаю, как ИИ может мне помочь?</b><p>Тогда вам точно надо на разбор. Вы сможете понять, где нейросети дадут максимальный эффект в выигрыше времени, денег и нервов.</p></div>
+    <div class="ask"><div class="qi"><svg class="ic"><use href="#i-help"/></svg></div><b>А если я пока не знаю, как ИИ может мне помочь?</b><p>Тогда вам точно надо на разбор. Вы сможете понять, где нейросети дадут <mark>максимальный эффект</mark> в выигрыше времени, денег и нервов.</p></div>
   </div>
 </section>
 
@@ -186,10 +236,10 @@
     <div class="eyebrow">Что вы уносите с разбора</div>
     <h2>Четыре вещи, которые остаются у вас в любом случае</h2>
     <div class="cards">
-      <article class="card"><div class="n">1</div><h3>Карту вашего проекта</h3><p>Три столбца: что вернёт время, что вернёт деньги, что откроет новое. Георгий смотрит на ваш проект, а не на учебный пример.</p></article>
-      <article class="card"><div class="n">2</div><h3>Три первых дела, которые отдаём помощнику</h3><p>С оценкой, сколько часов и денег они вернут. Корректура, перевод, описание, сайт, документы, ответы клиентам — у каждого свои.</p></article>
-      <article class="card"><div class="n">3</div><h3>Маршрут на восемь недель</h3><p>Что должно быть готово к неделе 2, 4, 6 и 8 — под ваш проект, а не по общему плану. Этот маршрут и становится вашей программой, если идёте в практикум.</p></article>
-      <article class="card"><div class="n">4</div><h3>Честный ответ</h3><p>Нужен ли вам практикум и в каком формате. Если не нужен — Георгий так и скажет.</p></article>
+      <article class="card"><div class="top"><div class="ico"><svg class="ic"><use href="#i-map"/></svg></div><div class="n">1</div></div><h3>Карту вашего проекта</h3><p>Три столбца: что вернёт время, что вернёт деньги, что откроет новое. Георгий смотрит на ваш проект, а не на учебный пример.</p></article>
+      <article class="card"><div class="top"><div class="ico"><svg class="ic"><use href="#i-list"/></svg></div><div class="n">2</div></div><h3>Три первых дела, которые отдаём помощнику</h3><p>С оценкой, сколько часов и денег они вернут. Корректура, перевод, описание, сайт, документы, ответы клиентам — у каждого свои.</p></article>
+      <article class="card"><div class="top"><div class="ico"><svg class="ic"><use href="#i-route"/></svg></div><div class="n">3</div></div><h3>Маршрут на восемь недель</h3><p>Что должно быть готово к неделе 2, 4, 6 и 8 — под ваш проект, а не по общему плану. Этот маршрут и становится вашей программой, если идёте в практикум.</p></article>
+      <article class="card"><div class="top"><div class="ico"><svg class="ic"><use href="#i-chat"/></svg></div><div class="n">4</div></div><h3>Честный ответ</h3><p>Нужен ли вам практикум и в каком формате. Если не нужен — Георгий так и скажет.</p></article>
     </div>
   </div>
 </section>
@@ -199,9 +249,9 @@
     <div class="eyebrow">Как проходит</div>
     <h2>Три шага</h2>
     <div class="steps">
-      <div class="step"><i>1</i><p><b>Оплачиваете разбор</b>Форма открывается по кнопке: имя, почта, телефон, оплата. Две минуты.</p></div>
-      <div class="step"><i>2</i><p><b>Согласуем время</b>Команда пишет в течение дня. Разбор — в ближайшие дни, в Zoom, 40–60 минут. Подготовьте одной фразой: какой проект, где он сейчас, что должно быть через два месяца.</p></div>
-      <div class="step"><i>3</i><p><b>Получаете карту и маршрут</b>На встрече Георгий строит карту вашего проекта.</p></div>
+      <div class="step"><i><svg class="ic"><use href="#i-card"/></svg></i><p><small>Шаг 1</small><b>Оплачиваете разбор</b>Форма открывается по кнопке: имя, почта, телефон, оплата. Две минуты.</p></div>
+      <div class="step"><i><svg class="ic"><use href="#i-cal"/></svg></i><p><small>Шаг 2</small><b>Согласуем время</b>Команда пишет в течение дня. Разбор — в ближайшие дни, в Zoom, 40–60 минут. Подготовьте одной фразой: какой проект, где он сейчас, что должно быть через два месяца.</p></div>
+      <div class="step"><i><svg class="ic"><use href="#i-map"/></svg></i><p><small>Шаг 3</small><b>Получаете карту и маршрут</b>На встрече Георгий строит карту вашего проекта.</p></div>
     </div>
   </div>
 </section>
@@ -211,12 +261,12 @@
     <div class="eyebrow">Для кого</div>
     <h2>Разбор для тех, кто хочет свою систему, а не разовый совет</h2>
     <div class="two">
-      <div class="box yes"><h3>Подойдёт, если</h3><ul>
+      <div class="box yes"><h3><svg class="ic"><use href="#i-check"/></svg>Подойдёт, если</h3><ul>
         <li>у вас есть проект, который ждёт: рукопись, своё дело, задача по жизни;</li>
         <li>вы пробовали нейросети сами и получили «врёт», «забывает», «выходит не то»;</li>
         <li>хотите, чтобы помощник знал ваш проект и работал каждый день — и готовы два месяца строить это с проводником.</li>
       </ul></div>
-      <div class="box no"><h3>Не подойдёт, если</h3><ul>
+      <div class="box no"><h3><svg class="ic"><use href="#i-x"/></svg>Не подойдёт, если</h3><ul>
         <li>нужно, чтобы нейросеть написала книгу за вас — текст остаётся вашим;</li>
         <li>ищете разовую консультацию по инструментам и настройкам;</li>
         <li>ждёте результата без своего участия.</li>
@@ -237,11 +287,11 @@
           <li><b>4 900 ₽ засчитываются в стоимость практикума</b> — для тех, кто идёт дальше, разбор получается бесплатным</li>
           <li>Можно оплатить картой, в том числе из-за рубежа</li>
         </ul>
-        <div class="guar"><b>Если разбор не дал ясности — вернём 4 900 ₽ в тот же день.</b> Без вопросов и объяснений.</div>
+        <div class="guar"><svg class="ic"><use href="#i-shield"/></svg><div><b>Если разбор не дал ясности — вернём 4 900 ₽ в тот же день.</b> Без вопросов и объяснений.</div></div>
       </div>
       <div>
-        <div class="anchor">Для сравнения: корректор на книгу стоит <b>150 000 ₽</b>, перевод — <b>1 650 000 ₽</b>, сайт книги у подрядчика — <b>70 000 ₽</b>. На разборе вы узнаете, что из этого можно больше не оплачивать.</div>
-        <div class="anchor">Георгий проводит разборы лично, поэтому мест немного. Запись — в порядке оплаты.</div>
+        <div class="anchor"><svg class="ic"><use href="#i-scale"/></svg><div>Для сравнения: корректор на книгу стоит <b>150 000 ₽</b>, перевод — <b>1 650 000 ₽</b>, сайт книги у подрядчика — <b>70 000 ₽</b>. На разборе вы узнаете, что из этого можно больше не оплачивать.</div></div>
+        <div class="anchor"><svg class="ic"><use href="#i-user"/></svg><div>Георгий проводит разборы лично, поэтому мест немного. Запись — в порядке оплаты.</div></div>
         <div class="cta"><a class="btn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>Оплата в окне на этой странице</small></div>
       </div>
     </div>
@@ -257,10 +307,10 @@
         <blockquote>«Я не написал с нейросетью ни одной фразы в своих книгах. Зато перестал платить за всё, что вокруг текста. Со стороны это выглядит просто. За этой простотой — настроенная система и навык, и я покажу, из чего они складываются у вас».<footer>Георгий Чистов, автор дилогии «Парадокс Джона»</footer></blockquote>
       </div>
       <div class="facts">
-        <div><b>2 книги</b><span>дилогия «Парадокс Джона»; вторую выпустил за месяц вместе с переводом и трейлером</span></div>
-        <div><b>Black List</b><span>сценарий по книгам попал на голливудскую площадку, оценка выросла с 4 до 6</span></div>
-        <div><b>14</b><span>ИИ-помощников работают у его клиентов — за это ему платят уже год</span></div>
-        <div><b>1 650 000 ₽</b><span>столько просили за перевод обеих книг; перевод сделан за неделю</span></div>
+        <div><svg class="ic"><use href="#i-book"/></svg><b>2 книги</b><span>дилогия «Парадокс Джона»; вторую выпустил за месяц вместе с переводом и трейлером</span></div>
+        <div><svg class="ic"><use href="#i-film"/></svg><b>Black List</b><span>сценарий по книгам попал на голливудскую площадку, оценка выросла с 4 до 6</span></div>
+        <div><svg class="ic"><use href="#i-bot"/></svg><b>14</b><span>ИИ-помощников работают у его клиентов — за это ему платят уже год</span></div>
+        <div><svg class="ic"><use href="#i-globe"/></svg><b>1 650 000 ₽</b><span>столько просили за перевод обеих книг; перевод сделан за неделю</span></div>
       </div>
     </div>
   </div>
