@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Разбор проекта с Георгием Чистовым — 4 900 ₽</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Личный разбор с Георгием Чистовым: за 40–60 минут поймём, как ваш проект — книгу, дело или задачу по жизни — сделать с нейросетями быстрее и дешевле. 4 900 ₽, засчитываются в стоимость практикума.">
+<!--
+  СТРАНИЦА РАЗБОРА для ссылки с эфира 07.10 (без анкеты предзаписи). Сделана 06.10.2026 на основе страницы
+  getpublish.getcourse.ru/anketa_neiroseti_spasibo. Оплата — тот же виджет GetCourse 1660602 (предложение 8752365, разбор 4 900 ₽):
+  форма заявки и оплата открываются во всплывающем окне по любой кнопке. Стиль — как у страниц эфиров: mobile first, красные кнопки.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0E0B09;--panel:#1A1410;--panel2:#221A14;--line:#3A2E24;--ink:#F5EFE6;--muted:#CDBFA9;--accent:#F2B15B;--accent-ink:#1A1208;--red:#E02424}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "IBM Plex Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+  .eyebrow{font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-size:12px}
+  h1,h2,h3{font-family:Literata,Georgia,serif;font-weight:700;margin:0}
+  h1{font-size:34px;line-height:1.1;letter-spacing:-.01em;margin:12px 0 14px}
+  h2{font-size:26px;line-height:1.15;margin:0 0 10px}
+  h3{font-size:19px;line-height:1.25;margin:0 0 6px}
+  p{margin:0 0 12px}
+  .sub{color:var(--muted);font-size:17px;max-width:720px}
+  .btn{display:inline-flex;width:100%;align-items:center;justify-content:center;gap:10px;background:var(--red);color:#fff;font-weight:700;font-size:17px;padding:15px 24px;border-radius:12px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;box-shadow:0 10px 28px rgba(224,36,36,.38);transition:transform .12s ease,filter .12s ease}
+  .btn:hover{filter:brightness(1.1)} .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+  .cta{display:grid;gap:8px;margin-top:18px}
+  .cta small{color:var(--muted);font-size:13px;text-align:center}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  /* первый экран */
+  .hero{padding:28px 0 36px;border-top:0;position:relative;overflow:hidden}
+  .hero .grid{display:grid;gap:22px}
+  .price-tag{display:inline-flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;color:var(--muted);margin-bottom:14px}
+  .price-tag b{color:var(--ink);font-size:16px}
+  .mphoto{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#1a1410}
+  .mphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+  .mphoto .cap{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(180deg,rgba(14,11,9,0),rgba(14,11,9,.92));font-size:13px;color:var(--muted)}
+  .mphoto .cap b{display:block;color:var(--ink);font-family:Literata,Georgia,serif;font-size:17px}
+  .def{margin-top:18px;padding:16px 18px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 14px 14px 0;font-family:Literata,Georgia,serif;font-size:17px;line-height:1.45}
+  /* карточки */
+  .cards{display:grid;gap:12px;margin-top:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card .n{font-family:Literata,Georgia,serif;font-size:28px;color:var(--accent);line-height:1;margin-bottom:10px}
+  .card p{color:var(--muted);margin:0;font-size:15px}
+  .steps{counter-reset:s;display:grid;gap:12px;margin-top:18px}
+  .step{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .step i{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700}
+  .step p{margin:0;color:var(--muted);font-size:15px}
+  .step b{display:block;color:var(--ink);font-size:16px;margin-bottom:3px}
+  /* для кого */
+  .two{display:grid;gap:14px;margin-top:18px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .box.yes{border-color:#3f9d6b}.box.no{border-color:#7a4a1a}
+  .box ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:15px}
+  .box li{margin-bottom:6px}
+  /* цена */
+  .offer{background:var(--panel);border:1px solid var(--accent);border-radius:20px;padding:22px 20px;margin-top:18px}
+  .price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .price b{font-family:Literata,Georgia,serif;font-size:44px;line-height:1}
+  .price span{color:var(--muted);font-size:14px}
+  .offer ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
+  .offer li{position:relative;padding-left:26px;font-size:15px}
+  .offer li::before{content:"✓";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font-size:11px;display:flex;align-items:center;justify-content:center}
+  .guar{margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--panel2);font-size:14px;color:var(--muted)}
+  .guar b{color:var(--ink)}
+  .anchor{margin-top:14px;font-size:14px;color:var(--muted)}
+  .anchor b{color:var(--ink)}
+  /* Георгий */
+  .host .box{display:grid;gap:16px}
+  .host blockquote{margin:0;font-family:Literata,Georgia,serif;font-size:19px;line-height:1.4}
+  .host blockquote footer{margin-top:8px;font-family:"IBM Plex Sans",Arial,sans-serif;font-size:14px;color:var(--muted)}
+  .facts{display:grid;gap:10px;margin-top:14px}
+  .facts div{display:flex;gap:12px;align-items:baseline}
+  .facts b{font-family:Literata,Georgia,serif;font-size:24px;color:var(--accent);white-space:nowrap}
+  .facts span{color:var(--muted);font-size:14.5px}
+  /* отзывы */
+  .quotes{display:grid;gap:12px;margin-top:18px}
+  .quote{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-family:Literata,Georgia,serif;font-size:16px;line-height:1.4}
+  .quote figcaption{margin-top:8px;font-family:"IBM Plex Sans",Arial,sans-serif;font-size:13px;color:var(--accent)}
+  /* вопросы */
+  details{border-top:1px solid var(--line);padding:12px 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin:10px 0 0;color:var(--muted);font-size:15px}
+  .chat{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .chat a{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border:1.5px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px}
+  .foot{padding:26px 0 90px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+  .foot a{color:var(--muted)}
+  /* закреплённая кнопка на телефоне */
+  .stick{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(14,11,9,.94);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .2s ease}
+  .stick.show{transform:none}
+  /* окно с формой */
+  .modal{position:fixed;inset:0;z-index:100;display:none}
+  .modal.open{display:block}
+  .modal .back{position:absolute;inset:0;background:rgba(0,0,0,.7)}
+  .dlg{position:absolute;left:0;right:0;bottom:0;max-height:92vh;overflow:auto;background:var(--panel);border-radius:22px 22px 0 0;padding:22px 18px 28px;border-top:1px solid var(--line)}
+  .dlg h2{font-size:24px;margin:6px 0 8px;padding-right:48px}
+  .dlg p{color:var(--muted);font-size:15px}
+  .close{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:22px;cursor:pointer}
+  .gc-embed{margin-top:12px;min-height:300px;position:relative}
+  .gc-embed:not(:has(iframe))::before{content:"Форма загружается…";position:absolute;left:0;right:0;top:36px;text-align:center;color:var(--muted);font-size:15px}
+  .gc-embed iframe{display:block!important;min-height:520px}
+  @media (min-width:861px){
+    body{font-size:17px}
+    .wrap{padding:0 28px}
+    h1{font-size:50px;margin:14px 0 18px}
+    h2{font-size:34px;margin-bottom:14px}
+    .btn{width:auto;padding:16px 30px}
+    .cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:26px}
+    .cta small{text-align:left}
+    .hero{padding:48px 0 56px}
+    .hero .grid{grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+    .mphoto{aspect-ratio:4/5;order:2}
+    section{padding:56px 0}
+    .cards{grid-template-columns:repeat(2,1fr);gap:16px}
+    .steps{grid-template-columns:repeat(3,1fr);gap:16px}
+    .two{grid-template-columns:1fr 1fr;gap:16px}
+    .offer{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:30px}
+    .quotes{grid-template-columns:repeat(3,1fr)}
+    .host .box{grid-template-columns:1fr 1fr;gap:28px;padding:28px}
+    .stick{display:none}
+    .dlg{left:50%;top:50%;bottom:auto;transform:translate(-50%,-50%);width:min(560px,92vw);border-radius:22px;border:1px solid var(--line)}
+    .gc-embed iframe{min-height:480px}
+  }
+</style>
+</head>
+<body>
+
+<script>
+/* Кнопки открывают окно с формой оплаты сразу, в один клик — даже пока скрипт виджета GetCourse ещё грузится */
+(function(){
+  var lastFocus=null,timer=null;
+  function el(){return document.getElementById('modal');}
+  function show(m){m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';if(history.replaceState){history.replaceState(null,'',location.pathname+location.search+'#pay');}var c=m.querySelector('.close');if(c){c.focus();}}
+  function openModal(){lastFocus=document.activeElement;var m=el();if(m){show(m);return;}if(timer){return;}timer=setInterval(function(){var m2=el();if(m2){clearInterval(timer);timer=null;show(m2);}},40);}
+  function closeModal(){var m=el();if(!m){return;}m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';if(history.replaceState){history.replaceState(null,'',location.pathname+location.search);}if(lastFocus&&lastFocus.focus){lastFocus.focus();}}
+  document.addEventListener('click',function(e){var t=e.target;if(!t||!t.closest){return;}if(t.closest('[data-open]')){e.preventDefault();openModal();return;}if(t.closest('[data-close]')){closeModal();}});
+  document.addEventListener('keydown',function(e){var m=el();if(e.key==='Escape'&&m&&m.classList.contains('open')){closeModal();}});
+  if(location.hash==='#pay'||/[?&]pay=1(&|$)/.test(location.search)){openModal();}
+})();
+</script>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="eyebrow">Личный разбор с Георгием Чистовым</div>
+        <h1>Ваш проект и нейросети: что отдать помощнику первым и сколько это вернёт</h1>
+        <div class="price-tag"><b>4 900 ₽</b> · 40–60 минут · засчитываются в стоимость практикума</div>
+        <p class="sub">Вы приносите один проект — книгу, своё дело или задачу по жизни. Уходите с картой: что остаётся вам, что забирает ИИ-система и что для этого нужно.</p>
+        <div class="def">Разбор — не консультация и не урок. Это встреча, на которой мы понимаем, как ваш проект сделать с нейросетями быстрее и дешевле, чем обычным способом, и какой должна быть ваша ИИ-инфраструктура — в писательстве, в жизни и в работе.</div>
+        <div class="cta"><a class="btn" id="heroBtn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>После оплаты команда свяжется в течение дня и согласует время</small></div>
+      </div>
+      <div class="mphoto"><img src="../img/author.jpg" alt="Георгий Чистов, писатель"><div class="cap"><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона». 14 его ИИ-помощников работают у клиентов</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <div class="eyebrow">Что вы уносите с разбора</div>
+    <h2>Четыре вещи, которые остаются у вас в любом случае</h2>
+    <div class="cards">
+      <article class="card"><div class="n">1</div><h3>Карту вашего проекта</h3><p>Три столбца: что вернёт время, что вернёт деньги, что откроет новое. Георгий смотрит на ваш проект, а не на учебный пример.</p></article>
+      <article class="card"><div class="n">2</div><h3>Три первых дела, которые отдаём помощнику</h3><p>С оценкой, сколько часов и денег они вернут. Корректура, перевод, описание, сайт, документы, ответы клиентам — у каждого свои.</p></article>
+      <article class="card"><div class="n">3</div><h3>Маршрут на восемь недель</h3><p>Что должно быть готово к неделе 2, 4, 6 и 8 — под ваш проект, а не по общему плану. Этот маршрут и становится вашей программой, если идёте в практикум.</p></article>
+      <article class="card"><div class="n">4</div><h3>Честный ответ и письмо с итогами</h3><p>Нужен ли вам практикум и в каком формате. Если не нужен — Георгий так и скажет. Итоги разбора приходят письмом в тот же день.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">Как проходит</div>
+    <h2>Три шага</h2>
+    <div class="steps">
+      <div class="step"><i>1</i><p><b>Оплачиваете разбор</b>Форма открывается по кнопке: имя, почта, телефон, оплата. Две минуты.</p></div>
+      <div class="step"><i>2</i><p><b>Согласуем время</b>Команда пишет в течение дня. Разбор — в ближайшие дни, в Zoom, 40–60 минут. Подготовьте одной фразой: какой проект, где он сейчас, что должно быть через два месяца.</p></div>
+      <div class="step"><i>3</i><p><b>Получаете карту и маршрут</b>На встрече Георгий строит карту вашего проекта. Вечером того же дня — письмо с итогами.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="eyebrow">Для кого</div>
+    <h2>Разбор для тех, кто хочет свою систему, а не разовый совет</h2>
+    <div class="two">
+      <div class="box yes"><h3>Подойдёт, если</h3><ul>
+        <li>у вас есть проект, который ждёт: рукопись, своё дело, задача по жизни;</li>
+        <li>вы пробовали нейросети сами и получили «врёт», «забывает», «выходит не то»;</li>
+        <li>хотите, чтобы помощник знал ваш проект и работал каждый день — и готовы два месяца строить это с проводником.</li>
+      </ul></div>
+      <div class="box no"><h3>Не подойдёт, если</h3><ul>
+        <li>нужно, чтобы нейросеть написала книгу за вас — текст остаётся вашим;</li>
+        <li>ищете разовую консультацию по инструментам и настройкам;</li>
+        <li>ждёте результата без своего участия.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <div class="eyebrow">Стоимость</div>
+    <h2>4 900 ₽, и они не пропадают</h2>
+    <div class="offer">
+      <div>
+        <div class="price"><b>4 900 ₽</b><span>за разбор 40–60 минут</span></div>
+        <ul>
+          <li>Карта проекта, три первых дела, маршрут на восемь недель</li>
+          <li>Письмо с итогами в тот же день — план остаётся у вас, даже если в практикум не пойдёте</li>
+          <li><b>4 900 ₽ засчитываются в стоимость практикума</b> — для тех, кто идёт дальше, разбор получается бесплатным</li>
+          <li>Можно оплатить картой, в том числе из-за рубежа</li>
+        </ul>
+        <div class="guar"><b>Если разбор не дал ясности — вернём 4 900 ₽ в тот же день.</b> Без вопросов и объяснений.</div>
+      </div>
+      <div>
+        <div class="anchor">Для сравнения: корректор на книгу стоит <b>150 000 ₽</b>, перевод — <b>1 650 000 ₽</b>, сайт книги у подрядчика — <b>70 000 ₽</b>. На разборе вы узнаете, что из этого можно больше не оплачивать.</div>
+        <div class="anchor">Георгий проводит разборы лично, поэтому мест немного. Запись — в порядке оплаты.</div>
+        <div class="cta"><a class="btn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>Оплата в окне на этой странице</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="host" id="host">
+  <div class="wrap">
+    <div class="eyebrow">Кто проводит</div>
+    <h2>Георгий Чистов — писатель, не айтишник</h2>
+    <div class="box">
+      <div>
+        <blockquote>«Я не написал с нейросетью ни одной фразы в своих книгах. Зато перестал платить за всё, что вокруг текста. Со стороны это выглядит просто. За этой простотой — настроенная система и навык, и я покажу, из чего они складываются у вас».<footer>Георгий Чистов, автор дилогии «Парадокс Джона»</footer></blockquote>
+      </div>
+      <div class="facts">
+        <div><b>2 книги</b><span>дилогия «Парадокс Джона»; вторую выпустил за месяц вместе с переводом и трейлером</span></div>
+        <div><b>Black List</b><span>сценарий по книгам попал на голливудскую площадку, оценка выросла с 4 до 6</span></div>
+        <div><b>14</b><span>ИИ-помощников работают у его клиентов — за это ему платят уже год</span></div>
+        <div><b>1 650 000 ₽</b><span>столько просили за перевод обеих книг; перевод сделан за неделю</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voices">
+  <div class="wrap">
+    <div class="eyebrow">После эфиров с Георгием</div>
+    <h2>Что говорят те, кто уже видел его в работе</h2>
+    <div class="quotes">
+      <figure class="quote">«Это скачок на порядок выше всех вещей, которые сейчас есть!»<figcaption>Сергей П., эфир 24 сентября</figcaption></figure>
+      <figure class="quote">«Вообще гениально! Хоть один человек правду сказал.»<figcaption>Елена С., эфир 24 сентября</figcaption></figure>
+      <figure class="quote">«Интересно именно мнение практика, а не постоянных рекламных кампаний.»<figcaption>Evgeniys, эфир 24 сентября</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Вопросы</div>
+    <h2>Коротко о главном</h2>
+    <details><summary>Это консультация?</summary><p>Нет. На консультации отвечают на вопросы. На разборе Георгий смотрит на ваш проект и строит карту: что отдать помощнику, сколько это вернёт, что для этого нужно и подходит ли вам практикум. Вы уходите с документом, а не с впечатлением.</p></details>
+    <details><summary>Что нужно подготовить?</summary><p>Одной фразой: какой у вас проект, где он сейчас и что должно быть через два месяца. Рукопись, описание дела или список задач по жизни — под рукой, показывать на экране не обязательно.</p></details>
+    <details><summary>Что, если я не пойду в практикум?</summary><p>Карта и маршрут остаются у вас. Если разбор не дал ясности, 4 900 ₽ вернём в тот же день.</p></details>
+    <details><summary>Можно сразу в практикум, без разбора?</summary><p>Можно. Но Георгий берёт в группу из пяти человек тех, чей проект видел: так программа строится под каждого. Разбор — самый короткий путь внутрь, и его стоимость засчитывается.</p></details>
+    <details><summary>Когда пройдёт разбор?</summary><p>В ближайшие дни после оплаты, время согласуем письмом или сообщением. Разборы идут вечером по Москве; если вы в Америке — с Георгием в одном часовом поясе.</p></details>
+    <details><summary>Я не технарь. Это точно для меня?</summary><p>Георгий тоже не айтишник. На разборе нет настроек и инструментов — только ваш проект и карта. Технику в практикуме ставит команда.</p></details>
+    <p style="margin-top:18px;color:var(--muted)">Остались вопросы — напишите в чат «Нейросреда», команда отвечает каждый день.</p>
+    <div class="chat"><a href="https://t.me/+5H-cH5b0RDI3Njgy" target="_blank" rel="noopener">Чат в Telegram</a><a href="https://max.ru/join/DG2Z1bpKVAjLFg3YimuGAx6D2LBT1zljMjVia3ZqwRE" target="_blank" rel="noopener">Чат в MAX</a></div>
+  </div>
+</section>
+
+<section id="final" style="padding-bottom:56px">
+  <div class="wrap">
+    <h2>Один проект. Одна встреча. Карта на два месяца вперёд.</h2>
+    <p class="sub">4 900 ₽ — засчитываются в практикум. Если ясности не появилось, вернём в тот же день.</p>
+    <div class="cta"><a class="btn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>Команда свяжется в течение дня и согласует время</small></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">ИП Гончаренко Сергей Владимирович · ИНН 771000780300 · ОГРНИП 318774600181224 · <a href="mailto:mail@getpublish.org">mail@getpublish.org</a><br>
+  <a href="https://drive.google.com/file/d/1b4vL_phWhTc3XZ_OL8B1pMhfKysTA8bv/view" target="_blank" rel="noopener">Политика конфиденциальности</a> · <a href="https://drive.google.com/file/d/1kAsc1gXUfju48q8wASsMgOUEN0CLmt-a/view" target="_blank" rel="noopener">Согласие на обработку персональных данных</a></div>
+</footer>
+
+<div class="stick" id="stick"><a class="btn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a></div>
+<script>
+(function(){var stick=document.getElementById('stick'),heroBtn=document.getElementById('heroBtn');if('IntersectionObserver' in window&&stick&&heroBtn){new IntersectionObserver(function(en){stick.classList.toggle('show',!en[0].isIntersecting);},{threshold:0}).observe(heroBtn);}})();
+</script>
+
+<!-- ОКНО С ФОРМОЙ ОПЛАТЫ: виджет GetCourse 1660602 (предложение «разбор» 8752365, оплата внутри формы) -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="back" data-close></div>
+  <div class="dlg">
+    <button class="close" type="button" aria-label="Закрыть" data-close>×</button>
+    <div class="eyebrow">Разбор с Георгием Чистовым · 4 900 ₽</div>
+    <h2 id="modalTitle">Запись на разбор</h2>
+    <p>Имя, почта и телефон — чтобы согласовать время. Оплата сразу здесь.</p>
+    <div class="gc-embed">
+      <script id="78fbf13ae7c815dca90f902595d6dab1ce3bd6dc" src="https://getpublish.getcourse.ru/pl/lite/widget/script?id=1660602"></script>
+    </div>
+  </div>
+</div>
+</body>
+</html>
