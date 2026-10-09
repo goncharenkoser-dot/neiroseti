@@ -359,6 +359,11 @@
   .nosale.bl{font-size:17px;gap:8px;color:var(--accent);font-family:Literata,Georgia,serif;font-weight:700;line-height:1.3}
   .nosale.bl li::before{background:var(--accent)}
   .eyebrow.lg{font-size:17px;letter-spacing:.09em}
+  .slogan.boxed{margin:14px 0 0;max-width:none;padding:18px 20px;border:1px solid var(--accent);border-radius:16px;background:linear-gradient(135deg,#2a1c10,#1A1410 60%);text-align:center;font-size:clamp(24px,6.4vw,30px);line-height:1.25;color:var(--accent);font-weight:600}
+  .slogan.boxed b{color:var(--ink)}
+  .eyebrow.lined:after{max-width:none}
+  .btn{text-align:center}
+  @media (min-width:861px){.slogan.boxed{margin-top:18px;padding:24px 28px;font-size:48px}}
   @media (min-width:861px){.eyebrow.lg{font-size:19px}.about .intro .bl{font-size:17px}#proof>.wrap>.bl{font-size:18px}.nosale.bl{font-size:19px}}
   .about .aphoto{border-radius:18px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);aspect-ratio:1/1;order:2}
   @media (min-width:861px){.about .aphoto{order:0}}
@@ -443,7 +448,6 @@
         <img src="../img/author.jpg" alt="Георгий Чистов, писатель">
         <div class="covers"><img src="../img/cover1.jpg" alt="Обложка книги «Парадокс Джона. Кратчайший путь»"><img src="../img/cover2.jpg" alt="Обложка книги «Парадокс Джона. Творец»"></div>
       </div>
-      <ul class="nosale bl"><li>Покажем в прямом эфире, как нейро‑агенты работают за вас и на вас</li><li>Стыдных вопросов нет</li></ul>
     </div>
     <div>
       <div class="mini"><img src="../img/author.jpg" alt="Георгий Чистов"><div><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона». Ведёт все три вечера</span></div></div>
@@ -452,7 +456,7 @@
       <h1>Нейросети глазами писателя</h1>
       <p class="feel"><b>Книга. Жизнь. Доход.</b><br>Узнайте, как нейро‑помощники могут забрать всю рутину вокруг книги, в личных и рабочих делах, а также какой доход они могут принести</p>
       <div class="cta"><a class="btn" id="heroBtn" href="#reg" data-open>Зарегистрироваться на практикум</a><small class="big">Бесплатно · одна регистрация – на все три вечера</small></div>
-      <ul class="nosale bl" style="margin-top:14px" data-mobile><li>Покажем в прямом эфире, как нейро‑агенты работают за вас и на вас</li><li>Стыдных вопросов нет</li></ul>
+      <ul class="nosale bl" style="margin-top:14px"><li>Покажем в прямом эфире, как нейро‑агенты работают за вас и на вас</li><li>Стыдных вопросов нет</li></ul>
       <div class="mphoto" data-mobile><img src="../img/author.jpg" alt="Георгий Чистов, писатель"><div class="cap"><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона». Ведёт все три вечера</span></div></div>
     </div>
   </div>
@@ -521,7 +525,6 @@
 <section class="what" id="program">
   <div class="wrap">
     <div class="eyebrow lg">Программа</div>
-    <h2>Три вечера – три темы. Каждый день – своё</h2>
     <div class="days">
       <article class="day">
         <div class="dt">Вечер 1 · вт, 13 октября · 19:00 мск</div>
@@ -578,7 +581,7 @@
       <div class="whoi"><div class="av"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg></div><b>Для предпринимателей</b><span>Экономия на подрядчиках, заявки, аналитика, маркетинг, новые источники дохода</span></div>
       <div class="whoi"><div class="av"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><b>Для любого человека</b><span>В любом возрасте – кто хочет быть актуальным и в работе, и в жизни</span></div>
     </div>
-    <p class="slogan">Нейросети не заменят людей. <b>Но они могут заменить тех, кто пока не владеет ими.</b></p>
+    <p class="slogan boxed">Нейросети не заменят людей. <b>Но они могут заменить тех, кто пока не владеет ими.</b></p>
   </div>
 </section>
 
