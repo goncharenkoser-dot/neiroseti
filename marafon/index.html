@@ -343,6 +343,17 @@
     .host .photos{margin-bottom:0}
   }
   /* ТЕЛЕФОН: подгонка после правок 09.10 — кнопка в первом экране, компактные даты и кнопки, фото во всю ширину */
+  .cta small,.reg .go small{font-weight:700;color:var(--ink)}
+  .hero .cta small.big{font-size:19px;line-height:1.3}
+  .about .intro{display:grid;gap:18px;margin-top:4px}
+  .about .aphoto{border-radius:18px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);aspect-ratio:1/1}
+  .about .aphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+  .whoi span{font-size:21px;line-height:1.35}
+  @media (min-width:861px){
+    .hero .cta small.big{font-size:26px}
+    .about .intro{grid-template-columns:1fr 320px;gap:40px;align-items:center}
+    .about .aphoto{aspect-ratio:4/5}
+  }
   @media (max-width:860px){
     .hero .wrap{padding-top:16px}
     .hero .badge{margin:14px 0 8px}
@@ -416,17 +427,16 @@
         <img src="../img/author.jpg" alt="Георгий Чистов, писатель">
         <div class="covers"><img src="../img/cover1.jpg" alt="Обложка книги «Парадокс Джона. Кратчайший путь»"><img src="../img/cover2.jpg" alt="Обложка книги «Парадокс Джона. Творец»"></div>
       </div>
-      <p class="nosale">Три вечера. Живые задачи. Ответы на ваши вопросы. Покажем, как агенты работают за вас и ваших подрядчиков, — в прямом эфире</p>
+      <p class="nosale">Покажем в прямом эфире, как нейро‑агенты работают за вас и на вас. Стыдных вопросов нет</p>
     </div>
     <div>
       <div class="mini"><img src="../img/author.jpg" alt="Георгий Чистов"><div><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона». Ведёт все три вечера</span></div></div>
       <span class="badge">Не вебинар — практикум</span>
       <div class="eyebrow dates">Онлайн · 13, 14, 15 октября · 19:00 мск · бесплатно</div>
       <h1>Нейросети глазами писателя</h1>
-      <p class="feel"><b>Книга. Жизнь. Доход.</b><br>Три вечера с Георгием Чистовым: агенты‑помощники, которые забирают рутину вокруг книги, в личных делах и в работе, — и сколько времени и денег они возвращают</p>
-      <div class="cta"><a class="btn" id="heroBtn" href="#reg" data-open>Зарегистрироваться на практикум</a><small>Бесплатно · одна регистрация — на все три вечера</small></div>
-      <p class="nosale" style="margin-top:12px" data-mobile>Три вечера. Живые задачи. Ответы на ваши вопросы. Покажем, как агенты работают за вас и ваших подрядчиков, — в прямом эфире</p>
-      <div class="facts"><span>Вт — Книга · Ср — Жизнь · Чт — Доход</span></div>
+      <p class="feel"><b>Книга. Жизнь. Доход.</b><br>Узнайте, как нейро‑помощники могут забрать всю рутину вокруг книги, в личных делах и в работе, а также какой доход они могут принести</p>
+      <div class="cta"><a class="btn" id="heroBtn" href="#reg" data-open>Зарегистрироваться на практикум</a><small class="big">Бесплатно · одна регистрация — на все три вечера</small></div>
+      <p class="nosale" style="margin-top:12px" data-mobile>Покажем в прямом эфире, как нейро‑агенты работают за вас и на вас. Стыдных вопросов нет</p>
       <div class="mphoto" data-mobile><img src="../img/author.jpg" alt="Георгий Чистов, писатель"><div class="cap"><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона». Ведёт все три вечера</span></div></div>
     </div>
   </div>
@@ -437,13 +447,13 @@
   <div class="wrap">
     <div class="eyebrow">Формат</div>
     <h2>Это не вебинар. Это практикум</h2>
-    <p class="sub">Каждый день — отдельная тема: книга, жизнь, работа. Не «в теории так можно», а готовые результаты на вашем экране и по вашим задачам в трёх сферах: что сделал помощник, сколько времени это заняло и сколько денег сберегло.</p>
+    <p class="sub">Каждый день — отдельная тема: книга, жизнь, работа. Не «в теории так можно», а готовые результаты на вашем экране и по вашим задачам в трёх сферах: что сделал нейро‑помощник, сколько времени это заняло, сколько денег сберегло, какой доход принесло.</p>
     </div>
     <div class="cards">
       <article class="card">
         <div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h10M7 12h6"/></svg></div>
         <h3>Живые задачи, а не слайды</h3>
-        <p>Структура книги, письмо издателю, свой сайт, сценарий, приложение для вашего бизнеса, письмо в банк, судебная претензия. <b>Георгий берёт настоящие задачи</b> и показывает, что с ними делает агент‑помощник.</p>
+        <p>Структура книги, письмо издателю, свой сайт, сценарий, приложение для вашего бизнеса, письмо в банк, судебная претензия. <b>Георгий берёт настоящие задачи</b> и показывает, что с ними делает нейро‑помощник.</p>
       </article>
       <article class="card">
         <div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1v3l-3-3"/></svg></div>
@@ -453,7 +463,7 @@
       <article class="card">
         <div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></div>
         <h3>Каждый вечер — результат</h3>
-        <p>Уйдёте с пониманием, <b>какой помощник нужен именно вам</b> и что изменится, когда он появится: сколько часов и денег он вернёт.</p>
+        <p>Уйдёте с пониманием, <b>какой нейро‑помощник нужен именно вам</b> и что изменится, когда он появится: сколько часов и денег он вернёт.</p>
       </article>
     </div>
     <div class="cta midcta"><a class="btn" href="#reg" data-open>Зарегистрироваться на практикум</a><small>Бесплатно · ссылка для участия придёт за час до эфира</small></div>
@@ -465,7 +475,10 @@
   <div class="wrap">
     <div class="eyebrow">Кто такой Георгий и почему его стоит слушать</div>
     <h2>Не айтишник. Писатель, который живёт с нейросетями во всех сферах</h2>
-    <p class="sub">Инженер по образованию, потом кейтеринг, потом онлайн‑школа. Автор дилогии «Парадокс Джона». Сейчас живёт в Тампе, издаёт книги на английском и показывает продюсерам сценарий по ним. <b>Нейросети у него открыты каждый день</b> — на книгу, документы, поездки, здоровье и бизнес клиентов.</p>
+    <div class="intro">
+      <p class="sub">Инженер по образованию, потом кейтеринг, потом онлайн‑школа. Автор дилогии «Парадокс Джона». Сейчас живёт в Тампе, издаёт книги на английском и показывает продюсерам сценарий по ним. <b>Нейросети у него открыты каждый день</b> — на книгу, документы, поездки, здоровье и бизнес клиентов.</p>
+      <div class="aphoto"><img src="../praktikum/img/03_author.jpg" alt="Георгий Чистов" loading="lazy"></div>
+    </div>
     <div class="cards">
       <article class="card">
         <div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><em>В книгах</em></div>
@@ -479,8 +492,8 @@
       </article>
       <article class="card">
         <div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="14" height="11" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6M3 12v4M21 12v4"/></svg><em>В работе и бизнесе</em></div>
-        <h3>Делает ИИ‑помощников на заказ и внедряет их в бизнес</h3>
-        <p><b>14 помощников работают у клиентов, за это ему платят уже год:</b> AI‑куратор онлайн‑школы, координатор федерального проекта для аудитории 55+, переводчик, исследователь, обработка заявок. Приложение для онлайн‑школы на 774 участницы собрал за 31 день, не открыв учебник по программированию.</p>
+        <h3>Делает нейро‑помощников на заказ и внедряет их в бизнес</h3>
+        <p><b>14 нейро‑помощников работают у клиентов, за это ему платят уже год:</b> AI‑куратор онлайн‑школы, координатор федерального проекта для аудитории 55+, переводчик, исследователь, обработка заявок. Приложение для онлайн‑школы на 774 участницы собрал за 31 день, не открыв учебник по программированию.</p>
       </article>
     </div>
     <p class="why">Поэтому на практикуме не будет «в теории так можно». Всё, что Георгий покажет, он делает сам каждый день — для своих книг, для своей семьи и за деньги для чужого бизнеса.</p>
@@ -511,42 +524,29 @@
       <article class="day">
         <div class="dt">Вечер 2 · ср, 14 октября · 19:00 мск</div>
         <div class="th"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 26l13-10 13 10M8 23v19h18V23"/><rect x="13" y="30" width="8" height="12"/><circle cx="36" cy="12" r="5"/><path d="M36 3v2M36 19v2M27 12h2M43 12h2"/></svg><b>Жизнь</b></div>
-        <h3>Суд, банк, виза, врач: помощник для дел, на которые уходят вечера</h3>
-        <p class="sub">Личный помощник, который разбирается в бумагах и ничего не забывает.</p>
+        <h3>Суд, банк, виза, врач: нейро‑помощник для дел, на которые уходят вечера</h3>
+        <p class="sub">Личный нейро‑помощник, который разбирается в бумагах и ничего не забывает.</p>
         <ul>
           <li>Суд с авиакомпанией — и деньги вернули</li>
           <li>Спор с банком: письмо и аргументы за один вечер</li>
           <li>Стратегия поступления сына за полдня — вместо 600 000 ₽ агентству</li>
           <li>Виза и подготовка к приёму у врача (решает, конечно, врач)</li>
-          <li>Помощник‑напоминалка для вас и ваших родителей</li>
+          <li>Напоминалка: нейро‑помощник для вас и ваших родителей</li>
         </ul>
       </article>
       <article class="day">
         <div class="dt">Вечер 3 · чт, 15 октября · 19:00 мск</div>
         <div class="th"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="18" cy="36" rx="12" ry="5"/><path d="M6 36v-6M30 36v-6"/><ellipse cx="18" cy="30" rx="12" ry="5"/><ellipse cx="18" cy="24" rx="12" ry="5"/><path d="M6 24v6M30 24v6"/><path d="M30 18l6-8 6 8M36 10v16"/></svg><b>Доход</b></div>
-        <h3>Агенты‑помощники, которые автоматизируют процессы, экономят вам уйму денег и времени и забирают всю рутину</h3>
+        <h3>Нейро‑помощники, которые автоматизируют процессы, экономят вам уйму денег и времени и забирают всю рутину</h3>
         <p class="sub">Продвижение, клиенты и новые источники дохода — без армии подрядчиков.</p>
         <ul>
           <li>Описание книги и посты на месяц — голосом автора</li>
           <li>10 писем продюсерам в день — и встреча с голливудским режиссёром</li>
-          <li>Помощники для вашей работы или бизнеса: обработка заявок, сводка продаж, кураторы, продавцы</li>
+          <li>Нейро‑помощники для вашей работы или бизнеса: обработка заявок, сводка продаж, кураторы, продавцы</li>
         </ul>
       </article>
     </div>
     <div class="cta midcta"><a class="btn" href="#reg" data-open>Занять место на трёх вечерах</a><small>Бесплатно · имя, почта, телефон — 20 секунд</small></div>
-  </div>
-</section>
-
-<!-- КОМУ КАКОЙ ВЕЧЕР -->
-<section class="what about" id="forwhom" style="padding-top:0">
-  <div class="wrap">
-    <div class="eyebrow">Кому какой вечер</div>
-    <h2>Каждый вечер — для своих</h2>
-    <div class="cards">
-      <article class="card"><div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><em>Вт · Книга</em></div><h3>Для тех, кто пишет</h3><p>Книги, статьи, посты, сценарии. <b>Текст остаётся вашим.</b></p></article>
-      <article class="card"><div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><em>Ср · Жизнь</em></div><h3>Для всех</h3><p>В том числе для тех, кто «не технический человек». <b>Это не сложнее, чем когда‑то освоить смартфон.</b></p></article>
-      <article class="card"><div class="n"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg><em>Чт · Доход</em></div><h3>Для писателей, экспертов и предпринимателей</h3><p><b>14 агентов Георгия работают у клиентов</b> — за это ему платят уже год.</p></article>
-    </div>
   </div>
 </section>
 
@@ -561,7 +561,7 @@
       <div class="pain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 12h18M10 8h4M10 16h4"/></svg><b>Рукопись лежит в столе</b><span>Корректор, перевод и обложка стоят как отпуск, а сил на всё вокруг текста уже нет.</span></div>
       <div class="pain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><b>Вечера уходят на бумаги</b><span>Письма в банк, справки, записи, напоминания — вместо книги и семьи.</span></div>
       <div class="pain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4h3l7 5V5l-7 5H3z"/><path d="M17 9a4 4 0 0 1 0 6M19.5 6.5a8 8 0 0 1 0 11"/></svg><b>Продвигать книгу некогда и неловко</b><span>А без продвижения её не читают — и не покупают.</span></div>
-      <div class="pain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M16 15h2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><b>Платите за то, что может делать помощник</b><span>Подрядчики, ассистенты, дизайнеры, иллюстраторы, копирайтеры, агентства — за работу, которую сегодня берёт на себя нейросеть.</span></div>
+      <div class="pain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M16 15h2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><b>Платите за то, что может делать нейро‑помощник</b><span>Подрядчики, ассистенты, дизайнеры, иллюстраторы, копирайтеры, агентства — за работу, которую сегодня берёт на себя нейросеть.</span></div>
     </div>
     <div class="answer one"><b>Это не сложнее, чем когда‑то освоить смартфон.</b></div>
   </div>
@@ -601,14 +601,14 @@
 <section class="what gal" id="gallery">
   <div class="wrap">
     <div class="eyebrow lined"><span>Из портфолио Георгия</span></div>
-    <h2>Не чат, которому всё объясняют заново, а помощник, который работает сам</h2>
+    <h2>Не чат, которому всё объясняют заново, а нейро‑помощник, который работает сам</h2>
     <p class="sub">14 агентов уже работают у его клиентов. Нейро‑помощник помнит вашу книгу, ваши дела и вашу манеру — и делает работу, на которую у вас уходили вечера. На практикуме увидите, как такие агенты работают у писателей, экспертов, предпринимателей и в личной жизни, и поймёте, какой нужен вам.</p>
     <div class="agents">
-      <figure class="agent"><div class="frame"><img src="../img/agents/maria.jpg" alt="Помощник Мария" loading="lazy"><span class="no">N°02</span></div><figcaption><small>Помощник</small><b>Мария</b><span>Литературный переводчик — перевела обе книги Георгия на английский</span></figcaption></figure>
-      <figure class="agent"><div class="frame"><img src="../img/agents/fedor.jpg" alt="Помощник Фёдор" loading="lazy"><span class="no">N°04</span></div><figcaption><small>Помощник</small><b>Фёдор</b><span>Аналитик отдела продаж: сводка за день без таблиц</span></figcaption></figure>
-      <figure class="agent"><div class="frame"><img src="../img/agents/klavdia.jpg" alt="Помощник Клавдия" loading="lazy"><span class="no">N°03</span></div><figcaption><small>Помощник</small><b>Клавдия</b><span>Обрабатывает заявки с сайта и отвечает клиентам</span></figcaption></figure>
-      <figure class="agent"><div class="frame"><img src="../img/agents/elena.jpg" alt="Помощник Елена" loading="lazy"><span class="no">N°05</span></div><figcaption><small>Помощник</small><b>Елена</b><span>Куратор онлайн‑школы: учится сама и отвечает ученикам</span></figcaption></figure>
-      <figure class="agent"><div class="frame"><img src="../img/agents/ignat.jpg" alt="Помощник Игнат" loading="lazy"><span class="no">N°01</span></div><figcaption><small>Помощник</small><b>Игнат</b><span>Исследователь в Telegram — отвечает голосом и картинками</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/maria.jpg" alt="Помощник Мария" loading="lazy"><span class="no">N°02</span></div><figcaption><small>Нейро‑помощник</small><b>Мария</b><span>Литературный переводчик — перевела обе книги Георгия на английский</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/fedor.jpg" alt="Помощник Фёдор" loading="lazy"><span class="no">N°04</span></div><figcaption><small>Нейро‑помощник</small><b>Фёдор</b><span>Аналитик отдела продаж: сводка за день без таблиц</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/klavdia.jpg" alt="Помощник Клавдия" loading="lazy"><span class="no">N°03</span></div><figcaption><small>Нейро‑помощник</small><b>Клавдия</b><span>Обрабатывает заявки с сайта и отвечает клиентам</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/elena.jpg" alt="Помощник Елена" loading="lazy"><span class="no">N°05</span></div><figcaption><small>Нейро‑помощник</small><b>Елена</b><span>Куратор онлайн‑школы: учится сама и отвечает ученикам</span></figcaption></figure>
+      <figure class="agent"><div class="frame"><img src="../img/agents/ignat.jpg" alt="Помощник Игнат" loading="lazy"><span class="no">N°01</span></div><figcaption><small>Нейро‑помощник</small><b>Игнат</b><span>Исследователь в Telegram — отвечает голосом и картинками</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -620,7 +620,7 @@
       <div>
         <div class="eyebrow">Регистрация</div>
         <h2>Займите место на трёх вечерах</h2>
-        <p><b>Ссылку на вход получат только зарегистрированные</b> — за час до каждого вечера, на почту и в чат. После регистрации придёт приглашение в чат «Нейросреда» в Telegram и MAX: там принимаем ваши задачи и вопросы Георгию.</p>
+        <p><b>Ссылку на вход получат только зарегистрированные</b> — за час до каждого вечера, на почту и в чат.</p>
         <ul class="sched">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><span><small>Вторник 13 октября, 19:00 мск</small><b>Книга</b></span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span><small>Среда 14 октября, 19:00 мск</small><b>Жизнь</b></span></li>
@@ -647,7 +647,7 @@
       <div class="whoi"><div class="av"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg></div><b>Для предпринимателей</b><span>Экономия на подрядчиках, заявки, аналитика, маркетинг, новые источники дохода</span></div>
       <div class="whoi"><div class="av"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><b>Для любого человека</b><span>В любом возрасте — кто хочет быть актуальным и в работе, и в жизни</span></div>
     </div>
-    <p class="slogan">ИИ не заменит людей. <b>ИИ уже может заменить многих людей, которые не владеют нейросетями.</b></p>
+    <p class="slogan">Нейросети не заменят людей. <b>Но они могут заменить тех, кто пока не владеет ими.</b></p>
   </div>
 </section>
 
@@ -685,7 +685,7 @@
         <ul class="pro">
           <li><b>Две книги</b> — обе переведены на английский за неделю</li>
           <li><b>Сценарий по книгам</b> попал на голливудскую площадку, оценка выросла с 4 до 6</li>
-          <li><b>14 помощников</b> работают у его клиентов — за это ему платят уже год</li>
+          <li><b>14 нейро‑помощников</b> работают у его клиентов — за это ему платят уже год</li>
           <li><b>Приложение для онлайн‑школы</b> на 774 участницы — за 31 день, без учебника по программированию</li>
         </ul>
         <div class="cohost">
@@ -708,7 +708,7 @@
       <details><summary>Если не смогу прийти на первый вечер?</summary><p>Приходите на второй и третий: каждый вечер — отдельная тема. Вторник — книга, среда — жизнь, четверг — доход.</p></details>
       <details><summary>Я не технический человек. Пойму?</summary><p>Поймёте. Георгий тоже не айтишник — он писатель. Это не сложнее, чем когда‑то освоить смартфон, а всё сложное берём на себя мы.</p></details>
       <details><summary>Я не писатель. Мне будет полезно?</summary><p>Да. Второй вечер — о личных делах: суд, банк, виза, врач, напоминания. Третий — о работе и доходе для экспертов и предпринимателей.</p></details>
-      <details><summary>Нейросеть будет писать мою книгу?</summary><p>Нет. Текст остаётся вашим. Помощник берёт на себя всё вокруг текста: замечания, перевод, иллюстрации, продвижение.</p></details>
+      <details><summary>Нейросеть будет писать мою книгу?</summary><p>Нет. Текст остаётся вашим. Нейро‑помощник берёт на себя всё вокруг текста: замечания, перевод, иллюстрации, продвижение.</p></details>
     </div>
   </div>
 </section>
@@ -720,7 +720,7 @@
       <div>
         <div class="eyebrow">13, 14, 15 октября · 19:00 мск</div>
         <h2>Займите место, пока оно есть</h2>
-        <p>Три вечера, чтобы увидеть, сколько времени и денег возвращают помощники, — и понять, какой нужен вам.</p>
+        <p>Три вечера, чтобы увидеть, сколько времени и денег возвращают нейро‑помощники, — и понять, какой нужен вам.</p>
       </div>
       <div class="go">
         <a class="btn" href="#reg" data-open>Зарегистрироваться на практикум</a>
