@@ -12,7 +12,8 @@
 <!--
   ЛЕНДИНГ МАРАФОНА 13–15.10 (онлайн‑практикум, три вечера в GetCourse, 19:00 мск). Собран 09.10.2026 по брифу Сергея.
   Структура — как у лендинга эфира 3 (efir3): первый экран с кнопкой, «не вебинар», программа трёх вечеров, боли, помощники,
-  цифры, для кого, как это было (цитаты), разбор с Георгием за 4 900 ₽, кто ведёт, вопросы, финальный призыв.
+  цифры, для кого, как это было (цитаты), кто ведёт, вопросы, финальный призыв.
+  Продажи разбора на этой странице нет (решение Сергея 09.10).
   Оформление — линия «Полдень и проводник» из файла «Концепция запуска — миры Стругацких»: советская книжная графика 60–70-х,
   тёплая бумага, тушь, янтарь, сурик; Зона — приглушённый зелёный. Иллюстрации свои (img/polden-scene.jpg — marafon_scene.py),
   без кадров и лиц актёров из сериалов. Фото Георгия тонированы под печать (marafon_art.py).
@@ -192,22 +193,7 @@
   .quote figcaption span{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
   .quote .qm{position:absolute;right:12px;top:0;font-family:Literata,Georgia,serif;font-size:56px;line-height:1;color:var(--amber)}
 
-  /* [9] Разбор */
-  .razbor .box{border:2px solid var(--amber);padding:22px 18px;display:grid;gap:20px;background:var(--night2)}
-  .razbor h2{color:var(--ntext)}
-  .razbor .price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:14px}
-  .razbor .price b{font-family:Literata,Georgia,serif;font-size:44px;color:var(--amber);line-height:1}
-  .razbor .price span{color:var(--nmuted);font-size:14px}
-  .four{list-style:none;display:grid;gap:10px;margin-top:16px}
-  .four li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
-  .four li i{font-style:normal;width:34px;height:34px;border-radius:50%;background:var(--amber);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
-  .four b{display:block;font-family:Literata,Georgia,serif;font-size:18px;line-height:1.25}
-  .four span{color:var(--nmuted);font-size:14px}
-  .razbor .card2{border:1px dashed var(--nline);padding:14px;color:var(--nmuted);font-size:14px}
-  .razbor .card2 a{color:var(--amber)}
-  .razbor .pic{border:2px solid var(--amber);overflow:hidden;aspect-ratio:4/3}
   @media (max-width:860px){.quotes .quote:nth-child(n+7){display:none}}
-  .razbor .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
 
   /* [10] Кто ведёт */
   .host .grid{display:grid;gap:20px;margin-top:22px}
@@ -297,8 +283,6 @@
     .past{grid-template-columns:repeat(3,1fr);gap:22px}
     .ev{grid-template-columns:1fr;border-bottom:0;border-top:2px solid var(--ink)}
     .quotes{grid-template-columns:repeat(3,1fr);gap:16px}
-    .razbor .box{grid-template-columns:1.4fr 1fr;gap:40px;padding:36px}
-    .razbor .pic{aspect-ratio:4/5}
     .host .grid{grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
     .host blockquote{font-size:22px}
     .final .box{display:grid;grid-template-columns:1.2fr 1fr}
@@ -388,7 +372,7 @@
       <div class="cta"><a class="btn" id="heroBtn" href="#reg" data-open>Зарегистрироваться на практикум</a><small>Бесплатно · одна регистрация — на все три вечера</small></div>
       <div class="facts">
         <span><svg><use href="#i-pin"/></svg>Прямой эфир в GetCourse — ссылка придёт на почту и в чат за час до начала</span>
-        <span><svg><use href="#i-gift"/></svg>С первого вечера — личный разбор вашего проекта с Георгием</span>
+        <span><svg><use href="#i-cal"/></svg>Одна регистрация — на все три вечера; можно прийти на любой</span>
       </div>
     </div>
     <div class="side">
@@ -473,7 +457,7 @@
             <li><svg><use href="#i-nut"/></svg>10 писем продюсерам в день — и встреча с голливудским режиссёром</li>
             <li><svg><use href="#i-nut"/></svg>Сайт книги с оплатой — за два дня</li>
             <li><svg><use href="#i-nut"/></svg>Выход книги на Amazon</li>
-            <li><svg><use href="#i-nut"/></svg>Помощники для дела: разбор заявок, сводка продаж, куратор онлайн‑школы</li>
+            <li><svg><use href="#i-nut"/></svg>Помощники для дела: обработка заявок, сводка продаж, куратор онлайн‑школы</li>
           </ul>
         </div>
         <p class="for"><b>Для писателей, экспертов и предпринимателей.</b> 14 помощников Георгия работают у клиентов — за это ему платят уже год.</p>
@@ -562,7 +546,7 @@
       <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Это невероятно! Я делала 2 сайта. Я поражена результатом. Шрифты, структура, цветовая палитра, удобство.»</blockquote><figcaption>Елена<span>чат эфира 30 сентября</span></figcaption></figure>
       <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Здорово! Хочу такого редактора!»</blockquote><figcaption>Зрительница<span>чат эфира 7 октября</span></figcaption></figure>
       <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Интересно именно мнение практика, а не постоянных рекламных кампаний.»</blockquote><figcaption>Евгений<span>чат эфира 24 сентября</span></figcaption></figure>
-      <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Исчерпывающая информация, спасибо.»</blockquote><figcaption>Участница разбора<span>после личного разбора с Георгием</span></figcaption></figure>
+      <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Георгий — огонь!! Спасибо огромное за эфир! Очень интересно!»</blockquote><figcaption>Марина<span>чат эфира 24 сентября</span></figcaption></figure>
       <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Вообще гениально! Хоть один человек правду сказал.»</blockquote><figcaption>Елена С.<span>чат эфира 24 сентября</span></figcaption></figure>
       <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Спасибо за эфир: практично! И спасибо за возможность задать вопросы в прямом эфире.»</blockquote><figcaption>Svitlana<span>чат эфира 30 сентября</span></figcaption></figure>
       <figure class="quote"><i class="qm" aria-hidden="true">“</i><blockquote>«Очень крутой вебинар. У нас ещё есть надежда, спасибо, Георгий! Нас спасёт наш творческий дух!»</blockquote><figcaption>Ольга<span>чат эфира 24 сентября</span></figcaption></figure>
@@ -572,30 +556,8 @@
   </div>
 </section>
 
-<!-- [9] РАЗБОР С ГЕОРГИЕМ — продаём с первого дня (страница /razbor/, 4 900 ₽, предложение 8752365) -->
-<section class="sec night razbor" id="razbor">
-  <div class="wrap">
-    <div class="box">
-      <div>
-        <div class="eyebrow">С первого вечера</div>
-        <h2>Личный разбор вашего проекта с Георгием</h2>
-        <p class="sub">Это не консультация в чистом виде. За одну встречу <b>вы поймёте, где в вашей книге, работе или делах можно сэкономить уйму времени и денег</b> — и с чего начать. Разбор — первый шаг в обучение.</p>
-        <ul class="four">
-          <li><i>1</i><div><b>Карта вашего проекта</b><span>Где помощник даст больше всего — по вашим задачам, а не «в среднем»</span></div></li>
-          <li><i>2</i><div><b>Три первых дела для помощника</b><span>С чего начать, чтобы результат был уже в первую неделю</span></div></li>
-          <li><i>3</i><div><b>Маршрут на восемь недель</b><span>Тропа от первых дел до своей системы</span></div></li>
-          <li><i>4</i><div><b>Честный ответ</b><span>Нужно ли вам это сейчас — или пока рано</span></div></li>
-        </ul>
-        <div class="price"><b>4 900 ₽</b><span>засчитываются в стоимость обучения, если решите идти дальше</span></div>
-        <div class="cta"><a class="btn" href="../razbor/?utm_source=marafon&amp;utm_medium=landing&amp;utm_content=razbor-block">Записаться на разбор — 4&nbsp;900&nbsp;₽</a><a class="btn ghost" href="../karta-razbora-georgiy-2b7e/" target="_blank" rel="noopener">Пример карты разбора</a></div>
-      </div>
-      <div class="pic"><img src="img/georgy-close.jpg" alt="Георгий Чистов" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
 <!-- [10] КТО ВЕДЁТ -->
-<section class="sec host" id="host">
+<section class="sec host" id="host" style="border-top:2px solid var(--ink)">
   <div class="wrap">
     <div class="eyebrow">Проводник</div>
     <h2>Георгий Чистов — писатель, не айтишник</h2>
@@ -621,13 +583,12 @@
     <div class="eyebrow">Вопросы</div>
     <h2>Коротко о главном</h2>
     <div class="faq">
-      <details open><summary>Это правда бесплатно?</summary><p>Да. Все три вечера бесплатны, одна регистрация — на все три. Платный только личный разбор с Георгием, по желанию.</p></details>
+      <details open><summary>Это правда бесплатно?</summary><p>Да. Все три вечера бесплатны, одна регистрация — на все три.</p></details>
       <details><summary>Где и во сколько?</summary><p>13, 14 и 15 октября в 19:00 по Москве, прямой эфир в GetCourse. Ссылка придёт на почту и в чат за час до начала каждого вечера. Смотреть можно с компьютера или с телефона.</p></details>
       <details><summary>Если не смогу прийти на первый вечер?</summary><p>Приходите на второй и третий: каждый вечер — отдельная тема. Вторник — книга, среда — жизнь, четверг — доход.</p></details>
       <details><summary>Я не технический человек. Пойму?</summary><p>Поймёте. Георгий тоже не айтишник — он писатель. Это не сложнее, чем когда‑то освоить смартфон, а всё сложное берём на себя мы.</p></details>
       <details><summary>Я не писатель. Мне будет полезно?</summary><p>Да. Второй вечер — о личных делах: суд, банк, виза, врач, напоминания. Третий — о работе и доходе для экспертов и предпринимателей.</p></details>
       <details><summary>Нейросеть будет писать мою книгу?</summary><p>Нет. Текст остаётся вашим. Помощник берёт на себя всё вокруг текста: замечания, перевод, иллюстрации, продвижение.</p></details>
-      <details><summary>Что такое разбор и зачем он мне?</summary><p>Это личная встреча с Георгием по вашему проекту. Не консультация в чистом виде: вы уходите с картой, тремя первыми делами для помощника и маршрутом на восемь недель — и понимаете, где сэкономить уйму времени и денег. 4 900 ₽ засчитываются в стоимость обучения.</p></details>
     </div>
   </div>
 </section>
