@@ -2,87 +2,78 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Вы зарегистрированы на практикум</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Вы зарегистрированы — заберите два PDF‑гайда в чате</title>
 <meta name="robots" content="noindex">
 <!--
-  Страница «спасибо» марафона 13–15.10 (виджет 1666921 переадресует сюда). Оформление — как у efir3/thanks.html. Без продажи разбора (решение Сергея 09.10).
-  ПЕРЕНОС НА ТИЛЬДУ — страница «спасибо» после отправки формы регистрации.
-  Один блок: Zero Block или CR-обложка с картинкой слева и текстом справа (например, CR27), плюс две кнопки.
-  В настройках формы на лендинге: «После отправки» → «Перейти на страницу» → адрес этой страницы.
-  Картинка: img/author.jpg. Цвета и шрифты — как на лендинге: фон #0E0B09, текст #F5EFE6, приглушённый #CDBFA9, акцент #F2B15B, кнопка #F2B15B с текстом #1A1208.
-  Ссылки на чат «Нейросреда» в Telegram и MAX подставлены.
+  Страница «спасибо» марафона 13–15.10 (виджет 1666921 переадресует сюда). Переписана 10.10 по задаче Сергея:
+  один экран, адаптив под телефон; главное действие — перейти в чат практикума (Telegram или MAX), где лежат два PDF-гайда,
+  напоминания о вечерах и ссылки на вход. Файлы на странице не выдаём — только в чате. Без продажи разбора.
+  PDF-гайды нужно закрепить в чатах: лендинг/marafon/pdf/30-zadach-dlya-neirosetey.pdf и karta-neirosetey-osen-2026.pdf.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
 <style>
-  :root{--bg:#0E0B09;--panel:#1A1410;--line:#3A2E24;--ink:#F5EFE6;--muted:#CDBFA9;--accent:#F2B15B;--accent-ink:#1A1208}
+  :root{--bg:#0E0B09;--panel:#1A1410;--panel2:#221A14;--line:#3A2E24;--ink:#F5EFE6;--muted:#CDBFA9;--accent:#F2B15B;--accent-ink:#1A1208;--red:#E02424}
   *{box-sizing:border-box;margin:0;padding:0}
-  /* mobile first: базовые стили — для телефона, десктоп в @media (min-width:761px) */
-  body{min-height:100vh;background:radial-gradient(1000px 700px at 75% 20%,#4a2a10 0%,#22150c 45%,#0E0B09 100%);color:var(--ink);font:16px/1.55 "IBM Plex Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased;display:flex;align-items:flex-start;justify-content:center;padding:24px 16px calc(24px + env(safe-area-inset-bottom,0px))}
-  .card{max-width:960px;width:100%;display:grid;grid-template-columns:1fr;gap:22px;align-items:center}
-  .photo{width:min(100%,280px);border-radius:18px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);aspect-ratio:3/4}
-  .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;display:block}
-  .cap{margin-top:12px;color:var(--muted);font-size:14px}
-  .cap b{color:var(--ink);font-weight:500}
-  .eyebrow{font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-size:13px}
-  h1{font-family:Literata,Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(32px,4.6vw,48px);line-height:1.1;margin-top:12px;text-wrap:balance}
-  p{margin-top:16px;color:var(--muted);max-width:36em}
-  p b{color:var(--ink);font-weight:500}
-  .chat{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
-  .chat h2{font-family:Literata,Georgia,serif;font-weight:600;font-size:22px;line-height:1.25;text-wrap:balance}
-  .chat ul{list-style:none;margin:12px 0 0;display:grid;gap:8px;color:var(--muted);font-size:16px}
-  .chat li{padding-left:18px;position:relative}
-  .chat li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
-  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-  .btn{display:inline-flex;width:100%;align-items:center;justify-content:center;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:16px;padding:14px 22px;border-radius:12px;text-decoration:none;transition:filter .12s ease}
-  .btn:hover{filter:brightness(1.06)} .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-  .btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
-  .btn[hidden]{display:none !important}
-  .foot{margin-top:22px;color:var(--muted);font-size:14px}
+  html,body{min-height:100%}
+  body{background:radial-gradient(900px 600px at 80% 0%,#4a2a10 0%,#22150c 45%,#0E0B09 100%);color:var(--ink);font:15px/1.45 "IBM Plex Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased;padding:14px 14px calc(16px + env(safe-area-inset-bottom,0px))}
+  .wrap{max-width:960px;margin:0 auto;display:grid;gap:12px}
+  .eyebrow{font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-size:11px}
+  h1{font-family:Literata,Georgia,serif;font-weight:700;font-size:clamp(24px,6.4vw,34px);line-height:1.12;margin-top:6px;text-wrap:balance}
+  h1 b{color:var(--accent);font-weight:700}
+  .gifts{display:grid;gap:8px;margin-top:10px}
+  .g{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 12px}
+  .g svg{width:44px;height:44px}
+  .g b{font-size:14px;line-height:1.3;font-weight:600}
+  .box{background:linear-gradient(135deg,#2a1c10,#1A1410 60%);border:1px solid var(--accent);border-radius:16px;padding:16px 14px}
+  .box h2{font-family:Literata,Georgia,serif;font-weight:700;font-size:21px;line-height:1.2;text-wrap:balance}
+  .box h2 b{color:var(--accent)}
+  .btns{display:grid;gap:8px;margin-top:12px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--red);color:#fff;font-weight:700;font-size:17px;padding:15px 18px;border-radius:12px;text-decoration:none;box-shadow:0 10px 26px rgba(224,36,36,.32)}
+  .btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none}
+  .btn svg{width:22px;height:22px;flex:0 0 22px}
+  .box ul{list-style:none;margin-top:12px;display:grid;gap:5px;color:var(--muted);font-size:14px}
+  .box li{padding-left:16px;position:relative}
+  .box li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .dates{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}
+  .dates b{color:var(--ink);font-weight:600}
   @media (min-width:761px){
-    body{font-size:17px;align-items:center;padding:40px 20px}
-    .card{grid-template-columns:300px 1fr;gap:44px}
-    .photo{width:auto}
-    .btn{width:auto}
+    body{padding:34px 24px;display:flex;align-items:center;justify-content:center}
+    .wrap{grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+    h1{font-size:38px}
+    .g b{font-size:15px}
+    .box{padding:24px 24px 22px}
+    .box h2{font-size:24px}
+    .btn{font-size:17px}
+    .dates{grid-column:1/-1;font-size:14px}
   }
 </style>
 </head>
 <body>
-<main class="card">
+<main class="wrap">
   <div>
-    <div class="photo"><img src="../img/author.jpg" alt="Георгий Чистов, писатель"></div>
-    <div class="cap"><b>Георгий Чистов</b>, автор дилогии «Парадокс Джона». Ведёт все три вечера: книга, жизнь, доход.</div>
-  </div>
-  <div>
-    <div class="eyebrow">13, 14, 15 октября · 19:00 мск</div>
-    <h1>Спасибо, вы зарегистрированы на практикум!</h1>
-    <p>Три вечера с Георгием Чистовым: <b>вторник — Книга, среда — Жизнь, четверг — Доход.</b> Начало в 19:00 мск, эфир в GetCourse, смотреть можно с телефона. <b>Ссылка на вход придёт за час до начала</b> каждого вечера — на почту и в чат.</p>
-    <div class="chat" style="border-color:#F2B15B;margin-top:22px">
-      <h2>Ваши два подарка — PDF‑гайды</h2>
-      <ul>
-        <li>«Топ‑30 писательских, житейских и рабочих задач, которые уже можно отдать ИИ»</li>
-        <li>«Какая нейросеть подойдёт именно мне? Таблица сравнения под ваши задачи»</li>
-      </ul>
-      <div class="btns">
-        <a class="btn" href="pdf/30-zadach-dlya-neirosetey.pdf" target="_blank" rel="noopener">Скачать «Топ‑30 задач»</a>
-        <a class="btn" href="pdf/karta-neirosetey-osen-2026.pdf" target="_blank" rel="noopener">Скачать «Карту нейросетей»</a>
-      </div>
+    <div class="eyebrow">Вы зарегистрированы · 13, 14, 15 октября · 19:00 мск</div>
+    <h1>Вы в одном шаге от <b>двух PDF‑гайдов</b></h1>
+    <div class="gifts">
+      <div class="g"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="12" y="8" width="38" height="48" rx="6" fill="url(#g1)"/><rect x="17" y="13" width="28" height="38" rx="3" fill="#1A1410"/><path d="M22 23l3 3 6-6M22 33l3 3 6-6M22 43l3 3 6-6" fill="none" stroke="#F2B15B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 21h8M34 31h8M34 41h8" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="11" fill="#fff">30</text></svg><b>«Топ‑30 писательских, житейских и рабочих задач, которые уже можно отдать ИИ»</b></div>
+      <div class="g"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="8" y="10" width="48" height="44" rx="6" fill="url(#g2)"/><rect x="13" y="15" width="38" height="34" rx="3" fill="#1A1410"/><path d="M13 26h38M13 37h38M26 15v34M39 15v34" stroke="#5C4A33" stroke-width="1.6"/><rect x="27" y="27" width="11" height="9" fill="#F2B15B"/><path d="M16 20h7M29 20h7M42 20h6" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="9" fill="#fff">PDF</text></svg><b>«Какая нейросеть подойдёт именно мне? Таблица сравнения под ваши задачи»</b></div>
     </div>
-    <div class="chat">
-      <h2>А пока — заходите в чат «Нейросреда»</h2>
-      <ul>
-        <li>Пришлите главу, письмо или рабочую задачу — лучшие Георгий возьмёт в эфир</li>
-        <li>Напоминания о каждом вечере и ссылки на вход</li>
-        <li>Живое общение писателей, экспертов и всех, кто осваивает нейросети</li>
-      </ul>
-      <div class="btns">
-        <a class="btn" href="https://t.me/+5H-cH5b0RDI3Njgy" target="_blank" rel="noopener">Перейти в чат в Telegram</a>
-        <a class="btn alt" href="https://max.ru/join/DG2Z1bpKVAjLFg3YimuGAx6D2LBT1zljMjVia3ZqwRE" target="_blank" rel="noopener">Перейти в чат в MAX</a>
-      </div>
-    </div>
-    <div class="foot">GetPublishED · до встречи во вторник, 13 октября, в 19:00 мск</div>
   </div>
+  <div class="box">
+    <h2>Заберите их в чате онлайн‑практикума – <b>в Telegram или MAX</b></h2>
+    <div class="btns">
+      <a class="btn" href="https://t.me/+5H-cH5b0RDI3Njgy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 3.4L2.9 10.6c-1 .4-1 1.4-.2 1.7l4.7 1.5 1.8 5.6c.2.6.9.8 1.4.4l2.6-2.1 4.9 3.6c.9.5 1.5.2 1.7-.8L22.9 4.9c.3-1.1-.3-1.8-1.3-1.5zM9.4 13.4l8.9-5.6c.4-.2.8.3.5.6l-7.3 6.6-.3 3-1.8-4.6z"/></svg>Перейти в чат в Telegram</a>
+      <a class="btn alt" href="https://max.ru/join/DG2Z1bpKVAjLFg3YimuGAx6D2LBT1zljMjVia3ZqwRE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-9l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>Перейти в чат в MAX</a>
+    </div>
+    <ul>
+      <li>Оба PDF‑гайда – закреплены в чате</li>
+      <li>Напоминания о каждом вечере и ссылки на вход</li>
+      <li>Живое общение писателей, экспертов и всех, кто осваивает нейросети</li>
+      <li>Можно задать вопрос – ответим в чате или в эфире</li>
+    </ul>
+  </div>
+  <div class="dates"><span><b>Вт, 13.10</b> – Книга</span><span><b>Ср, 14.10</b> – Жизнь</span><span><b>Чт, 15.10</b> – Доход</span><span>Начало в 19:00 мск, ссылка на вход придёт за час</span></div>
 </main>
 </body>
 </html>
