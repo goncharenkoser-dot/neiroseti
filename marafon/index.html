@@ -442,6 +442,62 @@
     .day .th b{font-size:30px}
     .about .card h3,.day h3{font-size:19px}
   }
+  /* Ритм страницы (10.10): все секции с одинаковым вертикальным шагом, кнопки регистрации — главный акцент */
+  .what,.sec{padding:40px 0}
+  .what.voices,.what.time,.what.about,.what.nowhat,.what.nums,.what.gal,.what.bonus,.what.who,#faq{padding-top:40px!important}
+  .reg{padding:0 0 40px}
+  .host{padding:0 0 40px}
+  .cta.midcta{margin-top:26px}
+  .reg .box{padding:24px 18px}
+  .final .box{padding:26px 18px}
+  .stick{padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px))}
+  .stick .btn{font-size:17px;padding:16px 20px}
+  @media (min-width:861px){
+    .what,.sec{padding:64px 0}
+    .what.voices,.what.time,.what.about,.what.nowhat,.what.nums,.what.gal,.what.bonus,.what.who,#faq{padding-top:64px!important}
+    .reg{padding-bottom:64px}
+    .host{padding-bottom:64px}
+    .cta.midcta{margin-top:32px}
+    .reg .box{padding:40px}
+    .final .box{padding:40px}
+  }
+  @media (max-width:860px){
+    .wrap{padding:0 16px}
+    h2{font-size:clamp(24px,6.4vw,30px);margin-bottom:6px}
+    .eyebrow.lg{font-size:14px}
+    .sub,.bl{font-size:15px}
+    .card,.day,.whoi,.bcard,.num{padding:16px 16px}
+    .pain{padding:14px 14px 14px 48px}
+    .cards,.days,.whos,.pains,.bcards,.numgrid,.quotes{gap:10px}
+    .day h3,.card h3{font-size:18px}
+    .day .th b{font-size:28px}
+    .agents{gap:10px}
+    .agent b{font-size:18px}
+    .quote{padding:14px 16px 12px}
+    .quote blockquote{font-size:15px}
+    .quotes .quote:nth-child(n+5){display:none}
+    .faq summary{font-size:16px;padding:11px 32px 11px 0}
+    .faq p{font-size:14px}
+    .answer.one{padding:16px}
+    .slogan.boxed{font-size:20px;padding:14px 16px}
+    .host blockquote{font-size:16px}
+    .host .pro{font-size:14px}
+    .about .intro{gap:14px}
+    .promise{padding:14px 14px 12px}
+    .promise .pr{font-size:15px}
+    .promise .gt{font-size:17px}
+    .gcard{padding:10px 12px;grid-template-columns:46px 1fr}
+    .gcard svg{width:46px;height:46px}
+    .gcard b{font-size:13.5px}
+    .gcard span{font-size:11px}
+    .tgrid{padding:16px 14px}
+    .bcard .bic{width:64px;height:64px;margin:12px 0 8px}
+    .bcard h3{font-size:18px}
+    .reg .sched b{font-size:22px}
+    .reg .go small,.cta small{font-size:12px}
+    .mock{display:none}
+    .foot{padding-bottom:88px}
+  }
 </style>
 </head>
 <body>
@@ -641,19 +697,6 @@
 </section>
 
 
-<!-- ПОДАРКИ ЗА РЕГИСТРАЦИЮ — два PDF-гайда, выдаются на странице «спасибо» -->
-<section class="what bonus" id="bonus1">
-  <div class="wrap">
-    <div class="eyebrow lg">Подарки</div>
-    <h2>Всем, кто зарегистрируется, – два PDF‑гайда</h2>
-    <div class="bcards">
-      <article class="bcard"><span class="tag">Сразу после регистрации</span><div class="bic"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="12" y="8" width="38" height="48" rx="6" fill="url(#g1)"/><rect x="17" y="13" width="28" height="38" rx="3" fill="#1A1410"/><path d="M22 23l3 3 6-6M22 33l3 3 6-6M22 43l3 3 6-6" fill="none" stroke="#F2B15B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 21h8M34 31h8M34 41h8" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="11" fill="#fff">30</text></svg></div><h3>«Топ‑30 писательских, житейских и рабочих задач, которые уже можно отдать ИИ»</h3><p>По 10 задач на каждый трек – книга, жизнь, доход. Что можно отдать нейросети уже завтра и сколько это возвращает.</p></article>
-      <article class="bcard"><span class="tag">Сразу после регистрации</span><div class="bic"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="8" y="10" width="48" height="44" rx="6" fill="url(#g2)"/><rect x="13" y="15" width="38" height="34" rx="3" fill="#1A1410"/><path d="M13 26h38M13 37h38M26 15v34M39 15v34" stroke="#5C4A33" stroke-width="1.6"/><rect x="27" y="27" width="11" height="9" fill="#F2B15B"/><path d="M16 20h7M29 20h7M42 20h6" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="9" fill="#fff">PDF</text></svg></div><h3>«Какая нейросеть подойдёт именно мне? Таблица сравнения под ваши задачи»</h3><p>Девять нейросетей, шестнадцать умений в одной таблице – и как читать её под свою задачу: книга, бумаги, работа.</p></article>
-    </div>
-    <div class="cta midcta center"><a class="btn" href="#reg" data-open>Зарегистрироваться и получить гайды</a></div>
-  </div>
-</section>
-
 <!-- [T2a] ДЛЯ КОГО -->
 <section class="what who" id="who"><div class="nebula" aria-hidden="true"></div>
   <div class="wrap">
@@ -670,6 +713,19 @@
       <div class="whoi wide"><div class="av"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1v3l-3-3"/></svg></div><b>Тем, кто осваивает нейросети для своих задач</b><span>Если вы хоть раз задавали вопрос нейросети – этого достаточно, чтобы понять всё на практикуме. А если ни разу – тем более приходите: начнём с ваших задач, а не с техники</span></div>
     </div>
     <p class="slogan boxed">Нейросети не заменят людей. <b>Но они могут заменить тех, кто пока не владеет ими.</b></p>
+  </div>
+</section>
+
+<!-- ПОДАРКИ ЗА РЕГИСТРАЦИЮ — два PDF-гайда, выдаются на странице «спасибо» -->
+<section class="what bonus" id="bonus1">
+  <div class="wrap">
+    <div class="eyebrow lg">Подарки</div>
+    <h2>Всем, кто зарегистрируется, – два PDF‑гайда</h2>
+    <div class="bcards">
+      <article class="bcard"><span class="tag">Сразу после регистрации</span><div class="bic"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="12" y="8" width="38" height="48" rx="6" fill="url(#g1)"/><rect x="17" y="13" width="28" height="38" rx="3" fill="#1A1410"/><path d="M22 23l3 3 6-6M22 33l3 3 6-6M22 43l3 3 6-6" fill="none" stroke="#F2B15B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 21h8M34 31h8M34 41h8" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="11" fill="#fff">30</text></svg></div><h3>«Топ‑30 писательских, житейских и рабочих задач, которые уже можно отдать ИИ»</h3><p>По 10 задач на каждый трек – книга, жизнь, доход. Что можно отдать нейросети уже завтра и сколько это возвращает.</p></article>
+      <article class="bcard"><span class="tag">Сразу после регистрации</span><div class="bic"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="8" y="10" width="48" height="44" rx="6" fill="url(#g2)"/><rect x="13" y="15" width="38" height="34" rx="3" fill="#1A1410"/><path d="M13 26h38M13 37h38M26 15v34M39 15v34" stroke="#5C4A33" stroke-width="1.6"/><rect x="27" y="27" width="11" height="9" fill="#F2B15B"/><path d="M16 20h7M29 20h7M42 20h6" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="9" fill="#fff">PDF</text></svg></div><h3>«Какая нейросеть подойдёт именно мне? Таблица сравнения под ваши задачи»</h3><p>Девять нейросетей, шестнадцать умений в одной таблице – и как читать её под свою задачу: книга, бумаги, работа.</p></article>
+    </div>
+    <div class="cta midcta center"><a class="btn" href="#reg" data-open>Зарегистрироваться и получить гайды</a></div>
   </div>
 </section>
 
@@ -831,7 +887,6 @@
       <article class="bcard"><span class="tag">Сразу после регистрации</span><div class="bic"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="12" y="8" width="38" height="48" rx="6" fill="url(#g1)"/><rect x="17" y="13" width="28" height="38" rx="3" fill="#1A1410"/><path d="M22 23l3 3 6-6M22 33l3 3 6-6M22 43l3 3 6-6" fill="none" stroke="#F2B15B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 21h8M34 31h8M34 41h8" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="11" fill="#fff">30</text></svg></div><h3>«Топ‑30 писательских, житейских и рабочих задач, которые уже можно отдать ИИ»</h3><p>По 10 задач на каждый трек – книга, жизнь, доход. Что можно отдать нейросети уже завтра и сколько это возвращает.</p></article>
       <article class="bcard"><span class="tag">Сразу после регистрации</span><div class="bic"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CF8A"/><stop offset="1" stop-color="#D98A2B"/></linearGradient></defs><rect x="8" y="10" width="48" height="44" rx="6" fill="url(#g2)"/><rect x="13" y="15" width="38" height="34" rx="3" fill="#1A1410"/><path d="M13 26h38M13 37h38M26 15v34M39 15v34" stroke="#5C4A33" stroke-width="1.6"/><rect x="27" y="27" width="11" height="9" fill="#F2B15B"/><path d="M16 20h7M29 20h7M42 20h6" stroke="#8E7B64" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="48" r="11" fill="#E02424"/><text x="50" y="52" text-anchor="middle" font-family="IBM Plex Sans,Arial,sans-serif" font-weight="700" font-size="9" fill="#fff">PDF</text></svg></div><h3>«Какая нейросеть подойдёт именно мне? Таблица сравнения под ваши задачи»</h3><p>Девять нейросетей, шестнадцать умений в одной таблице – и как читать её под свою задачу: книга, бумаги, работа.</p></article>
     </div>
-    <div class="cta midcta center"><a class="btn" href="#reg" data-open>Зарегистрироваться и получить гайды</a></div>
   </div>
 </section>
 
