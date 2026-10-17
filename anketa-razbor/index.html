@@ -1,0 +1,83 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Анкета перед разбором — Георгий Чистов</title>
+<meta name="robots" content="noindex">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{colors:{brown:{50:'#F8F5F2',100:'#EAE0D8',600:'#8E6F59',800:'#4A3B32',900:'#362B25',gold:'#D4AF37'}},fontFamily:{sans:['Montserrat','sans-serif'],serif:['Playfair Display','serif']},animation:{'fade-in':'fadeIn 0.5s ease-out forwards'},keyframes:{fadeIn:{'0%':{opacity:'0',transform:'translateY(10px)'},'100%':{opacity:'1',transform:'translateY(0)'}}}}}}</script>
+<style>
+html{font-size:16px} html,body{background:#F8F5F2;color:#362B25;margin:0}
+#anketa{font-family:'Montserrat',sans-serif} #anketa .font-serif{font-family:'Playfair Display',serif}
+.q{margin:0 0 22px} .q b{display:block;font-size:16px;font-weight:700;margin:0 0 8px;line-height:1.4} .q b .req{color:#d33;margin-left:3px}
+.q small{display:block;color:#6b5a4e;font-size:13.5px;margin:-4px 0 8px;line-height:1.4}
+.opt{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.45;margin:0 0 8px;cursor:pointer} .opt input{margin-top:4px;flex:none;width:16px;height:16px;accent-color:#8E6F59}
+.inp{width:100%;border:1px solid #cfc7ba;border-radius:4px;padding:12px 14px;font:inherit;font-size:15.5px;background:#fff;color:#362B25} .inp:focus{outline:2px solid #D4AF37;border-color:#D4AF37}
+textarea.inp{min-height:96px;resize:vertical}
+.btn{display:inline-block;background:#362B25;color:#fff;font-weight:700;font-size:16px;padding:16px 34px;border-radius:10px;border:0;cursor:pointer} .btn:hover{background:#4A3B32} .btn[disabled]{opacity:.6;cursor:default}
+.thanks{display:none;background:#fff;border:2px solid #D4AF37;border-radius:16px;padding:28px}
+.err{color:#c81e1e;font-size:14px;margin-top:8px;display:none}
+</style></head><body>
+<div id="anketa" class="antialiased min-h-screen flex flex-col relative pb-10">
+<header class="w-full bg-white shadow-sm py-6 sticky top-0 z-40"><div class="max-w-5xl mx-auto px-4 flex justify-between items-center"><img src="https://static.tildacdn.com/tild3736-3332-4362-b165-666566623733/logo_3.png" alt="GetPublishED" class="h-6 sm:h-8 filter brightness-0 opacity-90"><div class="text-sm font-medium text-brown-600 hidden sm:block">Нейросети глазами писателя</div></div></header>
+<main class="flex-grow w-full max-w-5xl mx-auto px-4 py-10">
+<div class="text-center mb-12 animate-fade-in"><h1 class="text-4xl md:text-5xl font-serif font-bold text-brown-900 mb-4">Анкета перед разбором</h1><p class="text-lg text-brown-800 max-w-2xl mx-auto">Две минуты до встречи с Георгием — чтобы час разбора ушёл на ваш проект, а не на знакомство.</p></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-5 bg-white rounded-3xl p-6 md:p-8 shadow-lg animate-fade-in" style="animation-delay:.1s">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden mb-6"><img src="https://neiroseti.getpublish-io.ru/img/author.jpg" alt="Георгий Чистов" class="w-full h-full object-cover object-top"></div>
+<h3 class="text-2xl font-serif font-bold text-brown-900 mb-3">Здравствуйте! На связи Георгий Чистов</h3>
+<p class="text-brown-800 mb-4 text-base md:text-lg leading-relaxed">Часто вижу одну и ту же закономерность: многие, кто хочет освоить нейросети и сделать с помощью них прорыв в своей жизни, спотыкаются и бросают начатое, потому что остаются один на один с барьерами: техническими, финансовыми и личными.</p>
+<p class="text-brown-800 text-base md:text-lg leading-relaxed font-medium">Пожалуйста, ответьте на вопросы анкеты максимально искренне. Это поможет мне понять вашу ситуацию и быть максимально полезным.</p>
+</div>
+<div class="lg:col-span-7 bg-white rounded-3xl p-5 md:p-10 shadow-lg relative animate-fade-in" style="animation-delay:.2s">
+<div class="mb-6 text-center"><span class="inline-block px-4 py-1 rounded-full bg-brown-50 text-brown-600 text-sm font-semibold mb-2">Заполните форму</span></div>
+<form id="f" novalidate>
+<div class="q"><b>ФИО<span class="req">*</span></b><input class="inp" name="full_name" required placeholder="Имя и фамилия"></div>
+<div class="q"><b>Эл. адрес<span class="req">*</span></b><input class="inp" name="email" type="email" required placeholder="name@example.com"></div>
+<div class="q"><b>Как с вами удобнее связаться?<span class="req">*</span></b><label class="opt"><input type="radio" name="contact" value="Telegram" required><span>Telegram</span></label><label class="opt"><input type="radio" name="contact" value="WhatsApp"><span>WhatsApp</span></label><label class="opt"><input type="radio" name="contact" value="MAX"><span>MAX</span></label></div>
+<div class="q"><b>Укажите ваш НИК<span class="req">*</span></b><input class="inp" name="nick" required placeholder="@ник или номер"></div>
+<div class="q"><b>1. Как вы оцениваете своё владение нейросетями?<span class="req">*</span></b><label class="opt"><input type="radio" name="level" value="Новичок" required><span>Новичок</span></label><label class="opt"><input type="radio" name="level" value="Средне"><span>Средне</span></label><label class="opt"><input type="radio" name="level" value="Продвинутый уровень"><span>Продвинутый уровень</span></label><label class="opt"><input type="radio" name="level" value="Пока не пробовал(а)"><span>Пока не пробовал(а)</span></label></div>
+<div class="q"><b>2. С какими сложностями вы столкнулись? (можно несколько)</b><label class="opt"><input type="checkbox" name="problems" value="Выдавал не то, что нужно"><span>Выдавал не то, что нужно</span></label><label class="opt"><input type="checkbox" name="problems" value="Забывал контекст"><span>Забывал контекст</span></label><label class="opt"><input type="checkbox" name="problems" value="Возникли технические сложности"><span>Возникли технические сложности</span></label><label class="opt"><input type="checkbox" name="problems" value="Другое (напишите ниже)"><span>Другое (напишите ниже)</span></label></div>
+<div class="q"><b>Ваш вариант ответа на п. 2</b><input class="inp" name="problems_other"></div>
+<div class="q"><b>3. В каких сферах жизни нейросети могут дать вам максимальный эффект? (можно несколько)</b><label class="opt"><input type="checkbox" name="spheres" value="Писательство"><span>Писательство</span></label><label class="opt"><input type="checkbox" name="spheres" value="Личные дела"><span>Личные дела</span></label><label class="opt"><input type="checkbox" name="spheres" value="Профессиональные задачи"><span>Профессиональные задачи</span></label></div>
+<div class="q"><b>4. Какие нейросети вы уже пробовали использовать? (можно несколько)</b><label class="opt"><input type="checkbox" name="nets" value="GPT"><span>GPT</span></label><label class="opt"><input type="checkbox" name="nets" value="Claude"><span>Claude</span></label><label class="opt"><input type="checkbox" name="nets" value="Gemini"><span>Gemini</span></label><label class="opt"><input type="checkbox" name="nets" value="DeepSeek"><span>DeepSeek</span></label><label class="opt"><input type="checkbox" name="nets" value="Алиса"><span>Алиса</span></label><label class="opt"><input type="checkbox" name="nets" value="Другое (напишите ниже)"><span>Другое (напишите ниже)</span></label></div>
+<div class="q"><b>Ваш вариант ответа на п. 4</b><input class="inp" name="nets_other"></div>
+<div class="q"><b>5. Я набираю ограниченное число участников. Почему мне стоит взять именно вас?</b><textarea class="inp" name="why"></textarea></div>
+<div class="q"><b>6. На каком проекте или запросе вы бы хотели сфокусироваться на ближайшие два месяца, и что должно быть сделано к концу декабря, чтобы вы сказали: «получилось»?</b><small>Заполните кратко</small><textarea class="inp" name="project"></textarea></div>
+<div class="q"><b>7. Работа в группе требует включённости. Сколько времени в неделю вы готовы инвестировать в работу с нейросетями?</b><label class="opt"><input type="radio" name="time" value="Пару часов на выходных."><span>Пару часов на выходных.</span></label><label class="opt"><input type="radio" name="time" value="Готов(а) выделить 4–6 часов в неделю, настроен(а) решительно."><span>Готов(а) выделить 4–6 часов в неделю, настроен(а) решительно.</span></label><label class="opt"><input type="radio" name="time" value="Работа с нейросетями сейчас мой приоритет, найду столько времени, сколько нужно."><span>Работа с нейросетями сейчас мой приоритет, найду столько времени, сколько нужно.</span></label><label class="opt"><input type="radio" name="time" value="Пока просто присматриваюсь."><span>Пока просто присматриваюсь.</span></label></div>
+<div class="q"><b>8. По желанию вставьте в поле ниже ссылку на любые материалы, касающиеся вашего запроса на разборе</b><small>А. Вставьте ссылку на ваши материалы. Если ссылку приложить неудобно, отправьте материалы на почту школы mail@getpublish.org</small><input class="inp" name="link" placeholder="https://…"><small style="margin-top:10px">Б. Дайте краткое пояснение к вашим материалам</small><textarea class="inp" name="linknote"></textarea></div>
+<div class="q"><b>9. На скольких моих эфирах вы были?</b><label class="opt"><input type="radio" name="efiry" value="На 2–6 эфирах"><span>На 2–6 эфирах</span></label><label class="opt"><input type="radio" name="efiry" value="На одном"><span>На одном</span></label><label class="opt"><input type="radio" name="efiry" value="Ни на одном"><span>Ни на одном</span></label></div>
+<div class="err" id="err">Заполните обязательные поля: ФИО, эл. адрес, способ связи, ник и вопрос 1.</div>
+<div class="mt-6"><button class="btn" type="submit" id="send">Отправить</button></div>
+</form>
+<div class="thanks" id="thanks"><h3 class="text-2xl font-serif font-bold text-brown-900 mb-3">Спасибо, анкета у Георгия</h3><p class="text-brown-800 mb-3">Он прочитает её до встречи. Ссылка на Zoom и время придут в письме и от Виталии.</p><p class="text-brown-800">Три подсказки: зайдите за пять минут до начала, держите под рукой рукопись или описание дела, камеру можно не включать.</p></div>
+</div></div></main></div>
+<iframe name="gcfr" style="display:none"></iframe>
+<form id="gcf" method="post" action="https://getpublish.getcourse.ru/pl/lite/block-public/process?id=2257342806" target="gcfr" style="display:none"></form>
+<script>
+(function(){
+var F={'contact': 22203070, 'nick': 22203071, 'level': 22379953, 'problems': 22379954, 'problems_other': 22379955, 'spheres': 22379956, 'nets': 22379957, 'nets_other': 22379958, 'why': 22379959, 'project': 22379960, 'time': 22379961, 'link': 22379962, 'linknote': 22379963, 'efiry': 22379964};
+var form=document.getElementById('f');
+function val(n){var e=form.querySelector('[name="'+n+'"]');return e?e.value.trim():''}
+function radio(n){var e=form.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+function checks(n){return [].map.call(form.querySelectorAll('input[name="'+n+'"]:checked'),function(e){return e.value}).join(', ')}
+form.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var email=val('email');
+  var ok=val('full_name')&&/^\S+@\S+\.\S+$/.test(email)&&radio('contact')&&val('nick')&&radio('level');
+  var err=document.getElementById('err');
+  if(!ok){err.style.display='block';err.scrollIntoView({behavior:'smooth',block:'center'});return}
+  err.style.display='none';
+  var g=document.getElementById('gcf');g.innerHTML='';
+  function add(n,v){var i=document.createElement('input');i.type='hidden';i.name=n;i.value=v||'';g.appendChild(i)}
+  add('formParams[email]',email);add('formParams[full_name]',val('full_name'));add('formParams[in_widget]','1');
+  function cf(key,v){add('formParams[userCustomFields]['+F[key]+']',v)}
+  cf('contact',radio('contact'));cf('nick',val('nick'));cf('level',radio('level'));
+  cf('problems',checks('problems'));cf('problems_other',val('problems_other'));cf('spheres',checks('spheres'));
+  cf('nets',checks('nets'));cf('nets_other',val('nets_other'));cf('why',val('why'));cf('project',val('project'));
+  cf('time',radio('time'));cf('link',val('link'));cf('linknote',val('linknote'));cf('efiry',radio('efiry'));
+  document.getElementById('send').disabled=true;
+  g.submit();
+  setTimeout(function(){form.style.display='none';var t=document.getElementById('thanks');t.style.display='block';t.scrollIntoView({behavior:'smooth',block:'start'})},900);
+});
+})();
+</script>
+</body></html>
