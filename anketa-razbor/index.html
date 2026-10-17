@@ -74,6 +74,8 @@ form.addEventListener('submit',function(ev){
   cf('problems',checks('problems'));cf('problems_other',val('problems_other'));cf('spheres',checks('spheres'));
   cf('nets',checks('nets'));cf('nets_other',val('nets_other'));cf('why',val('why'));cf('project',val('project'));
   cf('time',radio('time'));cf('link',val('link'));cf('linknote',val('linknote'));cf('efiry',radio('efiry'));
+  function arr(n){return [].map.call(form.querySelectorAll('input[name="'+n+'"]:checked'),function(e){return e.value})}
+  add('surveyData',JSON.stringify({fieldValues:{"22042359":radio('level'),"22042360":arr('problems'),"22042361":val('problems_other'),"22042362":arr('spheres'),"22042363":arr('nets'),"22042364":val('nets_other'),"22042365":val('why')}}));
   document.getElementById('send').disabled=true;
   g.submit();
   setTimeout(function(){form.style.display='none';var t=document.getElementById('thanks');t.style.display='block';t.scrollIntoView({behavior:'smooth',block:'start'})},900);
