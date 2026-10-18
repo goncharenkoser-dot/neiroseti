@@ -170,6 +170,7 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
 .toc b{display:block;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:30px}
 .toc p{margin:4px 0 0;font-size:15px;line-height:24px;color:color-mix(in srgb,var(--color-text) 78%,transparent);}
 @media (max-width:600px){.toc{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr 1fr}.facts>div:nth-child(2n+1){border-left:0;padding-left:0}.facts>div:nth-child(n+3){border-top:1px solid var(--color-divider)}.facts>div:nth-child(5){grid-column:1/-1}.facts b{font-size:30px}.tracks{grid-template-columns:repeat(3,1fr)}.tracks>div{padding:16px 10px!important}.tracks>div:first-child{padding-left:0!important}.tracks .tname{font-size:22px!important}.tracks .tsub{font-size:12px!important}.vbar{padding:6px}.vbtn{font-size:11px;padding:6px 10px}.nav{gap:10px 16px}}
+.otz-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin-top:14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.otz-item{flex:0 0 86%;max-width:420px;margin:0;scroll-snap-align:start;background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.10);overflow:hidden}.otz-item img{display:block;width:100%;height:auto}@media(min-width:820px){.otz-item{flex-basis:31.5%}}
 </style>
 </head>
 <body>
@@ -196,12 +197,14 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
   <div>
     <span class="kick" style="margin-bottom:28px;" data-v="group">GetPublishED × Георгий Чистов · Мини-группа</span>
     <span class="kick" style="margin-bottom:28px;" data-v="individual">GetPublishED × Георгий Чистов · Индивидуально</span>
-    <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(48px,6.4vw,88px);line-height:1.04;letter-spacing:-0.01em;margin:0 0 0 -0.04em;"><span style="display:block;">Человек с ИИ</span><span style="display:block;">может абсолютно всё</span></h1>
+    <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(48px,6.4vw,88px);line-height:1.04;letter-spacing:-0.01em;margin:0 0 0 -0.04em;"><span style="display:block;">Старт 3 ноября.</span><span style="display:block;">Ваш проект, ваша ИИ-система</span></h1>
     <div data-v="group"><p style="font-size:17px;line-height:28px;max-width:54ch;margin:32px 0 0;">Группа из пяти человек, два месяца с Георгием Чистовым — писателем, который дошёл с нейросетями до сценария на Black List в Голливуде и собрал 14 ИИ-помощников для своих клиентов.</p><p style="font-size:17px;line-height:28px;max-width:54ch;margin:14px 0 0;"><strong style="color:#B42318;">Вы сможете построить свою ИИ-систему под любой свой проект.</strong></p></div>
     <div data-v="individual"><p style="font-size:17px;line-height:28px;max-width:54ch;margin:32px 0 0;">Два месяца один на один с Георгием Чистовым — писателем, который дошёл с нейросетями до сценария на Black List в Голливуде и собрал 14 ИИ-помощников для своих клиентов.</p><p style="font-size:17px;line-height:28px;max-width:54ch;margin:14px 0 0;"><strong style="color:#B42318;">Вы сможете построить свою ИИ-систему под любой свой проект.</strong></p></div>
+    <blockquote style="margin:26px 0 0;padding:14px 18px;border-left:3px solid var(--color-accent);font-family:var(--font-heading);font-size:21px;line-height:1.35;max-width:54ch;">«Главный инсайт, неожиданный для меня: доверие Георгию и команде. Необходимость практикума лично мне».<span style="display:block;font-family:var(--font-body);font-size:14px;margin-top:8px;opacity:.75">— Валентина, 69 лет, после разбора 11 октября</span></blockquote>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:36px;">
       <button type="button" class="btn-gold cta" data-v="group" data-gc-open>Записаться в группу</button><button type="button" class="btn-gold cta" data-v="individual" data-gc-open>Записаться к Георгию</button>
     </div>
+    <p style="margin:16px 0 0;font-size:15.5px;line-height:1.5;max-width:54ch;opacity:.85;">Неделя 0 — с 27 октября: команда ставит систему на ваш компьютер, подписка входит в стоимость. Первый зум — 3 ноября.</p>
   </div>
   <figure class="plate" style="margin:0;justify-self:end;width:min(460px,100%);">
     <img src="img/01_hero_group.jpg" alt="Георгий Чистов" style="aspect-ratio:3/4;" data-v="group">
@@ -317,6 +320,19 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
 <hr class="hr" style="margin:0;">
 
 <!-- 6 · Георгий Чистов -->
+<section class="sec" id="week0">
+  <h2 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,4vw,52px);line-height:1.1;margin:0;max-width:20ch;">Неделя 0: команда ставит всё за вас</h2>
+  <p style="font-size:17px;line-height:28px;max-width:60ch;margin:18px 0 0;">Четыре фразы из чатов и разборов — и один ответ на все.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;margin-top:32px;">
+    <div style="padding:22px;border:1px solid var(--color-divider);border-radius:16px;"><b style="font-family:var(--font-heading);font-size:22px;line-height:1.2;display:block;">«У меня нет ноутбука»</b><p style="margin:10px 0 0;font-size:15.5px;line-height:1.5;">Начинаем с того, что есть. К старту поможем выбрать компьютер под задачи, установим и настроим всё сами.</p></div>
+    <div style="padding:22px;border:1px solid var(--color-divider);border-radius:16px;"><b style="font-family:var(--font-heading);font-size:22px;line-height:1.2;display:block;">«Я не технарь»</b><p style="margin:10px 0 0;font-size:15.5px;line-height:1.5;">Георгий тоже. Доступ, подписка, настройки — на команде до первого зума. Вы только открываете компьютер.</p></div>
+    <div style="padding:22px;border:1px solid var(--color-divider);border-radius:16px;"><b style="font-family:var(--font-heading);font-size:22px;line-height:1.2;display:block;">«VPN не стоит, лень ставить»</b><p style="margin:10px 0 0;font-size:15.5px;line-height:1.5;">Поставим. Подписка на инструмент входит в стоимость на два месяца, доплачивать не нужно.</p></div>
+    <div style="padding:22px;border:1px solid var(--color-divider);border-radius:16px;"><b style="font-family:var(--font-heading);font-size:22px;line-height:1.2;display:block;">«Они будут мне указывать?»</b><p style="margin:10px 0 0;font-size:15.5px;line-height:1.5;">Нет. Группа восемь человек, вы слушатель и наблюдатель; ваш проект разбирает Георгий, не группа.</p></div>
+  </div>
+</section>
+
+<hr class="hr" style="margin:0;">
+
 <section id="author" class="sec" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,80px);align-items:start;">
   <figure class="plate" style="margin:0;width:min(440px,100%);"><img src="img/03_author.jpg" alt="Георгий Чистов" style="aspect-ratio:4/5;object-position:40% 30%;"></figure>
   <div>
@@ -353,12 +369,28 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
 
 <!-- 7 · Отзывы -->
 <section class="sec">
-  <h2 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,4vw,52px);line-height:1.1;margin:0;max-width:20ch;">Что говорят после эфиров с Георгием</h2>
+  <h2 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,4vw,52px);line-height:1.1;margin:0;max-width:20ch;">Что говорят после разборов и эфиров</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 48px;margin-top:40px;">
-    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:26px;line-height:1.25;">«Это скачок на порядок выше всех вещей, которые сейчас есть!»</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Сергей П.</figcaption></figure>
-    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:26px;line-height:1.25;">«Вообще гениально! Хоть один человек правду сказал».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Елена С.</figcaption></figure>
-    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:26px;line-height:1.25;">«Интересно именно мнение практика, а не постоянных рекламных кампаний».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Evgeniys</figcaption></figure>
-    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:26px;line-height:1.25;">«Эфир — огонь. Очень интересно. Пожалуйста, зовите Георгия Чистова».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Всеволод</figcaption></figure>
+    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:24px;line-height:1.25;">«Главный инсайт, неожиданный для меня: доверие Георгию и команде. Необходимость практикума лично мне. Мне 69 лет».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Валентина У., разбор 11 октября</figcaption></figure>
+    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:24px;line-height:1.25;">«Безусловно оправдались! Георгий преуспел во многом и делился почти всей „кухней“ взаимодействия с агентами, которые могли бы облегчить нам работу по созданию книги и облегчить нашу жизнь».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Надежда П., разбор 11 октября</figcaption></figure>
+    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:24px;line-height:1.25;">«Огромное спасибо!»</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Олег Ш., разбор 2 октября, в группе с 3 ноября</figcaption></figure>
+    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:24px;line-height:1.25;">«Благодарю за разбор — идеи, до которых сама не додумалась».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Наталья В., разбор 6 октября</figcaption></figure>
+    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:24px;line-height:1.25;">«Спасибо за тёплое искреннее общение».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Лана П., разбор 11 октября</figcaption></figure>
+    <figure style="margin:0;padding:28px 0;border-top:1px solid var(--color-divider);"><blockquote style="margin:0;font-family:var(--font-heading);font-size:24px;line-height:1.25;">«Вы расширили мои горизонты! Несмотря на солидный возраст, не хочу отставать от жизни».</blockquote><figcaption style="font-size:14px;margin-top:14px;color:color-mix(in srgb,var(--color-text) 72%,transparent);">— Елена К., третий вечер</figcaption></figure>
+  </div>
+  <p style="font-size:17px;line-height:28px;margin:36px 0 0;">А это писали в чате прямо во время эфиров — скрины как есть, листайте:</p>
+  <div class="otz-track"><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-01.jpg" alt="Скрин из чата: доверие Георгию и команде, необходимость практикума лично мне" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-02.jpg" alt="Скрин из чата: ожидания безусловно оправдались" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-03.jpg" alt="Скрин из чата: я человек далёкий от ИИ, вы меня вдохновили" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-04.jpg" alt="Скрин из чата: вы расширили мои горизонты" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-05.jpg" alt="Скрин из чата: распахнул двери в новый мир; я хочу приложение" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-06.jpg" alt="Скрин из чата: шикарное приложение" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-07.jpg" alt="Скрин из чата: эфир супер" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-08.jpg" alt="Скрин из чата: благодарности после третьего вечера" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-09.jpg" alt="Скрин из чата: огромное спасибо" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-10.jpg" alt="Скрин из чата: вдохновляет; многое про меня" loading="lazy"></figure></div>
+</section>
+
+<hr class="hr" style="margin:0;">
+
+<section class="sec" id="projects">
+  <h2 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,4vw,52px);line-height:1.1;margin:0;max-width:20ch;">С какими проектами идут в группу</h2>
+  <p style="font-size:17px;line-height:28px;max-width:60ch;margin:18px 0 0;">Три проекта с разборов последних двух недель, без фамилий. Каждый пришёл с часовой встречи с картой на руках.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;margin-top:32px;">
+    <div style="padding:22px;border:1px solid var(--color-divider);border-radius:16px;"><b style="font-family:var(--font-heading);font-size:22px;line-height:1.2;display:block;">Архитектор и художник</b><p style="margin:10px 0 0;font-size:15.5px;line-height:1.5;">Стопки эскизов и два архитектурных проекта. Собирает визуализацию и графику на продажу: «что делать — знаю, вопрос как».</p></div>
+    <div style="padding:22px;border:1px solid var(--color-divider);border-radius:16px;"><b style="font-family:var(--font-heading);font-size:22px;line-height:1.2;display:block;">Редактор, тридцать лет в текстах</b><p style="margin:10px 0 0;font-size:15.5px;line-height:1.5;">Делает чужие книги под ключ, своих в списке пятнадцать. Цель — заказная книга за неделю вместо месяца и голова для своих.</p></div>
+    <div style="padding:22px;border:1px solid var(--color-divider);border-radius:16px;"><b style="font-family:var(--font-heading);font-size:22px;line-height:1.2;display:block;">Автор романа о Торонто 1930-х</b><p style="margin:10px 0 0;font-size:15.5px;line-height:1.5;">Живёт в Канаде, рядом киностудия. Сеттинг эпохи, свой стиль из нескольких авторов и перевод для англоязычного рынка.</p></div>
   </div>
 </section>
 
@@ -373,10 +405,12 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
       <span class="kick kick-dark" data-v="individual">Индивидуально с Георгием</span>
       <div class="price-num" data-v="group">170 000 ₽</div>
       <div class="price-num" data-v="individual">330 000 ₽</div>
-      <p class="price-dep">Депозит <b>20 000 ₽</b> бронирует место и цену.</p>
+      <p class="price-dep">Депозит <b>20 000 ₽</b> держит цену и место до 20:00 следующего дня после разбора. Полная оплата до этого срока — плюс два месяца куратора после практикума.</p>
       <ul class="price-list">
+        <li>Старт потока 3 ноября, неделя 0 с 27 октября</li>
         <li>Инструмент и подписка на два месяца уже внутри — доплачивать не нужно</li>
-        <li data-v="individual">Цена до 10 октября, дальше — 390 000 ₽</li>
+        <li data-v="individual">После дедлайна — 390 000 ₽</li>
+        <li data-v="group">После дедлайна — 190 000 ₽</li>
         <li data-v="group">Рассрочка до 12 месяцев — около 14 000 ₽ в месяц</li>
         <li data-v="individual">Рассрочка до 12 месяцев — около 27 500 ₽ в месяц</li>
         <li>Диагностическая сессия 4 900 ₽ засчитывается в стоимость</li>
@@ -385,11 +419,13 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
       </ul>
     </div>
     <div class="price-actions">
-      <button type="button" class="btn-gold cta" data-v="group" data-gc-open>Записаться в группу</button>
+      <button type="button" class="btn-gold cta" data-v="group" data-gc-open>Забронировать место — депозит 20 000 ₽</button>
+      <button type="button" class="btn-gold cta" data-v="group" data-gc-open>Оплатить полностью, с куратором</button>
       <button type="button" class="btn-gold cta" data-v="individual" data-gc-open>Записаться к Георгию</button>
       <span class="btn-ghost">Можно в рассрочку</span>
     </div>
   </div>
+  <p class="price-note"><b>Цена вопроса словами участников.</b> Месяц правок — неделя: три недели в месяц на свои книги. 60 страниц перевода — 40 000 ₽ у переводчиков. Перевод книги целиком — 1 650 000 ₽. 170 000 ₽ — это около 14 200 ₽ в месяц, меньше одного заказа.</p>
   <p class="price-note" data-v="group"><b>Гарантия.</b> Возврат без вопросов в течение 14 дней. Не собрали свой инструмент к концу курса — ещё месяц с куратором бесплатно.</p>
   <p class="price-note" data-v="individual"><b>Гарантия.</b> Возврат без вопросов в течение 14 дней. Если к концу двух месяцев система не собрана, Георгий продолжает работать с вами бесплатно до результата.</p>
  
@@ -401,6 +437,8 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
 <section id="faq" class="sec" style="display:flex;flex-wrap:wrap;gap:clamp(24px,5vw,80px);">
   <h2 style="flex:1 1 240px;font-family:var(--font-heading);font-weight:600;font-size:clamp(36px,4.4vw,58px);line-height:1.08;margin:0;">Вопросы</h2>
   <div style="flex:2 1 520px;min-width:0;border-top:1px solid var(--color-divider);">
+    <details style="border-bottom:1px solid var(--color-divider);"><summary style="display:flex;justify-content:space-between;gap:24px;align-items:center;padding:20px 0;font-family:var(--font-heading);font-size:24px;line-height:30px;"><span>Сколько стоит подписка на сценарную комнату?</span><span class="faq-mark" style="flex:none;color:var(--color-accent);font-size:28px;line-height:1;transition:transform .2s;">+</span></summary><p style="margin:0 0 22px;font-size:16px;line-height:26px;max-width:62ch;color:color-mix(in srgb,var(--color-text) 85%,transparent);">Сценарная комната — один из помощников, которые участники собирают на практикуме под себя; отдельной подписки на неё нет. Пока её нет у вас — задайте вопрос в чате «Нейросреда», команда отвечает каждый день.</p></details>
+    <details style="border-bottom:1px solid var(--color-divider);"><summary style="display:flex;justify-content:space-between;gap:24px;align-items:center;padding:20px 0;font-family:var(--font-heading);font-size:24px;line-height:30px;"><span>Как написать Георгию лично?</span><span class="faq-mark" style="flex:none;color:var(--color-accent);font-size:28px;line-height:1;transition:transform .2s;">+</span></summary><p style="margin:0 0 22px;font-size:16px;line-height:26px;max-width:62ch;color:color-mix(in srgb,var(--color-text) 85%,transparent);">После разбора у вас есть прямой контакт Георгия. До разбора вопросы — в чат «Нейросреда» (ссылки внизу страницы) или помощнице Георгия Виталии в том же чате.</p></details>
     <details style="border-bottom:1px solid var(--color-divider);"><summary style="display:flex;justify-content:space-between;gap:24px;align-items:center;padding:20px 0;font-family:var(--font-heading);font-size:24px;line-height:30px;"><span>Я не технарь. Справлюсь?</span><span class="faq-mark" style="flex:none;color:var(--color-accent);font-size:28px;line-height:1;transition:transform .2s;">+</span></summary><p style="margin:0 0 22px;font-size:16px;line-height:26px;max-width:62ch;color:color-mix(in srgb,var(--color-text) 85%,transparent);">Георгий тоже не айтишник. Сразу после оплаты команда устанавливает и настраивает нейросеть на вашем компьютере, к первому занятию инструмент готов. Дальше — обычный язык, без кода.</p></details>
     <details style="border-bottom:1px solid var(--color-divider);"><summary style="display:flex;justify-content:space-between;gap:24px;align-items:center;padding:20px 0;font-family:var(--font-heading);font-size:24px;line-height:30px;"><span>Нейросеть будет писать за меня?</span><span class="faq-mark" style="flex:none;color:var(--color-accent);font-size:28px;line-height:1;transition:transform .2s;">+</span></summary><p style="margin:0 0 22px;font-size:16px;line-height:26px;max-width:62ch;color:color-mix(in srgb,var(--color-text) 85%,transparent);">Нет. Текст — ваш. Нейросеть берёт на себя всё вокруг: корректуру, перевод, описание, сайт, письма.</p></details>
     <details style="border-bottom:1px solid var(--color-divider);"><summary style="display:flex;justify-content:space-between;gap:24px;align-items:center;padding:20px 0;font-family:var(--font-heading);font-size:24px;line-height:30px;"><span>Мои тексты не утекут?</span><span class="faq-mark" style="flex:none;color:var(--color-accent);font-size:28px;line-height:1;transition:transform .2s;">+</span></summary><p style="margin:0 0 22px;font-size:16px;line-height:26px;max-width:62ch;color:color-mix(in srgb,var(--color-text) 85%,transparent);">Проект живёт в вашем личном аккаунте. Обучение на ваших данных можно выключить в настройках — покажем, где. А что не хотите загружать, можно не загружать.</p></details>
@@ -416,7 +454,7 @@ main{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
   <div class="final-inner">
     <h2 class="final-h" data-v="group"><span>Пять мест.</span><span>Ваш проект, ваша система, два месяца.</span></h2>
     <h2 class="final-h" data-v="individual"><span>3–5 мест в потоке.</span><span>Георгий работает лично с каждым.</span></h2>
-    <p class="final-p">Не подойдёт, если ждёте, что нейросеть сделает всё за вас. Подойдёт, если готовы два месяца работать над своим проектом и довести систему до результата.</p>
+    <p class="final-p">Старт 3 ноября, неделя 0 с 27 октября. Не подойдёт, если ждёте, что нейросеть сделает всё за вас. Подойдёт, если готовы два месяца работать над своим проектом и довести систему до результата.</p>
     <div class="final-cta"><button type="button" class="btn-gold cta" data-v="group" data-gc-open>Записаться в группу</button><button type="button" class="btn-gold cta" data-v="individual" data-gc-open>Записаться к Георгию</button></div>
   </div>
 </section>
