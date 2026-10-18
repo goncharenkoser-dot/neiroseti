@@ -163,6 +163,7 @@
     .dlg{left:50%;top:50%;bottom:auto;transform:translate(-50%,-50%);width:min(560px,92vw);border-radius:22px;border:1px solid var(--line)}
     .gc-embed iframe{min-height:480px}
   }
+.nums{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.nums div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:118px}.nums b{display:block;font-family:Literata,Georgia,serif;font-size:26px;line-height:1}.nums span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px}.shot img{display:block;width:100%;max-width:560px;border-radius:14px;border:1px solid var(--line);margin-top:16px}.karta{display:grid;gap:12px;margin-top:18px}.karta div{font-size:16px;line-height:1.55}.otz-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin-top:14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.otz-item{flex:0 0 86%;max-width:420px;margin:0;scroll-snap-align:start;background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.10);overflow:hidden}.otz-item img{display:block;width:100%;height:auto}@media(min-width:820px){.otz-item{flex-basis:31.5%}}
 </style>
 </head>
 <body>
@@ -208,14 +209,24 @@
     <div class="grid">
       <div>
         <div class="eyebrow">Личный разбор с Георгием Чистовым</div>
-        <h1>Узнайте, как построить свою личную ИИ-систему под свой проект или задачу</h1>
+        <h1>Час с Георгием о вашем проекте: карта, три дела для помощника и честный ответ</h1>
         <div class="price-tag"><b>4 900 ₽</b><span><svg class="ic"><use href="#i-clock"/></svg>40–60 минут</span><span><svg class="ic"><use href="#i-back"/></svg>засчитываются в стоимость практикума</span></div>
         <p class="sub">Вы приносите один проект — книгу, своё дело или задачу по жизни. Уходите с картой: что остаётся вам, что забирает ИИ-система и что для этого нужно.</p>
         <div class="def">Разбор — не консультация и не урок. Это встреча, на которой мы понимаем, как ваш проект сделать с нейросетями быстрее и дешевле, чем обычным способом, и какой должна быть ваша ИИ-инфраструктура — в писательстве, в жизни и в работе.</div>
-        <div class="cta"><a class="btn" id="heroBtn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>После оплаты команда свяжется в течение дня и согласует время</small></div>
+        <div class="nums"><div><b>21</b><span>оплатили разбор за три недели</span></div><div><b>10</b><span>уже прошли встречу</span></div><div><b>0</b><span>недовольных</span></div></div>
+        <div class="cta"><a class="btn" id="heroBtn" href="#pay" data-open>Разобрать мой проект — 4 900 ₽</a><small>Разборы до 24 октября, по три в день. После оплаты команда свяжется в течение дня и согласует время. Карта не из России — пришлём способ оплаты</small></div>
       </div>
       <div class="mphoto"><img src="../img/author.jpg" alt="Георгий Чистов, писатель"><div class="cap"><b>Георгий Чистов</b><span>писатель, автор дилогии «Парадокс Джона». 14 его ИИ-помощников работают у клиентов</span></div></div>
     </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="wrap">
+    <div class="eyebrow">Голос клиента</div>
+    <h2>«Главный инсайт — доверие Георгию и команде. И необходимость практикума лично мне»</h2>
+    <p class="sub">Валентина, 69 лет, прошла разбор 11 октября. Ноутбука пока нет — «с помощью команды справлюсь». Сообщение как есть:</p>
+    <div class="shot"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-01.jpg" alt="Сообщение Валентины после разбора" loading="lazy"></div>
   </div>
 </section>
 
@@ -275,6 +286,22 @@
   </div>
 </section>
 
+<section id="voices">
+  <div class="wrap">
+    <div class="eyebrow">После разбора</div>
+    <h2>Что говорят те, кто уже прошёл разбор</h2>
+    <div class="quotes">
+      <figure class="quote">«Безусловно оправдались! Особо впечатлила подробная демонстрация взаимодействия Георгия со своим агентом: поиск сведений, редактирование, структурирование книги. Но всё это по запросам автора — творческая работа по текстам, смыслам и сюжету остаётся прерогативой автора».<figcaption>Надежда П., разбор 11 октября</figcaption></figure>
+      <figure class="quote">«Главный инсайт, неожиданный для меня: доверие Георгию и команде. Необходимость практикума лично мне. Мне 69 лет».<figcaption>Валентина У., разбор 11 октября</figcaption></figure>
+      <figure class="quote">«Благодарю за разбор — идеи, до которых сама не додумалась».<figcaption>Наталья В., разбор 6 октября</figcaption></figure>
+      <figure class="quote">«Спасибо за тёплое искреннее общение».<figcaption>Лана П., разбор 11 октября</figcaption></figure>
+      <figure class="quote">«Огромное спасибо!»<figcaption>Олег Ш., разбор 2 октября</figcaption></figure>
+    </div>
+    <p class="sub" style="margin-top:24px">А это писали в чате прямо во время эфиров — скрины как есть, листайте:</p>
+    <div class="otz-track"><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-01.jpg" alt="Скрин из чата: доверие Георгию и команде, необходимость практикума лично мне" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-02.jpg" alt="Скрин из чата: ожидания безусловно оправдались" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-03.jpg" alt="Скрин из чата: я человек далёкий от ИИ, вы меня вдохновили" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-04.jpg" alt="Скрин из чата: вы расширили мои горизонты" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-05.jpg" alt="Скрин из чата: распахнул двери в новый мир; я хочу приложение" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-06.jpg" alt="Скрин из чата: шикарное приложение" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-07.jpg" alt="Скрин из чата: эфир супер" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-08.jpg" alt="Скрин из чата: благодарности после третьего вечера" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-09.jpg" alt="Скрин из чата: огромное спасибо" loading="lazy"></figure><figure class="otz-item"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-10.jpg" alt="Скрин из чата: вдохновляет; многое про меня" loading="lazy"></figure></div>
+  </div>
+</section>
+
 <section id="price">
   <div class="wrap">
     <div class="eyebrow">Стоимость</div>
@@ -290,9 +317,9 @@
         <div class="guar"><svg class="ic"><use href="#i-shield"/></svg><div><b>Если разбор не дал ясности — вернём 4 900 ₽ в тот же день.</b> Без вопросов и объяснений.</div></div>
       </div>
       <div>
-        <div class="anchor"><svg class="ic"><use href="#i-scale"/></svg><div>Для сравнения: корректор на книгу стоит <b>150 000 ₽</b>, перевод — <b>1 650 000 ₽</b>, сайт книги у подрядчика — <b>70 000 ₽</b>. На разборе вы узнаете, что из этого можно больше не оплачивать.</div></div>
-        <div class="anchor"><svg class="ic"><use href="#i-user"/></svg><div>Георгий проводит разборы лично, поэтому мест немного. Запись — в порядке оплаты.</div></div>
-        <div class="cta"><a class="btn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>Оплата в окне на этой странице</small></div>
+        <div class="anchor"><svg class="ic"><use href="#i-scale"/></svg><div>С разборов этой недели: 250 страниц правок — месяц, с помощником — пара часов. 60 страниц перевода — <b>40 000 ₽</b> у переводчиков, с помощником — вечер. Перевод книги целиком — <b>1 650 000 ₽</b> у людей. 4 000 помарок на полях, ни одного тронутого слова.</div></div>
+        <div class="anchor"><svg class="ic"><use href="#i-user"/></svg><div>Георгий проводит разборы лично, по три в день, до 24 октября. Запись — в порядке оплаты; следующие разборы — после старта группы 3 ноября.</div></div>
+        <div class="cta"><a class="btn" href="#pay" data-open>Разобрать мой проект — 4 900 ₽</a><small>Оплата в окне на этой странице</small></div>
       </div>
     </div>
   </div>
@@ -316,14 +343,20 @@
   </div>
 </section>
 
-<section id="voices">
+
+
+<section id="karta">
   <div class="wrap">
-    <div class="eyebrow">После эфиров с Георгием</div>
-    <h2>Что говорят те, кто уже видел его в работе</h2>
-    <div class="quotes">
-      <figure class="quote">«Это скачок на порядок выше всех вещей, которые сейчас есть!»<figcaption>Сергей П., эфир 24 сентября</figcaption></figure>
-      <figure class="quote">«Вообще гениально! Хоть один человек правду сказал.»<figcaption>Елена С., эфир 24 сентября</figcaption></figure>
-      <figure class="quote">«Интересно именно мнение практика, а не постоянных рекламных кампаний.»<figcaption>Evgeniys, эфир 24 сентября</figcaption></figure>
+    <div class="eyebrow">Что остаётся на руках</div>
+    <h2>Пример карты проекта с разбора этой недели</h2>
+    <p class="sub">Обезличено. Одна страница, шесть строк — такую карту вы уносите после часа разговора.</p>
+    <div class="box karta">
+      <div><b>Проект.</b> Редактор, тридцать лет в текстах, делает чужие книги под ключ. Своих книг в списке пятнадцать, на них не остаётся головы.</div>
+      <div><b>Точка Б к концу декабря.</b> Заказная книга занимает неделю вместо месяца. Три освободившиеся недели в месяц — на свои.</div>
+      <div><b>Цена вопроса.</b> Десять страниц правок в день, 250 страниц — месяц. С помощником — пара часов. За год это девять месяцев, которые уходят на чужие тексты.</div>
+      <div><b>Три дела для помощника.</b> Замечания на полях всей рукописи, ничего не переписывая. Расшифровка интервью в страницу смысла. Перевод главы для зарубежного издателя.</div>
+      <div><b>Маршрут на восемь недель.</b> Неделя 0 — команда ставит систему. Вторая — редактор на полях. Четвёртая — расшифровщик. Шестая — первое приложение. Восьмая — система помнит проект и работает без нас.</div>
+      <div><b>Честный ответ.</b> Нужен ли практикум — да, и вот почему. А одному человеку на этой неделе Георгий сказал: не нужен, идите в издательства, — и показал как. Это тоже результат.</div>
     </div>
   </div>
 </section>
@@ -332,6 +365,11 @@
   <div class="wrap">
     <div class="eyebrow">Вопросы</div>
     <h2>Коротко о главном</h2>
+    <details><summary>«Нужно прежде разобраться с собой: нужно ли это мне»</summary><p>Так написала Ольга после третьего вечера. Разбор и есть способ разобраться: за час Георгий смотрит на ваш проект и честно говорит, нужен ли вам практикум. Одному человеку на этой неделе он сказал «не нужен» и показал, что делать без нас. Честный ответ — часть результата, а не повод его откладывать.</p></details>
+    <details><summary>«Я человек, далёкий от ИИ»</summary><p>Ирина написала это в чате и добавила: «вы меня вдохновили». На разборе нет настроек и терминов — только ваш проект и карта. В практикуме технику, доступ и подписку ставит команда, вы только открываете компьютер.</p></details>
+    <details><summary>«У меня нет ноутбука»</summary><p>Валентина прошла разбор с телефона и написала: «надеюсь приобрести до обучения, с помощью команды справлюсь». Разбор проходит в Zoom с любого устройства; к старту группы поможем выбрать компьютер под задачи.</p></details>
+    <details><summary>«Для большинства цена курса недоступна»</summary><p>Разбор — 4 900 ₽, и они засчитываются в практикум. Практикум — рассрочка до 12 месяцев, около 14 200 ₽ в месяц, и о нём речь только на разборе и только если он вам нужен. Не было полезно — вернём 4 900 ₽ в тот же день.</p></details>
+    <details><summary>«Они будут мне указывать?»</summary><p>Нет. Разбор — один на один с Георгием. В группе практикума вы слушатель, а не ученик у доски: никто не разбирает ваши тексты при других.</p></details>
     <details><summary>Это консультация?</summary><p>Нет. На консультации отвечают на вопросы. На разборе Георгий смотрит на ваш проект и строит карту: что отдать помощнику, сколько это вернёт, что для этого нужно и подходит ли вам практикум.</p></details>
     <details><summary>Что нужно подготовить?</summary><p>Одной фразой: какой у вас проект, где он сейчас и что должно быть через два месяца. Рукопись, описание дела или список задач по жизни — под рукой, показывать на экране не обязательно.</p></details>
     <details><summary>Что, если я не пойду в практикум?</summary><p>Карта и маршрут остаются у вас. Если разбор не дал ясности, 4 900 ₽ вернём в тот же день.</p></details>
@@ -346,8 +384,8 @@
 <section id="final" style="padding-bottom:56px">
   <div class="wrap">
     <h2>Один проект. Одна встреча. Карта на два месяца вперёд.</h2>
-    <p class="sub">4 900 ₽ — засчитываются в практикум. Если ясности не появилось, вернём в тот же день.</p>
-    <div class="cta"><a class="btn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a><small>Команда свяжется в течение дня и согласует время</small></div>
+    <p class="sub">4 900 ₽ — засчитываются в практикум. Разборы до 24 октября, по три в день. Если ясности не появилось, вернём в тот же день.</p>
+    <div class="cta"><a class="btn" href="#pay" data-open>Разобрать мой проект — 4 900 ₽</a><small>Команда свяжется в течение дня и согласует время</small></div>
   </div>
 </section>
 
@@ -356,7 +394,7 @@
   <a href="https://drive.google.com/file/d/1b4vL_phWhTc3XZ_OL8B1pMhfKysTA8bv/view" target="_blank" rel="noopener">Политика конфиденциальности</a> · <a href="https://drive.google.com/file/d/1kAsc1gXUfju48q8wASsMgOUEN0CLmt-a/view" target="_blank" rel="noopener">Согласие на обработку персональных данных</a></div>
 </footer>
 
-<div class="stick" id="stick"><a class="btn" href="#pay" data-open>Записаться на разбор — 4 900 ₽</a></div>
+<div class="stick" id="stick"><a class="btn" href="#pay" data-open>Разобрать мой проект — 4 900 ₽</a></div>
 <script>
 (function(){var stick=document.getElementById('stick'),heroBtn=document.getElementById('heroBtn');if('IntersectionObserver' in window&&stick&&heroBtn){new IntersectionObserver(function(en){stick.classList.toggle('show',!en[0].isIntersecting);},{threshold:0}).observe(heroBtn);}})();
 </script>
