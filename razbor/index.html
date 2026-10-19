@@ -180,6 +180,10 @@
 .rzc-btn{position:absolute;top:42%;z-index:2;width:42px;height:42px;border-radius:50%;border:0;background:#F2B15B;color:#1a1208;font-size:28px;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);display:none}
 .rzc-prev{left:-8px}.rzc-next{right:-8px}
 @media (min-width:820px){.rzc-btn{display:block}}
+.meet-grid{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:30px;align-items:center}
+@media (max-width:700px){.meet-grid{grid-template-columns:1fr;gap:18px}}
+.meet-photo{margin:0}
+.meet-photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:18px;border:1px solid var(--line)}
 .proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px;align-items:start}
 @media (max-width:700px){.proof-grid{grid-template-columns:1fr}}
 .pcard{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column}
@@ -313,6 +317,21 @@
 </section>
 
 
+
+<section id="meet">
+  <div class="wrap">
+    <div class="meet-grid">
+      <figure class="meet-photo"><img src="../praktikum/img/02_hero_individual.jpg" alt="Георгий Чистов" loading="lazy"></figure>
+      <div>
+        <div class="eyebrow">Час с Георгием</div>
+        <h2>Разберём ваш проект и соберём карту за один час</h2>
+        <p class="sub">Книга, дело или жизнь: Георгий смотрит, что у вас есть, и говорит, из чего будет состоять ваша система, которая помнит вас. После встречи у вас на руках карта проекта и честный ответ, нужен ли вам практикум.</p>
+        <p style="margin-top:22px"><a class="btn" href="#pay" data-open>Разобрать мой проект — 4 900 ₽</a></p>
+        <p class="sub" style="font-size:14px;margin-top:12px">Разборы до 24 октября, по три встречи в день. Не было полезно — вернём полностью.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="price">
   <div class="wrap">
