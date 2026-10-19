@@ -163,7 +163,11 @@
     .dlg{left:50%;top:50%;bottom:auto;transform:translate(-50%,-50%);width:min(560px,92vw);border-radius:22px;border:1px solid var(--line)}
     .gc-embed iframe{min-height:480px}
   }
-.nums{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.nums div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:118px}.nums b{display:block;font-family:Literata,Georgia,serif;font-size:26px;line-height:1}.nums span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px}.shot img{display:block;width:100%;max-width:560px;border-radius:14px;border:1px solid var(--line);margin-top:16px}.karta{display:grid;gap:12px;margin-top:18px}.karta div{font-size:16px;line-height:1.55}.otz-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin-top:14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.otz-item{flex:0 0 86%;max-width:420px;margin:0;scroll-snap-align:start;background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.10);overflow:hidden}.otz-item img{display:block;width:100%;height:auto}@media(min-width:820px){.otz-item{flex-basis:31.5%}}
+.nums{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.nums div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:118px}.nums b{display:block;font-family:Literata,Georgia,serif;font-size:26px;line-height:1}.nums span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px}.shot img{display:block;width:100%;max-width:560px;border-radius:14px;border:1px solid var(--line);margin-top:16px}
+.vid{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-start;margin-top:16px}
+.vid video{display:block;width:min(300px,100%);aspect-ratio:9/16;border-radius:14px;border:1px solid var(--line);background:#000}
+.vid .vq{flex:1 1 260px;max-width:52ch;font-family:Literata,Georgia,serif;font-size:17px;line-height:1.45;margin:0}
+.vid .vq small{display:block;margin-top:8px;font-family:"IBM Plex Sans",Arial,sans-serif;font-size:13px;color:var(--accent)}.karta{display:grid;gap:12px;margin-top:18px}.karta div{font-size:16px;line-height:1.55}.otz-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin-top:14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.otz-item{flex:0 0 86%;max-width:420px;margin:0;scroll-snap-align:start;background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.10);overflow:hidden}.otz-item img{display:block;width:100%;height:auto}@media(min-width:820px){.otz-item{flex-basis:31.5%}}
 </style>
 </head>
 <body>
@@ -229,6 +233,10 @@
     <div class="shot"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-01.jpg" alt="Сообщение Валентины после разбора" loading="lazy"></div>
     <p class="sub" style="margin-top:26px">Надежда, разбор 11 октября, — о том, что увидела на эфирах и на встрече:</p>
     <div class="shot"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-02.jpg" alt="Отзыв Надежды после эфиров и разбора" loading="lazy"></div>
+    <p class="sub" style="margin-top:26px">Мария Х., разбор 17 октября, — две минуты на камеру: с чем пришла и что получила.</p>
+    <div class="vid"><video controls playsinline preload="none" poster="https://neiroseti.getpublish-io.ru/video/otzyv-razbor-2026-10-19.jpg" aria-label="Видеоотзыв Марии Х. после разбора 17 октября: три книги, помощник астролога, совет идти в издательства"><source src="https://neiroseti.getpublish-io.ru/video/otzyv-razbor-2026-10-19.mp4" type="video/mp4"></video><p class="vq">«Георгий глубоко проникает, понимает наши боли и очень грамотно советует, что делать, чтобы получить нужный результат. Советую тем, кто застрял и не знает, куда идти: получить консультацию и начинать работать»<small>Мария Х., видеоотзыв после разбора</small></p></div>
+    <p class="sub" style="margin-top:26px">Наталья В., разбор 6 октября, — сообщение как есть:</p>
+    <div class="shot"><img src="https://neiroseti.getpublish-io.ru/img/otzyvy/otzyv-11.jpg" alt="Отзыв Натальи после разбора: Георгий сразу уловил главное — столько идей, что одной жизни не хватит; после встречи определила программу-минимум; начинать нужно было ещё вчера" loading="lazy"></div>
   </div>
 </section>
 
@@ -295,7 +303,7 @@
     <div class="quotes">
       <figure class="quote">«Безусловно оправдались! Особо впечатлила подробная демонстрация взаимодействия Георгия со своим агентом: поиск сведений, редактирование, структурирование книги. Но всё это по запросам автора — творческая работа по текстам, смыслам и сюжету остаётся прерогативой автора».<figcaption>Надежда П., разбор 11 октября</figcaption></figure>
       <figure class="quote">«Главный инсайт, неожиданный для меня: доверие Георгию и команде. Необходимость практикума лично мне. Мне 69 лет».<figcaption>Валентина У., разбор 11 октября</figcaption></figure>
-      <figure class="quote">«Благодарю за разбор — идеи, до которых сама не додумалась».<figcaption>Наталья В., разбор 6 октября</figcaption></figure>
+      <figure class="quote">«Георгий сразу уловил главное: у меня столько идей, что одной жизни, кажется, не хватит. После встречи я смогла определить программу-минимум. Мой вывод простой: если у вас есть мечта, не откладывайте её. Начинать нужно было ещё вчера!»<figcaption>Наталья В., разбор 6 октября</figcaption></figure>
       <figure class="quote">«Спасибо за тёплое искреннее общение».<figcaption>Лана П., разбор 11 октября</figcaption></figure>
       <figure class="quote">«Огромное спасибо!»<figcaption>Олег Ш., разбор 2 октября</figcaption></figure>
     </div>
