@@ -62,9 +62,10 @@ function checks(n){return [].map.call(form.querySelectorAll('input[name="'+n+'"]
 form.addEventListener('submit',function(ev){
   ev.preventDefault();
   var email=val('email');
-  var ok=val('full_name')&&/^\S+@\S+\.\S+$/.test(email)&&radio('contact')&&val('nick')&&radio('level');
+  var nameOk=/^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ\s\-'’.]+$/.test(val('full_name'));
+  var ok=val('full_name')&&nameOk&&/^\S+@\S+\.\S+$/.test(email)&&radio('contact')&&val('nick')&&radio('level');
   var err=document.getElementById('err');
-  if(!ok){err.style.display='block';err.scrollIntoView({behavior:'smooth',block:'center'});return}
+  if(!ok){if(val('full_name')&&!nameOk){err.textContent='В поле «ФИО» — только имя и фамилия буквами, без цифр и скобок.'}err.style.display='block';err.scrollIntoView({behavior:'smooth',block:'center'});return}
   err.style.display='none';
   var g=document.getElementById('gcf');g.innerHTML='';
   function add(n,v){var i=document.createElement('input');i.type='hidden';i.name=n;i.value=v||'';g.appendChild(i)}
@@ -72,9 +73,9 @@ form.addEventListener('submit',function(ev){
   function cf(key,v){add('formParams[userCustomFields]['+F[key]+']',v)}
   function cfArr(key,n){[].forEach.call(form.querySelectorAll('input[name="'+n+'"]:checked'),function(e){add('formParams[userCustomFields]['+F[key]+'][]',e.value)})}
   cf('contact',radio('contact'));cf('nick',val('nick'));cf('level',radio('level'));
-  cfArr('problems','problems');cf('problems_other',val('problems_other'));cfArr('spheres','spheres');
-  cfArr('nets','nets');cf('nets_other',val('nets_other'));cf('why',val('why'));cf('project',val('project'));
-  cf('time',radio('time'));cf('link',val('link'));cf('linknote',val('linknote'));cf('efiry',radio('efiry'));
+  cf('problems_other',(checks('problems')?'Сложности: '+checks('problems'):'')+(val('problems_other')?(checks('problems')?'. ':'')+'Своё: '+val('problems_other'):''));
+  cf('nets_other',(checks('nets')?'Сети: '+checks('nets'):'')+(val('nets_other')?(checks('nets')?'. ':'')+'Своё: '+val('nets_other'):''));cf('why',val('why'));cf('project',val('project'));
+  cf('time',radio('time'));cf('link',val('link'));cf('linknote',(checks('spheres')?'Сферы: '+checks('spheres'):'')+(val('linknote')?(checks('spheres')?'. ':'')+'Примечание к ссылке: '+val('linknote'):''));cf('efiry',radio('efiry'));
   function arr(n){return [].map.call(form.querySelectorAll('input[name="'+n+'"]:checked'),function(e){return e.value})}
   add('surveyData',JSON.stringify({fieldValues:{"22042359":radio('level'),"22042360":arr('problems'),"22042361":val('problems_other'),"22042362":arr('spheres'),"22042363":arr('nets'),"22042364":val('nets_other'),"22042365":val('why')}}));
   document.getElementById('send').disabled=true;
